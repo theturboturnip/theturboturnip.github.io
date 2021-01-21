@@ -1,0 +1,7 @@
+{% assign items = include.items %}
+
+<div class="datagrid">
+{% for item in items %}
+  {% include_cached components/datagrid-item.html item=item %}
+{% endfor %}
+</div>

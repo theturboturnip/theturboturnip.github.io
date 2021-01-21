@@ -1,0 +1,11 @@
+{% assign title = item.name %}
+{% assign description = item.description %}
+{% assign image = item.img %}
+
+<div class="datagrid-item">
+    <img src="/assets/img/{{ image }}">
+    <div class="datagrid-item-text">
+        <span class="datagrid-item-title">{{ title }}</span>
+        <span class="datagrid-item-desc">{{ description }}</span>
+    </div>
+</div>

@@ -2,7 +2,7 @@
 layout: list
 title: Blog
 description: >
-  My blogposts
+  My blogposts - small programming tidbits and rendering breakdowns.
 hide_description: true
 grouped: true
 ---

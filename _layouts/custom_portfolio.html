@@ -19,7 +19,7 @@ layout: page
 
 {{ content }}
 
-{% assign posts = site.projects %}
+<!-- {% assign posts = site.projects %}
 
 {% assign date_formats  = site.data.strings.date_formats               %}
 {% assign list_group_by = date_formats.list_group_by | default:"%Y"    %}
@@ -37,4 +37,7 @@ layout: page
   {% endif %}{% endunless %}
   {% include_cached components/post-list-item.html post=post format=list_entry %}
   {% if forloop.last %}</ul>{% endif %}
-{% endfor %}
+{% endfor %} -->
+
+{% assign projects = site.data.projects %}
+{% include_cached components/datagrid.html items=projects %}
