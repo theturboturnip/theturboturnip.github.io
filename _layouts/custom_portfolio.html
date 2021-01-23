@@ -39,5 +39,5 @@ layout: page
   {% if forloop.last %}</ul>{% endif %}
 {% endfor %} -->
 
-{% assign projects = site.data.projects %}
+{% assign projects = site.projects %}
 {% include_cached components/datagrid.html items=projects %}

@@ -1,11 +1,13 @@
-{% assign title = item.name %}
+{% assign title = item.title %}
 {% assign description = item.description %}
 {% assign image = item.img %}
+<!-- {% assign landing = {{ site.baseurl }}{% post_url _projects/item.meta.img %} %} -->
+{% assign landing_rel = site.baseurl | append: item.id %}
 
-<div class="datagrid-item">
+<div class="datagrid-item" >
     <img src="/assets/img/{{ image }}">
     <div class="datagrid-item-text">
-        <span class="datagrid-item-title">{{ title }}</span>
+        <a class="datagrid-item-title" href="{{ site.baseurl }}{{ landing_rel }}">{{ title }}</a>
         <span class="datagrid-item-desc">{{ description }}</span>
     </div>
 </div>
