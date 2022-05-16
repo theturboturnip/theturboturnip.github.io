@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["rsim","rust_cheri_compressed_cap"];

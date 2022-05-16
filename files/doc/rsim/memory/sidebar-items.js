@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["CheriAggregateMemory","Wrapper for AggregateMemory64 that keeps tags, supports MemoryOf for reading/writing capabilities. All other Memory variants clear associated tag bits on write."]]});

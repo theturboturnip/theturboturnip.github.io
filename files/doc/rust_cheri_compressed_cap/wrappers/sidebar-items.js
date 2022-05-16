@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["CheriRVFuncs","Trait exposing the utility functions used to specify CHERI-RISC-V behaviour in Tech Report 951. Behaviour is derived from the Sail specification"]]});

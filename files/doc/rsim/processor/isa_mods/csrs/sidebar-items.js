@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Zicsr",""],["ZicsrConn","References to all CSR providers"]],"trait":[["CSRProvider",""]],"type":[["Zicsr32","CSR unit for RV32 ISAs"],["Zicsr32Conn",""],["Zicsr64","CSR unit for RV64 ISAs"],["Zicsr64Conn",""]]});

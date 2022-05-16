@@ -1,0 +1,1 @@
+initSidebarItems({"trait":[["VecMemInterface","Common trait for interfaces to memory"],["VecRegInterface",""]],"type":[["Provenance","Struct indicating the providence of a pointer."]]});

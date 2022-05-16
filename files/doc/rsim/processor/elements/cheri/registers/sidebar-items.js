@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["CheriRV64RegisterFile","Register file for 64-bit RISC-V that can hold tagged 128-bit capabilities."],["IntegerModeCheriRV64RegisterFile",""]]});

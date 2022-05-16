@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Rv64imvProcessor","RISC-V Processor Model where XLEN=64-bit. No CHERI support. Holds scalar registers and configuration, all other configuration stored in [Rv64imvProcessorModules]"],["Rv64imvProcessorCSRs",""],["Rv64imvProcessorModules",""]]});

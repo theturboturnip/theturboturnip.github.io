@@ -8,5 +8,5 @@ author_profile: true
 
 This website hosts documentation for my research projects:
 
-- [rust-cheri-compressed-cap](/files/docs/rust-cheri-compressed-cap/)
-- [riscv-v-lite](/files/docs/riscv-v-lite/)
+- [rust-cheri-compressed-cap](/files/doc/rust_cheri_compressed_cap/index.html)
+- [riscv-v-lite](/files/doc/rsim/index.html)

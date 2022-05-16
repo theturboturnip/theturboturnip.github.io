@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Cc128","Defines the CC128 capability profile as an implementation of the CompressedCapability trait."]],"type":[["Addr",""],["Cap",""],["Cc128Cap",""],["FfiLength",""],["FfiOffset",""],["Length",""],["Offset",""]]});

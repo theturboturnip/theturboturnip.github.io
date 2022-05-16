@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["InstructionBits","TODO - Right now this does sign extension up to 32-bits. These should really all be 64-bit, now that we could be decoding 32 or 64-bit instructions. TODO - Make each of these a separate struct? Then we can combine variants in enums, e.g. type ROrIType = (RType, IType)."],["Opcode",""]],"fn":[["decode",""]],"struct":[["Imm",""]]});

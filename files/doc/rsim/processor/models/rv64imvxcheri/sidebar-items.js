@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["CheriExecMode",""]],"struct":[["Rv64imvXCheriProcessor","RISC-V Processor Model where XLEN=64-bit, with CHERI support. Can execute in Integer or Capability mode. Holds scalar registers and configuration, all other configuration stored in [Rv64imvXCheriProcessorModules]"],["Rv64imvXCheriProcessorCSRs",""],["Rv64imvXCheriProcessorModules",""]]});
