@@ -1,11 +1,13 @@
 {% assign title = item.title %}
 {% assign description = item.description %}
-{% assign image = item.img %}
-<!-- {% assign landing = {{ site.baseurl }}{% post_url _projects/item.meta.img %} %} -->
+{% assign image = item.image %}
 {% assign landing_rel = site.baseurl | append: item.id %}
 
-<div class="datagrid-item" >
-    <img src="/assets/img/{{ image }}">
+<div class="datagrid-item">
+    <a href="{{ site.baseurl }}{{ landing_rel }}">
+    {% include_cached components/hy-img.html img=image alt=title height='200px' class='datagrid-item-img' %}
+    </a>
+    <!-- <img src="{{ image.path }}"> -->
     <div class="datagrid-item-text">
         <a class="datagrid-item-title" href="{{ site.baseurl }}{{ landing_rel }}">{{ title }}</a>
         <span class="datagrid-item-desc">{{ description }}</span>
