@@ -21,5 +21,5 @@ main:
   # - title: "Guide"
   #   url: /markdown/
 
-  - title: "Documentation"
-    url: /docs/
+  # - title: "Documentation"
+  #   url: /docs/
