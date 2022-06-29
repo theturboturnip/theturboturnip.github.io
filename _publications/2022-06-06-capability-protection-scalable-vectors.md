@@ -2,11 +2,10 @@
 title: "Capability-Based Memory Protection for Scalable Vector Processing"
 collection: publications
 permalink: /publication/2022-06-06-capability-protection-scalable-vectors
-excerpt: "On applying CHERI-based memory protection to vector processors, particularly scalable vector models e.g. Arm SVE and RISC-V &quot;V&quot;. My masters project at Cambridge."
+excerpt: "On applying CHERI-based memory protection to vector processors, particularly scalable vector models e.g. Arm SVE and RISC-V &quot;V&quot;."
 date: 2022-06-06
 paperurl: 'https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors.pdf'
-citation: 'Stark, Samuel (2021). &quot;Capability-Based Memory Protection
-for Scalable Vector Processing&quot; <i>University of Cambridge</i>.'
+citation: 'Stark, S. (2021). Capability-Based Memory Protection for Scalable Vector Processing. [M.Phil thesis]. University of Cambridge.'
 course: 'Advanced Computer Science M.Phil @ University of Cambridge'
 ---
 

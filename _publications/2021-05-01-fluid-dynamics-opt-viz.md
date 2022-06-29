@@ -2,10 +2,12 @@
 title: "Performance Optimization and Visualization for a Fluid Dynamics Simulation"
 collection: publications
 permalink: /publication/2021-05-01-fluid-dynamics-opt-viz
-excerpt: "<img src='/images/2021-05-fluid-dynamics-header-small.png'>On creating a real-time GPU fluid simulation (CUDA) and visualization (Vulkan). My third-year project at Warwick."
+header:
+    teaser: "2021-05-fluid-dynamics-header-small.png"
+excerpt: "On creating a real-time GPU fluid simulation (CUDA) and visualization (Vulkan)."
 date: 2021-05-01
 paperurl: 'https://theturboturnip.github.io/files/2021-05-fluid-dynamics-opt-viz.pdf'
-citation: 'Stark, Samuel (2021). &quot;Performance Optimization and Visualization for a Fluid Dynamics Simulation&quot; <i>University of Warwick</i>.'
+citation: 'Stark, S. (2021). Performance Optimization and Visualization for a Fluid Dynamics Simulation. [Third-year project]. University of Warwick.'
 course: 'Computer Systems Engineering @ University of Warwick'
 ---
 
