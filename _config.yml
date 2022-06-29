@@ -10,7 +10,7 @@ locale                   : "en-GB"
 title                    : "Samuel Stark"
 title_separator          : "-"
 name                     : &name "Samuel Stark"
-description              : &description "MPhil/PhD at University of Cambridge"
+description              : &description "PhD @ Cambridge. Computer architecture, graphics, and GPUs"
 url                      : https://theturboturnip.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "theturboturnip/theturboturnip.github.io"
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  false #"google-universal" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Samuel Stark"
   avatar           : "profile.png"
-  bio              : "MPhil student at University of Cambridge. Previously did a BEng in Computer Systems Engineering at Warwick."
+  bio              : "PhD @ Cambridge Uni. I enjoy working with computer architecture, graphics, and GPUs."
   location         : "Cambridge"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
