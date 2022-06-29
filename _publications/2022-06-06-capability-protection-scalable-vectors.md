@@ -7,7 +7,7 @@ date: 2022-06-06
 paperurl: 'https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors.pdf'
 citation: 'Stark, Samuel (2021). &quot;Capability-Based Memory Protection
 for Scalable Vector Processing&quot; <i>University of Cambridge</i>.'
-venue: 'University of Cambridge, Advanced Computer Science M.Phil'
+course: 'Advanced Computer Science M.Phil @ University of Cambridge'
 ---
 
 <!-- <img src='/images/2021-05-fluid-dynamics-header.png'><br/> -->
@@ -16,9 +16,9 @@ My masters project at University of Cambridge.
 
 Examines the impact of combining CHERI's hardware memory protection with vector processing, particularly vectorized loads and stores, by designing a potential specification for "CHERI-RVV" - a CHERI version of the RISC-V "V" scalable vector extension.
 
-[Download paper here](https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors.pdf)
+[Download paper here](/files/2022-06-06-capability-protection-scalable-vectors.pdf)
 
-[Download presentation here](https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors-presentation.pdf)
+[Download presentation here](/files/2022-06-06-capability-protection-scalable-vectors-presentation.pdf)
 
 Recommended citation BibTeX:
 ```
