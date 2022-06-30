@@ -1,7 +1,10 @@
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
+title: "Academic Papers"
+permalink: /academia/
+redirect_from:
+  - /publications/
+  - /publications.html
 author_profile: true
 ---
 

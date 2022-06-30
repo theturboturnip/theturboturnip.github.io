@@ -1,7 +1,10 @@
 ---
 title: "Performance Optimization and Visualization for a Fluid Dynamics Simulation"
 collection: publications
-permalink: /publication/2021-05-01-fluid-dynamics-opt-viz
+permalink: /academia/2021-05-01-fluid-dynamics-opt-viz
+redirect_from:
+    - /publication/2021-05-01-fluid-dynamics-opt-viz
+    - /publication/2021-05-01-fluid-dynamics-opt-viz.html
 header:
     teaser: "2021-05-fluid-dynamics-header-small.png"
 excerpt: "On creating a real-time GPU fluid simulation (CUDA) and visualization (Vulkan)."
