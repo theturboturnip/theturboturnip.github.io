@@ -71,6 +71,18 @@ function render(resume) {
     });
 }
 
+// From https://github.com/jsonresume/resume-cli/issues/617
 module.exports = {
-    render: render
+	render: render,
+	pdfRenderOptions: {
+		format: 'A4',
+		mediaType: 'print',
+		pdfViewport: { width: 1920, height: 1280 },
+		margin: {
+			top: '0.2in',
+			bottom: '0.2in',
+			left: '0.4in',
+			right: '0.4in',
+		},
+	},
 };
