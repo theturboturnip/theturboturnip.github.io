@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[PDF version](/files/cv/current.pdf)
+[PDF version](/files/cv/current.pdf), [HTML version](/files/cv/current.html)
 
 {% include cv/current.md %}
 
