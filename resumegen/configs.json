@@ -1,7 +1,7 @@
 {
     "current": {
-        "education": ["phd", "mphil", "beng"],
-        "work": ["arm2021", "arm2019", "gapyear"],
+        "education": ["allcambs", "beng"],
+        "work": ["arminternships", "gapyear"],
         "projects": ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
     },
     "arm2021": {

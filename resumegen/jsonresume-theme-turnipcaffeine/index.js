@@ -41,7 +41,16 @@ handlebars.registerHelper({
     },
 
     formatDate: function(date) {
-        return moment(date).format('MM/YYYY');
+        // If only a year is specified, don't add a month
+        if (date.match(/^[0-9]+$/)) {
+            return moment(date).format('YYYY');
+        } else {
+            return moment(date).format('MM/YYYY');
+        }
+    },
+
+    ifEquals: function(arg1, arg2, options) {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
     }
 });
 

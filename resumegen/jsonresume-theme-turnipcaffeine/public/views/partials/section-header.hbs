@@ -1,8 +1,8 @@
 <div class="section-header clearfix">
     {{#if name}}
     <h3 class="bold pull-left">
-        {{#if website}}
-            <a href="{{website}}" target="_blank">
+        {{#if url}}
+            <a href="{{url}}" target="_blank">
                 {{name}} <i class="fa fa-external-link" aria-hidden="true"></i>
             </a>
         {{else}}
@@ -14,12 +14,17 @@
         {{#if startDate}}
             <span class="startDate">{{formatDate startDate}}</span>
             {{#if endDate}}
-            <span class="endDate"> - {{formatDate endDate}}</span>
+                {{#ifEquals startDate endDate}}
+                {{else}}
+                <span class="endDate"> - {{formatDate endDate}}</span>
+                {{/ifEquals}}
             {{else}}
             <span class="endDate"> - Present</span>
             {{/if}}
         {{else if releaseDate}}
             {{formatDate releaseDate}}
+        {{else if dateText}}
+            {{dateText}}
         {{/if}}
     </h5>
 </div>

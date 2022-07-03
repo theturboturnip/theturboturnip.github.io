@@ -1,0 +1,25 @@
+{{#if resume.projects.length}}
+<div class="container work-container">
+    {{> title value="Projects"}}
+
+    {{#each resume.projects}}
+        <section class="item">
+            {{> section-header name=this.name }}
+
+            {{#if summary}}
+            <p class="summary">{{summary}}</p>
+            {{else if description}}
+            <p class="summary">{{description}}</p>
+            {{/if}}
+
+            {{#if highlights.length}}
+            <ul>
+                {{#each highlights}}
+                <li>{{.}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
+        </section>
+    {{/each}}
+</div>
+{{/if}}

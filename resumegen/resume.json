@@ -48,19 +48,17 @@
             "institution": "University of Cambridge",
             "url": "https://cam.ac.uk",
             "area": "Computer Architecture/Security",
-            "studyType": "M.Phil and PhD",
             "startDate": "2021-10-01",
-            "score": "Distinction"
+            "score": "M.Phil, Distinction; PhD ongoing"
         },
         {
             "id": "beng",
             "institution": "University of Warwick",
             "url": "https://warwick.ac.uk",
             "area": "Computer Systems Engineering",
-            "studyType": "BEng",
             "startDate": "2018-10-01",
             "endDate": "2021-07-02",
-            "score": "First Class (85)",
+            "score": "B.Eng, First Class (85)",
             "highlights": [
                 "Best Overall Graduating Student"
             ]
@@ -90,7 +88,7 @@
                 "Added DVM operations to existing gem5 CHI protocol model",
                 "Simulated impact of DVM on many-core systems",
                 "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
-                "Changes have been upstreamed to public gem5 repo (https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+                "Changes upstreamed to public gem5 repo (https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
             ]
         },
         {
@@ -104,6 +102,21 @@
             "summary": "Simulated impact of using non-volatile memory for L3 cache in gem5 (C++)."
         },
         {
+            "id": "arminternships",
+            "name": "Arm Ltd",
+            "company": "Arm Ltd",
+            "position": "Architecture Research Intern",
+            "url": "https://arm.com",
+            "dateText": "Summers 2019, 2021",
+            "summary": "Simulated impact of DVM operations and non-volatile memory in gem5 (C++, 'Ruby' DSL).",
+            "highlights": [
+                "Added DVM operations to existing gem5 CHI protocol model",
+                "Simulated impact of DVM on many-core systems",
+                "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+                "Changes have been upstreamed to public gem5 repo (https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+            ]
+        },
+        {
             "id": "gapyear",
             "name": "Virtual Arts Ltd",
             "company": "Virtual Arts Ltd",
@@ -113,8 +126,8 @@
             "endDate": "2018-08",
             "summary": "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers",
             "highlights": [
-                "Implemented Physically Based Rendering system with Image Based Lightning",
-                "Ported Unity-based code/shaders to C++/GLSL and Metal",
+                "Implemented Physically Based Rendering with Image Based Lighting",
+                "Ported Unity-based code, shaders to C++, GLSL and Metal",
                 "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
             ]
         }
@@ -137,7 +150,7 @@
         },
         {
             "id": "warwick_typ",
-            "name": "BEng Third-Year Project",
+            "name": "GPU Fluid Simulation/Visualization",
             "description": "Created a real-time GPU fluid simulation (CUDA) and parallel visualization (C++/Vulkan).",
             "highlights": [
                 "Ported a fluid simulation from C to CUDA",
@@ -163,7 +176,7 @@
         },
         {
             "id": "warwick_hpes",
-            "name": "FPGA Rhythm Game",
+            "name": "FPGA Image Processing",
             "description": "Built high-performance image filter in SystemVerilog",
             "highlights": [
                 "Designed highly performant image filtering kernels (3x3 convolution, 1x1 brightness/contrast)",
@@ -175,7 +188,7 @@
         },
         {
             "id": "cambs_mphil",
-            "name": "MPhil - Research Project",
+            "name": "CHERI for RISC-V \"V\" - Masters Project",
             "description": "Applied CHERI-based memory protection to the RISC-V \"V\" vector extension.",
             "highlights": [
                 "Researched RISC-V \"V\" extension and other scalable vector models in depth",
