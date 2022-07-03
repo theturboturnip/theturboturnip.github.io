@@ -19,6 +19,14 @@
                 {{/each}}
             </ul>
             {{/if}}
+
+            {{#if highlights.length}}
+            <ul>
+                {{#each highlights}}
+                <li>{{.}}</li>
+                {{/each}}
+            </ul>
+            {{/if}}
         </section>
     {{/each}}
 </div>
