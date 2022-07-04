@@ -41,7 +41,7 @@
             "studyType": "M.Phil",
             "startDate": "2021-10-01",
             "endDate": "2022-06-06",
-            "score": "Distinction"
+            "score": "Distinction (83%)"
         },
         {
             "id": "allcambs",
@@ -49,7 +49,7 @@
             "url": "https://cam.ac.uk",
             "area": "Computer Architecture/Security",
             "startDate": "2021-10-01",
-            "score": "M.Phil, Distinction; PhD ongoing"
+            "score": "M.Phil, Distinction (83%); PhD ongoing"
         },
         {
             "id": "beng",
@@ -58,7 +58,7 @@
             "area": "Computer Systems Engineering",
             "startDate": "2018-10-01",
             "endDate": "2021-07-02",
-            "score": "B.Eng, First Class (85) - Best Overall Graduating Student"
+            "score": "B.Eng, First Class (85%) - Best Overall Graduating Student"
         },
         {
             "id": "alevels",
@@ -162,7 +162,7 @@
         {
             "id": "warwick_dsd",
             "name": "FPGA Rhythm Game",
-            "description": "Implemented a rhythm game with video/audio support in Verilog",
+            "description": "Implemented a rhythm game with video/audio support in Verilog.",
             "highlights": [
                 "Implemented PWM audio with 3 sine wave generators",
                 "Implemented VGA video with clock-domain-crossing between 25MHz VGA clock and 100MHz game clock",
@@ -174,7 +174,7 @@
         {
             "id": "warwick_hpes",
             "name": "FPGA Image Processing",
-            "description": "Built high-performance image filter in SystemVerilog",
+            "description": "Built high-performance image filter in SystemVerilog.",
             "highlights": [
                 "Designed highly performant image filtering kernels (3x3 convolution, 1x1 brightness/contrast)",
                 "Implemented CPU-based real-time brightness adjustment using APB to communicate with the FPGA",

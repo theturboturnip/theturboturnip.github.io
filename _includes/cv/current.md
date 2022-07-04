@@ -3,14 +3,14 @@
 
 2021-10-01 - Present
 
-Computer Architecture/Security - M.Phil, Distinction; PhD ongoing
+Computer Architecture/Security - M.Phil, Distinction (83%); PhD ongoing
 
 
 ### [University of Warwick](https://warwick.ac.uk)
 
 2018-10-01 - 2021-07-02
 
-Computer Systems Engineering - B.Eng, First Class (85) - Best Overall Graduating Student
+Computer Systems Engineering - B.Eng, First Class (85%) - Best Overall Graduating Student
 
 
 ## Work
@@ -62,7 +62,7 @@ Created a real-time GPU fluid simulation (CUDA) and parallel visualization (C++/
 
 2021 - 2021
 
-Built high-performance image filter in SystemVerilog
+Built high-performance image filter in SystemVerilog.
 * Designed highly performant image filtering kernels (3x3 convolution, 1x1 brightness/contrast)
 * Implemented CPU-based real-time brightness adjustment using APB to communicate with the FPGA
 * Developed a Python library for converting VGA signals to images for automatic testing
