@@ -11,7 +11,7 @@ redirect_from:
 
 [PDF version](/files/cv/current.pdf), [HTML version](/files/cv/current.html)
 
-<!-- {% include cv/current.md %} -->
-
-
- {% pdf "/files/cv/current.pdf" no_link %}
+<div style="display: flex;
+flex-direction: column;
+width: 100%;
+height: 650px;"> <div style="height: 100%;"> <iframe src="/files/cv/current.pdf" allowfullscreen="" frameborder="0" style="width:100%;height:100%;"></iframe> </div> </div>
