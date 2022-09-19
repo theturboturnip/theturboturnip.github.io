@@ -6,6 +6,7 @@ redirect_from:
     - /publication/2022-06-06-capability-protection-scalable-vectors
     - /publication/2022-06-06-capability-protection-scalable-vectors.html
     - /cheri-rvv
+    - /cheri-rvv/
 header:
     teaser: "2022-06-06-capability-protection-header-small.png"
 excerpt: "On applying CHERI-based memory protection to vector processors, particularly scalable vector models e.g. Arm SVE and RISC-V &quot;V&quot;."
