@@ -34,7 +34,10 @@ My master's project examines the impact of combining [CHERI](https://www.cl.cam.
 ### Presentations
 - End-of-year presentation [(pdf)](/files/2022-06-06-capability-protection-scalable-vectors-presentation.pdf)
   - [(source, LuaLaTeX)](https://github.com/theturboturnip/mphil-presentation)
-- RISE competition presentation [COMING SOON]
+- RISE competition presentation [(youtube, embedded below)](https://www.youtube.com/watch?v=J82OFvF3yGY)
+  - [(source, PowerPoint)](/files/2022-09-19-RISE_Presentation.pptx)
+  
+<iframe src="https://www.youtube-nocookie.com/embed/J82OFvF3yGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Recommended citation
 
