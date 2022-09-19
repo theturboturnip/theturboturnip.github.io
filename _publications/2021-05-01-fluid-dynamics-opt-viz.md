@@ -17,26 +17,27 @@ course: 'Computer Systems Engineering @ University of Warwick'
 
 <img src='/images/2021-05-fluid-dynamics-header.png'><br/>
 
-My third-year project at University of Warwick.
+For my third-year project at University of Warwick, I created a real-time GPU fluid simulation and visualization with CUDA and Vulkan.
 
-Describes how I created a real-time GPU fluid simulation and visualization with CUDA and Vulkan.
+## Artefacts
+- Dissertation [(pdf)](/files/2021-05-fluid-dynamics-opt-viz.pdf)
+  - [(source code, XeLaTeX)](https://github.com/theturboturnip/warwick-typ-finalreport)
+- Presentation [(pdf)](/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf)
+  - [(source code, XeLaTeX)](https://github.com/theturboturnip/warwick-typ-presentation)
+- Real-time fluid simulation program
+  - [(source code, C++ + CUDA + Vulkan)](https://github.com/theturboturnip/warwick-typ)
 
-[Download paper here](/files/2021-05-fluid-dynamics-opt-viz.pdf)
+## Recommended citation
 
-[Download presentation here](/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf)
+*Stark, S. (2021). Performance Optimization and Visualization for a Fluid Dynamics Simulation. [Third-year project]. University of Warwick. URL: <https://theturboturnip.github.io/files/2021-05-fluid-dynamics-opt-viz.pdf>*
 
-Recommended citation BibTeX:
 ```
-@mastersthesis{starkRealTimeFluidSim2021,
+@unpublished{starkRealTimeFluidSim2021,
     author = "Stark, Samuel",
     title = "Performance Optimization and Visualization for a Fluid Dynamics Simulation",
     school = "University of Warwick",
     year = "2021",
-    month = "May"
+    month = "May",
+    url = "https://theturboturnip.github.io/files/2021-05-fluid-dynamics-opt-viz.pdf"
 }
 ```
-
-## Source code
-- [Main project](https://github.com/theturboturnip/warwick-typ)
-- [Thesis](https://github.com/theturboturnip/warwick-typ-finalreport)
-- [Presentation](https://github.com/theturboturnip/warwick-typ-presentation)
