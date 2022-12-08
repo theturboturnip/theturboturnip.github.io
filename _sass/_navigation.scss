@@ -257,17 +257,18 @@
     padding: 5px;
     border: 1px solid $border-color;
     border-radius: $border-radius;
-    background: $masthead-link-color;
+    background: $masthead-hidden-links-bg-color;
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
       margin: 0;
       padding: 10px 20px;
       font-size: $type-size-5;
+      color: $masthead-hidden-link-color;
 
       &:hover {
-        color: $masthead-link-color-hover;
-        background: mix($masthead-link-color, $primary-color, 75%);
+        color: $masthead-hidden-link-color-hover;
+        background: mix($masthead-hidden-link-color, $primary-color, 10%);
       }
     }
 
