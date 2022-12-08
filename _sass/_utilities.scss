@@ -437,12 +437,12 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 .footnote {
-  color: mix(#fff, $gray, 25%);
+  color: mix(#000, $gray, 25%);
   text-decoration: none;
 }
 
 .footnotes {
-  color: mix(#fff, $gray, 25%);
+  color: mix(#000, $gray, 25%);
 
   ol, li, p {
     margin-bottom: 0;
