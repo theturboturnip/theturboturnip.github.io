@@ -18,7 +18,8 @@
 <p>Vector memory access performance is critical, because vectors aren’t just used for computation. For example,
     <code>glibc</code> uses vector memory accesses to implement <code>memcpy</code> where available. These
     implementations are written in assembly and heavily optimized. If they hit the cache, extra cycles of
-    bounds-checking for each access could make a difference.</p>
+    bounds-checking for each access could make a difference.
+</p>
 <p><code>memcpy</code> also raises the important question of how vectors interact with capabilities. In non-CHERI
     processors, <code>memcpy</code> will copy pointers around in memory. An equivalent CHERI-enabled vector memcpy would
     need to load/store capabilities from vectors without violating security guarantees.</p>
@@ -97,7 +98,8 @@
 <p>CHERI-RISC-V specifies two encoding modes, selected using a flag in the PCC <code>flags</code> field. <em>Capability
         mode</em> modifies the behaviour of pre-existing instructions (e.g. Load Byte) to use capability addressing, and
     <em>Integer mode</em> keeps those instructions using integer addresses but dereferences them relative to the DDC.
-    This allows legacy code to run in a sandbox defined by the DDC without recompiling.</p>
+    This allows legacy code to run in a sandbox defined by the DDC without recompiling.
+</p>
 <h3 data-number="2.1.3" id="cheri_purecap_hybrid"><span class="header-section-number">2.1.3</span> Pure-capability and
     Hybrid compilation modes</h3>
 <p>CHERI-Clang, the main CHERI-enabled compiler, supports two ways to compile CHERI-RISC-V which map to the different
@@ -190,12 +192,14 @@
     <code>SafeTaggedCap</code> type: a sum type which represents either a <code>CcxCap</code> with the tag bit set, or
     raw data with the tag bit unset. This adds type safety, as the Rust compiler forces every usage of
     <code>SafeTaggedCap</code> to consider both options, preventing raw data from being interpreted as a capability by
-    accident and enforcing Provenance.</p>
+    accident and enforcing Provenance.
+</p>
 <h2 data-number="3.2" id="emulating-vectors"><span class="header-section-number">3.2</span> Emulating vectors</h2>
 <p>Vector instructions are executed by a Vector ISA module, which stores all registers and other state.
     <code>VLEN</code> is hardcoded as 128-bits, chosen because it’s the largest integer primitive provided by Rust
     that’s large enough to hold a capability. <code>ELEN</code> is also 128-bits, which isn’t supported by the
-    specification, but is required for capabilities-in-vectors.</p>
+    specification, but is required for capabilities-in-vectors.
+</p>
 <p>To support both CHERI and non-CHERI execution pointers are separated into an address and a <em>provenance</em><a
         href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The vector unit retrieves an
     address + provenance pair from the base register, generates a stream of addresses to access, then rejoins each
@@ -229,7 +233,8 @@
     Because all archetypes may have Failure or Likely-Failure outcomes, and thus require a fallback slow-path which
     checks elements individually, computing the fast-path can only be worthwhile if Success is the common case.</p>
 <h3 data-number="3.3.2" id="m-element-known-range-fast-paths"><span class="header-section-number">3.3.2</span>
-    <em>m</em>-element known-range fast-paths</h3>
+    <em>m</em>-element known-range fast-paths
+</h3>
 <p>A hardware implementation of a vector unit may be able to issue <em>m</em> requests within a set range in parallel.
     For example, elements in the same cache line may be accessible all at once. In these cases, checking elements
     individually would either require <em>m</em> parallel bounds checks, <em>m</em> checks’ worth of latency, or
@@ -358,7 +363,8 @@ may be expected to use 128-bit offsets on 64-bit systems. --></p>
     capability and differentiate it from integer data. One could also hold multiple capabilities in a register if
     <code>VLEN</code> was an integer multiple of <code>CLEN</code>, but this was not tested. We decided that only
     <code>CLEN</code>-width operations could produce capabilities, thus we had to ensure <code>ELEN = CLEN</code>. Our
-    implementation sets <code>VLEN = ELEN = CLEN = 128bits</code>.</p>
+    implementation sets <code>VLEN = ELEN = CLEN = 128bits</code>.
+</p>
 <p>To ensure Provenance and Monotonicity were upheld, we decided that the tag bit for a register would only be set when
     loading a valid capability from memory, and cleared in all other circumstances. Integrity is not affected by how a
     capability is stored.</p>
@@ -390,7 +396,8 @@ may be expected to use 128-bit offsets on 64-bit systems. --></p>
     <code>cheri-compressed-cap</code> C library (900 lines of code), a RISC-V emulator supporting multiple architecture
     extensions (5,300 LoC), a fork of CHERI-Clang supporting CHERI-RVV (400 changed LoC), and test programs for the
     emulator (3,000 LoC). Developing these artifacts provided enough information to make conclusions for the initial
-    hypotheses.</p>
+    hypotheses.
+</p>
 <p>Based on the hypotheses examined in this summary and the original dissertation, scalable vector models can be adapted
     to CHERI without significant loss of functionality. Most of the hypotheses are general enough to cover other
     scalable models, e.g. Arm SVE, but any differences from RVV’s model will require careful examination. Given the
@@ -428,13 +435,16 @@ may be expected to use 128-bit offsets on 64-bit systems. --></p>
     <div id="ref-TR-941" class="csl-entry" role="doc-biblioentry">
         <div class="csl-left-margin">[1] </div>
         <div class="csl-right-inline">Watson R N M, Moore S W, et al; 2019; "<em>An <span>Introduction</span> to
-                <span>CHERI</span></em>"</div>
+                <span>CHERI</span></em>". <a
+                href="https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-941.pdf">https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-941.pdf</a>
+        </div>
     </div>
     <div id="ref-szekeresSoKEternalWar2013" class="csl-entry" role="doc-biblioentry">
         <div class="csl-left-margin">[2] </div>
         <div class="csl-right-inline">Szekeres L, Payer M, et al; 2013; "<span>SoK</span>: <span>Eternal War</span> in
             <span>Memory</span>". 2013 <span>IEEE Symposium</span> on <span>Security</span> and <span>Privacy</span> pp
-            48–62. <a href="https://doi.org/10.1109/SP.2013.13">https://doi.org/10.1109/SP.2013.13</a></div>
+            48–62. <a href="https://doi.org/10.1109/SP.2013.13">https://doi.org/10.1109/SP.2013.13</a>
+        </div>
     </div>
     <div id="ref-watsonCHERIHybridCapabilitySystem2015" class="csl-entry" role="doc-biblioentry">
         <div class="csl-left-margin">[3] </div>
@@ -463,7 +473,8 @@ may be expected to use 128-bit offsets on 64-bit systems. --></p>
         <div class="csl-left-margin">[6] </div>
         <div class="csl-right-inline">Woodruff J, Joannou A, et al; 2019; "<span>CHERI Concentrate</span>:
             <span>Practical Compressed Capabilities</span>". 15. <a
-                href="https://doi.org/gm9ngf">https://doi.org/gm9ngf</a></div>
+                href="https://doi.org/gm9ngf">https://doi.org/gm9ngf</a>
+        </div>
     </div>
     <div id="ref-TR-951" class="csl-entry" role="doc-biblioentry">
         <div class="csl-left-margin">[7] </div>
@@ -477,7 +488,8 @@ may be expected to use 128-bit offsets on 64-bit systems. --></p>
         <div class="csl-left-margin">[8] </div>
         <div class="csl-right-inline">Joannou A, Woodruff J, et al; 2017; "Efficient <span>Tagged Memory</span>". 2017
             <span>IEEE International Conference</span> on <span>Computer Design</span> (<span>ICCD</span>) pp 641–8. <a
-                href="https://doi.org/ghnj26">https://doi.org/ghnj26</a></div>
+                href="https://doi.org/ghnj26">https://doi.org/ghnj26</a>
+        </div>
     </div>
     <div id="ref-armltdArmCompilerScalable2019" class="csl-entry" role="doc-biblioentry">
         <div class="csl-left-margin">[9] </div>
