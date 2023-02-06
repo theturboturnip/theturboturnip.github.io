@@ -51,7 +51,7 @@ def main():
     if requested_config is None:
         configs_to_build = list(configs.keys())
     else:
-        configs_to_build = [requested_spec]
+        configs_to_build = [requested_config]
 
     for c_name in configs_to_build:
         c = configs[c_name]
