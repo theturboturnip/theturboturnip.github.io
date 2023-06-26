@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-GB"
-title                    : "Samuel Stark"
+title                    : "Samuel W. Stark"
 title_separator          : "-"
-name                     : &name "Samuel Stark"
+name                     : &name "Samuel W. Stark"
 description              : &description "PhD @ Cambridge. Computer architecture, graphics, and GPUs"
 url                      : https://theturboturnip.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -79,7 +79,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Samuel Stark"
+  name             : "Samuel W. Stark"
   avatar           : "profile.jpg"
   bio              : "PhD @ Cambridge Uni. I enjoy working with computer architecture, graphics, and GPUs."
   location         : "Cambridge"

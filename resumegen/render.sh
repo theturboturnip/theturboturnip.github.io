@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-python3.8 ./buildcv.py resume.json configs.json
+# should be min. 3.8
+PYTHON=python3
+
+mkdir -p ./output/
+
+$PYTHON ./buildcv.py resume.json configs.json
 npx resume-cli export ../files/cv/current.pdf -r ./output/resume.current.json -t ./jsonresume-theme-turnipcaffeine
 npx resume-cli export ../files/cv/current.html -r ./output/resume.current.json -t ./jsonresume-theme-turnipcaffeine
 
-python3.8 ./rendermarkdown.py ./output/resume.current.json ../_includes/cv/current.md
+$PYTHON ./rendermarkdown.py ./output/resume.current.json ../_includes/cv/current.md
