@@ -16,7 +16,7 @@ My inspiration was video games, and I've worked on a few, but now I'm leaning mo
 
 ## Recent Posts
 <div>
-{% for post in site.posts reversed limit:2 %}
+{% for post in site.posts limit:2 %}
 {% include archive-single.html %}
 {% endfor %}
 </div>
