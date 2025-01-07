@@ -4,7 +4,7 @@
         "label": "Programmer",
         "image": "",
         "email": "samuel.winslow.stark@gmail.com",
-        "url": "https://theturboturnip.github.io",
+        "url": "https://theturboturnip.com",
         "location": {
             "city": "Cambridge",
             "countryCode": "GB",
@@ -155,7 +155,7 @@
                 "Implemented various synchronization between CPUs and GPU",
                 "Used memory sharing between CUDA and Vulkan to reduce copying"
             ],
-            "url": "https://theturboturnip.github.io/academia/2021-05-01-fluid-dynamics-opt-viz",
+            "url": "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz",
             "startDate": "2020",
             "endDate": "2021"
         },
@@ -193,7 +193,7 @@
                 "Implemented CHERI-RVV support in Clang",
                 "Developed CHERI-RVV emulator in Rust"
             ],
-            "url": "https://theturboturnip.github.io/academia/2022-06-06-capability-protection-scalable-vectors",
+            "url": "https://theturboturnip.com/academia/2022-06-06-capability-protection-scalable-vectors",
             "startDate": "2021",
             "endDate": "2022"
         }

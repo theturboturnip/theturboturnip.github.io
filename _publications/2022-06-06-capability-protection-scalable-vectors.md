@@ -11,7 +11,7 @@ header:
     teaser: "2022-06-06-capability-protection-header-small.png"
 excerpt: "On applying CHERI-based memory protection to vector processors, particularly scalable vector models e.g. Arm SVE and RISC-V &quot;V&quot;."
 date: 2022-06-06
-paperurl: 'https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors.pdf'
+paperurl: 'https://theturboturnip.com/files/2022-06-06-capability-protection-scalable-vectors.pdf'
 citation: 'Stark, S. (2022). Capability-Based Memory Protection for Scalable Vector Processing. [MPhil thesis]. University of Cambridge.'
 course: 'Advanced Computer Science MPhil @ University of Cambridge'
 ---
@@ -45,7 +45,7 @@ My master's project examines the impact of combining [CHERI](https://www.cl.cam.
 
 ## Recommended citation
 
-*Stark, S. (2022). Capability-Based Memory Protection for Scalable Vector Processing. [MPhil thesis]. University of Cambridge. URL: <https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors.pdf>*
+*Stark, S. (2022). Capability-Based Memory Protection for Scalable Vector Processing. [MPhil thesis]. University of Cambridge. URL: <https://theturboturnip.com/files/2022-06-06-capability-protection-scalable-vectors.pdf>*
 
 ```
 @mastersthesis{starkCapabilityProtectionScalableVectors2022,
@@ -54,6 +54,6 @@ My master's project examines the impact of combining [CHERI](https://www.cl.cam.
     school = "University of Cambridge",
     year = "2022",
     month = "June",
-    url = "https://theturboturnip.github.io/files/2022-06-06-capability-protection-scalable-vectors.pdf"
+    url = "https://theturboturnip.com/files/2022-06-06-capability-protection-scalable-vectors.pdf"
 }
 ```

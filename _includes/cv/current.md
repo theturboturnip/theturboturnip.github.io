@@ -36,7 +36,7 @@ Developed 3D game engine in C++/Vulkan/Metal with two senior engineers
 
 
 ## Projects
-### [CHERI for RISC-V "V" - Masters Project](https://theturboturnip.github.io/academia/2022-06-06-capability-protection-scalable-vectors)
+### [CHERI for RISC-V "V" - Masters Project](https://theturboturnip.com/academia/2022-06-06-capability-protection-scalable-vectors)
 
 2021 - 2022
 
@@ -47,7 +47,7 @@ Applied CHERI-based memory protection to the RISC-V "V" vector extension.
 * Developed CHERI-RVV emulator in Rust
 
 
-### [GPU Fluid Simulation/Visualization](https://theturboturnip.github.io/academia/2021-05-01-fluid-dynamics-opt-viz)
+### [GPU Fluid Simulation/Visualization](https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz)
 
 2020 - 2021
 
