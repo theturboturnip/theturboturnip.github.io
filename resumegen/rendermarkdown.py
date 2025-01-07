@@ -1,4 +1,5 @@
-#!/usr/bin/env python3.8
+#!/usr/bin/env python
+# ^ requires python3.8+ for dataclasses
 
 import argparse
 import json

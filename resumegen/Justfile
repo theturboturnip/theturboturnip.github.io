@@ -1,0 +1,31 @@
+set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
+
+python := if os_family() == "windows" { "py" } else { "python3" }
+output_resume_json := "./output"
+
+cv_pdf := "../files/cv/current.pdf"
+cv_html := "../files/cv/current.html"
+cv_md := "../_includes/cv/current.md"
+
+default:
+    @just --list
+
+[windows]
+_setup:
+    nvm use 23.5.0
+    npm install
+    New-Item -Path .\TestFolder -ItemType Directory -Force
+
+[unix]
+_setup:
+    npm install
+    mkdir -p ./output/
+
+render: _setup
+    {{python}} ./buildcv.py -o {{output_resume_json}} resume.json configs.json
+
+    npx resume-cli export {{cv_pdf}} -r {{output_resume_json}}/resume.current.json -t ./jsonresume-theme-turnipcaffeine
+    npx resume-cli export {{cv_html}} -r {{output_resume_json}}/resume.current.json -t ./jsonresume-theme-turnipcaffeine
+
+    {{python}} ./rendermarkdown.py {{output_resume_json}}/resume.current.json {{cv_md}}
+
