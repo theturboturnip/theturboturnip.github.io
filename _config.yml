@@ -146,6 +146,7 @@ exclude:
   - tmp
   - vendor
   - Justfile
+  - resumegen
 keep_files:
   - .git
   - .svn
@@ -187,7 +188,8 @@ collections:
   # talks:
   #   output: true
   #   permalink: /:collection/:path/
-
+  apps:
+    output: true
 
 # Defaults
 defaults:
