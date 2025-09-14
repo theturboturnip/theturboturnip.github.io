@@ -1,0 +1,24 @@
+{
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 150,
+    "python.linting.mypyEnabled": true,
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "turnip_text",
+            "depth": 5,
+            "includeAllSymbols": false
+        }
+    ],
+    "[c]": {
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.formatOnSave": false,
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
+    "editor.unusualLineTerminators": "off"
+}
