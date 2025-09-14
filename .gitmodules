@@ -1,0 +1,3 @@
+[submodule "turnip_text"]
+	path = turnip_text
+	url = https://github.com/theturboturnip/turnip_text
