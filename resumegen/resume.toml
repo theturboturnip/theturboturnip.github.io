@@ -208,7 +208,7 @@ company = "Arm Ltd"
 position = "Memory & Systems Architecture Research Intern"
 url = "https://arm.com"
 dateText = "Summers of 2019 & 2021"
-summary = "Simulated impact of non-volatile memory and DVM operations in gem5 (C++, 'Ruby' DSL)."
+summary = "Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the 'Ruby' DSL."
 highlights = [
     "Added DVM operations to existing gem5 CHI protocol model",
     "Simulated impact of DVM on many-core systems",
@@ -223,7 +223,7 @@ position = "Junior Programmer"
 url = "https://virtualarts.co.uk"
 startDate = "2017-09"
 endDate = "2018-08"
-summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers"
+summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers."
 highlights = [
     "Implemented Physically Based Rendering with Image Based Lighting",
     "Ported Unity-based code and shaders to C++, GLSL and Metal",

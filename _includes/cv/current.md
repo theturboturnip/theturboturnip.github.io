@@ -86,7 +86,7 @@ First Class - Best overall graduating student in subject
 
 Summers of 2019 & 2021
 
-Simulated impact of non-volatile memory and DVM operations in gem5 (C++, 'Ruby' DSL).
+Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the 'Ruby' DSL.
 
 * Added DVM operations to existing gem5 CHI protocol model
 
@@ -101,7 +101,7 @@ Simulated impact of non-volatile memory and DVM operations in gem5 (C++, 'Ruby' 
 
 September 2017 - August 2018
 
-Developed 3D game engine in C++/Vulkan/Metal with two senior engineers
+Developed 3D game engine in C++/Vulkan/Metal with two senior engineers.
 
 * Implemented Physically Based Rendering with Image Based Lighting
 
