@@ -66,7 +66,12 @@ body {
   background: #f8f8f8;
   margin: 50px 0 100px;
   letter-spacing: .3px;
-  color: #39424B; }
+  color: #39424B;
+}
+
+html, body {
+  min-height: 100vh;
+}
 
 h1 {
   text-transform: uppercase;
@@ -79,34 +84,37 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 20px;
   letter-spacing: 1px; }
 
 h2 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: .5px; }
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .4px; }
+  h2.bold {
+    font-weight: 700; }
 
 h3 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 12px;
   letter-spacing: .4px; }
   h3.bold {
     font-weight: 700; }
 
 h4 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 12px; }
+  font-weight: 400;
+  font-size: 10px; }
   h4.bold {
     font-weight: 700; }
 
 h5 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 11px; }
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 2px; }
   h5.italic {
     font-style: italic; }
 
@@ -115,14 +123,37 @@ h6 {
   font-weight: 400;
   font-size: 10px; }
 
+:is(h1,h2,h3,h4,h5,h6) p {
+  margin: 0;
+  padding: 0;
+}
+
+p p {
+  margin: 0;
+  padding: 0;
+}
+
+li:not(.block) p {
+  margin: 0;
+  padding: 0;
+}
+
+li.block p {
+  margin: 5px 0;
+  padding: 0;
+  /* margin-bottom: 10px; */
+}
+
 a {
   color: inherit;
-  text-decoration: inherit; }
+  text-decoration: underline; }
   a:hover {
     color: #2895F1; }
   a .fa-external-link {
     font-size: 10px;
     vertical-align: text-top; }
+  .about-container a {
+    text-decoration: inherit; } 
 
 p,
 li {
@@ -164,11 +195,11 @@ ul {
   size: A4; }
 
 .container {
-  padding-top: 20px; }
+  padding-top: 10px; }
 
 .keyline {
   width: 45px;
-  margin: 8px 0 10px;
+  margin: 4px 0 4px;
   border-top: 1px solid #0f53d1; } /* 3b47b3 */
 
 .pull-left {
@@ -201,7 +232,6 @@ ul {
   min-height: 792px;
   display: block;
   margin: 0 auto;
-  border-top: 10px solid #0f53d1;
   padding: 36px 22px 30px 34px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
   .page:after {
@@ -210,14 +240,29 @@ ul {
     clear: both; }
 
 .left-column {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
+  /* float: left; */
+  /* width: 160px; */
+  /* margin-right: 20px; */
   word-wrap: break-word; }
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2.5px solid #0f53d1;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  padding-top: 5px;
+}
+
+.about-container > .info-tag-container {
+  display: inline-block;
+  width: auto;
+}
 
 .right-column {
   width: auto;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .item {
   margin-bottom: 15px; }
@@ -226,18 +271,19 @@ ul {
 
 @media print {
   body {
-    margin: 0; }
+    margin: 0; 
+    background: white; }
   .page {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 36px 0 30px;
     box-shadow: none; }
     .page .resume-header,
     .page .resume-content {
-      padding: 0 22px 0 34px; }
-  .container {
-    page-break-inside: avoid; }
+      padding: 0 22px 0 22px; }
+  /* .container {
+    page-break-inside: avoid; } */
   .work-container .item {
     page-break-inside: avoid; }
   .fa-external-link {
@@ -268,7 +314,14 @@ ul {
     font-size: 9px;
     display: inline-block;
     vertical-align: middle;
-    width: 139px; }
+    /* width: 139px; */
+    width: auto;
+    /* padding-right: 50px; */
+  }
+  .info-tag-container i {
+    position:relative;
+    top: calc(50% - 10px);
+  }
 
 .references-container .fa {
   font-size: 14px; }
@@ -280,21 +333,22 @@ ul {
 			<header class="resume-header clearfix">
 			    <div class="profile-header pull-left">
 			        <h1>Samuel W. Stark</h1>
-			        <h2>Programmer</h2>
 			    </div>
 			</header>
 			<div class="resume-content">
 				<aside class="left-column">
 					<div class="container about-container">
-					    <div class="title">
-					        <h3>About</h3>
-					        <div class="keyline"></div>
-					    </div>
+					
 					        <div class="info-tag-container">
-					            <i class="fa fa-map-marker"></i>
+					            <i class="fa fa-font-awesome"></i>
 					        
-					                <h6 class="info-text">Cambridge England</h6>
+					                <h6 class="info-text">UK/USA dual national</h6>
 					        </div>
+					            <div class="info-tag-container">
+					                <i class="fa fa-map-marker"></i>
+					            
+					                    <h6 class="info-text">Cambridge, England</h6>
+					            </div>
 					        <div class="info-tag-container">
 					            <i class="fa fa-envelope-o"></i>
 					        
@@ -325,165 +379,170 @@ ul {
 					                        </div></section>
 				</aside>
 				<div class="right-column">
-					<div class="container work-container">
-					    <div class="title">
-					        <h3>Experience</h3>
-					        <div class="keyline"></div>
-					    </div>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://arm.com" target="_blank">
-					                            Arm Ltd <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        Summers 2019, 2021
-					                        </h5>
-					            </div>
-					            <h4>Architecture Research Intern</h4>
-					
-					            <p class="summary">Simulated impact of DVM operations and non-volatile memory in gem5 (C++, &#x27;Ruby&#x27; DSL).</p>
-					
-					            <ul>
-					                <li>Added DVM operations to existing gem5 CHI protocol model</li>
-					                <li>Simulated impact of DVM on many-core systems</li>
-					                <li>Presented results to key stakeholders and senior design members, including a &#x27;CHI protocol crash course&#x27;</li>
-					                <li>Changes have been upstreamed to public gem5 repo (https://gem5-review.googlesource.com/c/public/gem5/+/57298)</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://virtualarts.co.uk" target="_blank">
-					                            Virtual Arts Ltd <i class="fa fa-external-link" aria-hidden="true"></i>
-					                        </a>
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">09/2017</span>
-					                            <span class="endDate"> - 08/2018</span>
-					                </h5>
-					            </div>
-					            <h4>Junior Programmer</h4>
-					
-					            <p class="summary">Developed 3D game engine in C++/Vulkan/Metal with two senior engineers</p>
-					
-					            <ul>
-					                <li>Implemented Physically Based Rendering with Image Based Lighting</li>
-					                <li>Ported Unity-based code, shaders to C++, GLSL and Metal</li>
-					                <li>Supported development of AR racing game (Lightstream Racer) in Unity/C#</li>
-					            </ul>
-					        </section>
-					</div>
 					<div class="container education-container">
 					    <div class="title">
-					        <h3>Education</h3>
+					        <h2>Education</h2>
 					        <div class="keyline"></div>
 					    </div>
 					        <section class="item">
 					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
+					                <h3 class="pull-left">
+					                        PhD in Computer Science —
 					                        <a href="https://cam.ac.uk" target="_blank">
 					                            University of Cambridge <i class="fa fa-external-link" aria-hidden="true"></i>
 					                        </a>
 					                </h3>
 					                <h5 class="italic pull-right">
-					                        <span class="startDate">10/2021</span>
+					                        <span class="startDate">October 2022</span>
 					                        <span class="endDate"> - Present</span>
 					                </h5>
 					            </div>
-					            <h4>Computer Architecture/Security</h4>
 					
-					            <h5>M.Phil, Distinction (83%); PhD ongoing</h5>
+					            <h5><p>Ongoing, planning to submit in March 2026</p></h5>
 					
 					
+					            <ul>
+					                <li class="block"><p><strong>Secure FPGA Design</strong></p>
+					
+					<p>Designed a high-throughput cryptography accelerator for checking memory accesses at the edges of the interconnect.
+					Verified the design using a custom C++ UVM testbench with Verilator.
+					Integrated with a pre-existing soft-CPU interconnect design on a Stratix-10 FPGA.
+					    </p></li>
+					                <li class="block"><p><strong>Low-Level Operating System Integration</strong></p>
+					
+					<p>Wrote drivers and other software for interacting with the cryptography accelerator in multiple operating systems, including FreeBSD, using C, C++, Rust, and Python.
+					    </p></li>
+					                <li class="block"><p><strong>Writing and Communication</strong></p>
+					
+					<p>Wrote an article for <a href="https://spawn-queue.acm.org/doi/abs/10.1145/3606014">ACM Queue</a> on high-performance memory safety in CXL, which was subsequently published in Communications of the ACM - the official magazine of the world&#39;s largest scientific computing society.
+					<a href="https://dl.acm.org/doi/10.1145/3617580">The article is available online.</a>
+					    </p></li>
+					            </ul>
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
+					                <h3 class="pull-left">
+					                        M.Phil in Advanced Computer Science —
+					                        <a href="https://cam.ac.uk" target="_blank">
+					                            University of Cambridge <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">October 2021</span>
+					                            <span class="endDate"> - June 2022</span>
+					                </h5>
+					            </div>
+					
+					            <h5><p>Distinction - <a href="https://x.com/UK_RISE/status/1598685532434964480">Thesis won 1st place in the RISE 2022 Student Competition</a></p></h5>
+					
+					
+					            <ul>
+					                <li class="block"><p><strong>Large-Scale Data Processing and Systems Research</strong></p>
+					
+					<p>Evaluated and presented research papers on many areas in large-scale data processing and cloud computing, focusing on GPU-based data processing.
+					Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+					    </p></li>
+					                <li class="block"><p><strong>RISC-V Vector Emulation &amp; Security</strong></p>
+					
+					<p>Built a RISC-V CPU emulator with support for the &quot;V&quot; vector extension, the CHERI memory safety extension, and a combination of the two.
+					Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
+					<a href="https://theturboturnip.com/cheri-rvv">The project is available online.</a>
+					    </p></li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        B.Eng in Computer Systems Engineering —
 					                        <a href="https://warwick.ac.uk" target="_blank">
 					                            University of Warwick <i class="fa fa-external-link" aria-hidden="true"></i>
 					                        </a>
 					                </h3>
 					                <h5 class="italic pull-right">
-					                        <span class="startDate">10/2018</span>
-					                            <span class="endDate"> - 07/2021</span>
+					                        <span class="startDate">October 2018</span>
+					                            <span class="endDate"> - July 2021</span>
 					                </h5>
 					            </div>
-					            <h4>Computer Systems Engineering</h4>
 					
-					            <h5>B.Eng, First Class (85%) - Best Overall Graduating Student</h5>
+					            <h5><p>First Class - Best overall graduating student in subject</p></h5>
 					
 					
+					            <ul>
+					                <li class="block"><p><strong>High Performance CPU and GPU Programming</strong></p>
+					
+					<p>Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+					Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
+					<a href="https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz">The project is available online.</a>
+					    </p></li>
+					                <li class="block"><p><strong>High Performance FPGA Design</strong></p>
+					
+					<p>Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+					    </p></li>
+					                <li class="block"><p><strong>Machine Learning</strong></p>
+					
+					<p>Learned basics of classic machine learning and neural networks/deep learning.
+					    </p></li>
+					            </ul>
 					        </section>
 					</div>
 					<div class="container work-container">
 					    <div class="title">
-					        <h3>Projects</h3>
+					        <h2>Experience</h2>
 					        <div class="keyline"></div>
 					    </div>
 					        <section class="item">
 					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://theturboturnip.com/academia/2022-06-06-capability-protection-scalable-vectors" target="_blank">
-					                            CHERI for RISC-V &quot;V&quot; - Masters Project <i class="fa fa-external-link" aria-hidden="true"></i>
+					                <h3 class="pull-left">
+					                        Memory &amp; Systems Architecture Research Intern —
+					                        <a href="https://arm.com" target="_blank">
+					                            Arm Ltd <i class="fa fa-external-link" aria-hidden="true"></i>
 					                        </a>
 					                </h3>
 					                <h5 class="italic pull-right">
-					                        <span class="startDate">2021</span>
-					                            <span class="endDate"> - 2022</span>
-					                </h5>
+					                        Summers of 2019 &amp; 2021
+					                        </h5>
 					            </div>
-					            <p class="summary">Applied CHERI-based memory protection to the RISC-V &quot;V&quot; vector extension.</p>
-					            
+					
+					            <p class="summary"><p>Simulated impact of non-volatile memory and DVM operations in gem5 (C++, &#39;Ruby&#39; DSL).</p></p>
+					
 					            <ul>
-					                <li>Researched RISC-V &quot;V&quot; extension and other scalable vector models in depth</li>
-					                <li>Designed combination CHERI and &quot;V&quot; specification, CHERI-RVV</li>
-					                <li>Implemented CHERI-RVV support in Clang</li>
-					                <li>Developed CHERI-RVV emulator in Rust</li>
+					                <li><p>Added DVM operations to existing gem5 CHI protocol model</p></li>
+					                <li><p>Simulated impact of DVM on many-core systems</p></li>
+					                <li><p>Presented results to key stakeholders and senior design members, including a &#39;CHI protocol crash course&#39;</p></li>
+					                <li><p>Changes upstreamed to public open source gem5 repository <a href="https://gem5-review.googlesource.com/c/public/gem5/+/57298">(available online)</a></p></li>
 					            </ul>
 					        </section>
 					        <section class="item">
 					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        <a href="https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz" target="_blank">
-					                            GPU Fluid Simulation/Visualization <i class="fa fa-external-link" aria-hidden="true"></i>
+					                <h3 class="pull-left">
+					                        Junior Programmer —
+					                        <a href="https://virtualarts.co.uk" target="_blank">
+					                            Virtual Arts Ltd <i class="fa fa-external-link" aria-hidden="true"></i>
 					                        </a>
 					                </h3>
 					                <h5 class="italic pull-right">
-					                        <span class="startDate">2020</span>
-					                            <span class="endDate"> - 2021</span>
+					                        <span class="startDate">September 2017</span>
+					                            <span class="endDate"> - August 2018</span>
 					                </h5>
 					            </div>
-					            <p class="summary">Created a real-time GPU fluid simulation (CUDA) and parallel visualization (C++/Vulkan).</p>
-					            
+					
+					            <p class="summary"><p>Developed 3D game engine in C++/Vulkan/Metal with two senior engineers</p></p>
+					
 					            <ul>
-					                <li>Ported a fluid simulation from C to CUDA</li>
-					                <li>Implemented a GPU visualization in Vulkan</li>
-					                <li>Implemented various synchronization between CPUs and GPU</li>
-					                <li>Used memory sharing between CUDA and Vulkan to reduce copying</li>
+					                <li><p>Implemented Physically Based Rendering with Image Based Lighting</p></li>
+					                <li><p>Ported Unity-based code and shaders to C++, GLSL and Metal</p></li>
+					                <li><p>Supported development of AR racing game (Lightstream Racer) in Unity/C#</p></li>
 					            </ul>
 					        </section>
+					</div>
+					<div class="container work-container">
+					    <div class="title">
+					        <h2>Projects</h2>
+					        <div class="keyline"></div>
+					    </div>
 					        <section class="item">
 					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
-					                        FPGA Image Processing
-					                </h3>
-					                <h5 class="italic pull-right">
-					                        <span class="startDate">2021</span>
-					                </h5>
-					            </div>
-					            <p class="summary">Built high-performance image filter in SystemVerilog.</p>
-					            
-					            <ul>
-					                <li>Designed highly performant image filtering kernels (3x3 convolution, 1x1 brightness/contrast)</li>
-					                <li>Implemented CPU-based real-time brightness adjustment using APB to communicate with the FPGA</li>
-					                <li>Developed a Python library for converting VGA signals to images for automatic testing</li>
-					            </ul>
-					        </section>
-					        <section class="item">
-					            <div class="section-header clearfix">
-					                <h3 class="bold pull-left">
+					                <h3 class="pull-left">
 					                        <a href="https://github.com/theturboturnip/yk_gmd_io" target="_blank">
 					                            yk_gmd_io <i class="fa fa-external-link" aria-hidden="true"></i>
 					                        </a>
@@ -493,12 +552,12 @@ ul {
 					                        <span class="endDate"> - Present</span>
 					                </h5>
 					            </div>
-					            <p class="summary">Import/export addon in Blender for the proprietary GMD file format from the Yakuza game series. (Python)</p>
+					            <p class="summary"><p>Python addon for importing and exporting the proprietary GMD file format, used by the &#39;Yakuza&#39; game series, into Blender.</p></p>
 					            
 					            <ul>
-					                <li>Reverse-engineered parts of the file format with the community</li>
-					                <li>Designed algorithms to convert computer-friendly meshes to artist-friendly meshes</li>
-					                <li>Developed beginner-friendly user experience for new modders</li>
+					                <li><p>Reverse-engineered parts of the file format with the community</p></li>
+					                <li><p>Designed algorithms to convert computer-friendly meshes to artist-friendly meshes</p></li>
+					                <li><p>Developed beginner-friendly user experience for new modders</p></li>
 					            </ul>
 					        </section>
 					</div>

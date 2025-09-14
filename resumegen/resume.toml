@@ -1,0 +1,310 @@
+[basics]
+name = "Samuel W. Stark"
+label = ""
+image = ""
+email = "samuel.winslow.stark@gmail.com"
+url = "https://theturboturnip.com"
+location = { city = "Cambridge", countryCode = "GB", region = "England", formatAddress = "Cambridge, England" }
+profiles = [
+    { network = "GitHub", username = "theturboturnip", url = "https://github.com/theturboturnip" },
+    { network = "LinkedIn", url = "https://linkedin.com/in/samuel-stark", username = "Samuel Stark" },
+]
+nationality = "UK/USA dual national"
+
+[education.phd]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+# area = "Computer Architecture, Security, GPUs"
+area = "Computer Science"
+studyType = "PhD"
+startDate = "2022-10-01"
+score = "Ongoing, planning to submit in March 2026"
+# summary = "My PhD focuses on memory security on the interconnect, "
+highlights = [
+    """
+**Secure FPGA Design**
+
+Designed a high-throughput cryptography accelerator for checking memory accesses at the edges of the interconnect.
+Verified the design using a custom C++ UVM testbench with Verilator.
+Integrated with a pre-existing soft-CPU interconnect design on a Stratix-10 FPGA.
+    """,
+    """
+**Low-Level Operating System Integration**
+
+Wrote drivers and other software for interacting with the cryptography accelerator in multiple operating systems, including FreeBSD, using C, C++, Rust, and Python.
+    """,
+    """
+**Writing and Communication**
+
+Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/3606014) on high-performance memory safety in CXL, which was subsequently published in Communications of the ACM - the official magazine of the world's largest scientific computing society.
+[The article is available online.](https://dl.acm.org/doi/10.1145/3617580)
+    """,
+]
+#Received internship offer from the CEO of a CXL-based startup after the article was published, which fell through due to pay concerns.
+
+
+[education.mphil]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+area = "Computer Architecture, Security"
+studyType = "M.Phil"
+startDate = "2021-10-01"
+endDate = "2022-06-06"
+score = "Distinction (83%)"
+
+[education.mphil_mlfocus]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+area = "Advanced Computer Science"
+studyType = "M.Phil"
+startDate = "2021-10-01"
+endDate = "2022-06-06"
+# score = "Distinction (83%) - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
+score = "Distinction - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
+# courses = [
+#     """
+# #### Large-Scale Data Processing
+#
+#     """,
+#     """
+# #### [RISC-V Vector Security](theturboturnip.com/cheri-rvv)
+#
+#     """,
+#     """
+# #### Advanced Computer Architecture/Systems Research
+#
+#     """,
+#     """
+# #### High-speed Lock Free Programming
+#
+#     """,
+# ]
+highlights = [
+    """
+**Large-Scale Data Processing and Systems Research**
+
+Evaluated and presented research papers on many areas in large-scale data processing and cloud computing, focusing on GPU-based data processing.
+Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+    """,
+    """
+**RISC-V Vector Emulation & Security**
+
+Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two.
+Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
+[The project is available online.](https://theturboturnip.com/cheri-rvv)
+    """,
+]
+# description = "Applied CHERI-based memory protection to the RISC-V \"V\" vector extension."
+# highlights = [
+#     "Researched RISC-V \"V\" extension and other scalable vector models in depth",
+#     "Designed combination CHERI and \"V\" specification, CHERI-RVV",
+#     "Implemented CHERI-RVV support in Clang",
+#     "Developed CHERI-RVV emulator in Rust"
+# ]
+
+[education.allcambs]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+area = "Computer Architecture/Security"
+startDate = "2021-10-01"
+score = "M.Phil, Distinction (83%); PhD ongoing"
+
+[education.beng_mlfocus]
+institution = "University of Warwick"
+url = "https://warwick.ac.uk"
+studyType = "B.Eng"
+area = "Computer Systems Engineering"
+startDate = "2018-10-01"
+endDate = "2021-07-02"
+# score = "First Class (85%) - Best overall graduating student in subject"
+score = "First Class - Best overall graduating student in subject"
+# courses = [
+#     """
+# #### High-speed CPU Programming in C
+#
+# Achieved best-in-class (64x) speedup on a fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+#     """,
+#     """
+# #### High-speed GPU Programming in CUDA
+#
+# Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
+#     """,
+#     """
+# #### High Performance Embedded Systems Design
+#
+# Built a high-speed video processing filter on an FPGA with various parameters controlled in real-time from the onboard hard Arm CPU.
+#     """,
+#     """
+# #### Machine Learning
+#
+# Learned basics of classic machine learning and neural networks/deep learning.
+#     """
+# ]
+highlights = [
+    """
+**High Performance CPU and GPU Programming**
+
+Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
+[The project is available online.](https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz)
+    """,
+    """
+**High Performance FPGA Design**
+
+Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+    """,
+    """
+**Machine Learning**
+
+Learned basics of classic machine learning and neural networks/deep learning.
+    """
+]
+
+[education.beng_minimal]
+institution = "University of Warwick"
+url = "https://warwick.ac.uk"
+area = "Computer Systems Engineering"
+startDate = "2018-10-01"
+endDate = "2021-07-02"
+score = "B.Eng, First Class (85%) - Best Overall Graduating Student"
+
+[education.alevels]
+institution = "Cambridge Center for Sixth-Form Studies"
+studyType = "A-Levels"
+score = "Further Maths A*, Maths A*, Physics A*, AS Chemistry A"
+highlights = [
+    "Baroness Perry Award for outstanding achievement in year 13",
+    "Paul Redhead Prize for outstanding achievement in year 12"
+]
+
+
+[work.arm2021]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Systems Architecture Research Intern"
+url = "https://arm.com"
+startDate = "2021-07"
+endDate = "2021-09"
+summary = "Simulated new class of cache coherence operations in gem5 (C++, 'Ruby' DSL)."
+highlights = [
+    "Added DVM operations to existing gem5 CHI protocol model",
+    "Simulated impact of DVM on many-core systems",
+    "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+    "Changes upstreamed to public open source gem5 repository [(see changes online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+]
+
+[work.arm2019]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Memory Architecture Research Intern"
+url = "https://arm.com"
+startDate = "2019-07"
+endDate = "2019-09"
+summary = "Simulated impact of using non-volatile memory for L3 cache in gem5 (C++)."
+
+[work.arminternships]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Memory & Systems Architecture Research Intern"
+url = "https://arm.com"
+dateText = "Summers of 2019 & 2021"
+summary = "Simulated impact of non-volatile memory and DVM operations in gem5 (C++, 'Ruby' DSL)."
+highlights = [
+    "Added DVM operations to existing gem5 CHI protocol model",
+    "Simulated impact of DVM on many-core systems",
+    "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+    "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+]
+
+[work.gapyear]
+name = "Virtual Arts Ltd"
+company = "Virtual Arts Ltd"
+position = "Junior Programmer"
+url = "https://virtualarts.co.uk"
+startDate = "2017-09"
+endDate = "2018-08"
+summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers"
+highlights = [
+    "Implemented Physically Based Rendering with Image Based Lighting",
+    "Ported Unity-based code and shaders to C++, GLSL and Metal",
+    "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
+]
+
+[projects.yk_gmd_io]
+name = "yk_gmd_io"
+description = "Python addon for importing and exporting the proprietary GMD file format, used by the 'Yakuza' game series, into Blender."
+highlights = [
+    "Reverse-engineered parts of the file format with the community",
+    "Designed algorithms to convert computer-friendly meshes to artist-friendly meshes",
+    "Developed beginner-friendly user experience for new modders"
+]
+url = "https://github.com/theturboturnip/yk_gmd_io"
+startDate = "2020"
+roles = [
+    "developer", "maintainer"
+]
+
+[projects.warwick_typ]
+name = "GPU Fluid Simulation/Visualization"
+description = "Created a real-time GPU fluid simulation (CUDA) and parallel visualization (C++/Vulkan)."
+highlights = [
+    "Ported a fluid simulation from C to CUDA",
+    "Implemented a GPU visualization in Vulkan",
+    "Implemented various synchronization between CPUs and GPU",
+    "Used memory sharing between CUDA and Vulkan to reduce copying"
+]
+url = "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz"
+startDate = "2020"
+endDate = "2021"
+
+[projects.warwick_dsd]
+name = "FPGA Rhythm Game"
+description = "Implemented a rhythm game with video/audio support in Verilog."
+highlights = [
+    "Implemented PWM audio with 3 sine wave generators",
+    "Implemented VGA video with clock-domain-crossing between 25MHz VGA clock and 100MHz game clock",
+    "Used asynchronous memories with pipelines for efficient data processing"
+]
+startDate = "2020"
+endDate = "2020"
+
+[projects.warwick_hpes]
+name = "FPGA Image Processing"
+description = "Built high-performance image filter in SystemVerilog."
+highlights = [
+    "Designed highly performant image filtering kernels (3x3 convolution, 1x1 brightness/contrast)",
+    "Implemented CPU-based real-time brightness adjustment using APB to communicate with the FPGA",
+    "Developed a Python library for converting VGA signals to images for automatic testing"
+]
+startDate = "2021"
+endDate = "2021"
+
+[projects.warwick_aca]
+name = "Optimized Vectorized Fluid Simulation"
+description = "Optimized a provided fluid simulation in C using AVX and SSE vectorized x86 instructions."
+highlights = [
+    "Implemented profiling to determine functions most in need of optimization",
+    "Parallelized viable loops with OpenMP",
+    "Vectorized the most expensive code with SSE/AVX intrinsics",
+    "Achieved greatest speedup in year group (64x) while keeping bit-for-bit accurate output"
+]
+startDate = "2020"
+endDate = "2020"
+
+[projects.cambs_mphil]
+name = "CHERI for RISC-V \"V\" - Masters Project"
+description = "Applied CHERI-based memory protection to the RISC-V \"V\" vector extension."
+highlights = [
+    "Researched RISC-V \"V\" extension and other scalable vector models in depth",
+    "Designed combination CHERI and \"V\" specification, CHERI-RVV",
+    "Implemented CHERI-RVV support in Clang",
+    "Developed CHERI-RVV emulator in Rust"
+]
+url = "https://theturboturnip.com/academia/2022-06-06-capability-protection-scalable-vectors"
+startDate = "2021"
+endDate = "2022"
+
+# TODO DXD and https://github.com/theturboturnip/turnip_gfx_disasm once it sucks less
+[projects.turnip_dxd]
+name = "DirectX Disassembler"
+url = "https://github.com/theturboturnip/dx-disassembler"

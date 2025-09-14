@@ -58,7 +58,12 @@ body {
   background: #f8f8f8;
   margin: 50px 0 100px;
   letter-spacing: .3px;
-  color: #39424B; }
+  color: #39424B;
+}
+
+html, body {
+  min-height: 100vh;
+}
 
 h1 {
   text-transform: uppercase;
@@ -71,34 +76,37 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 20px;
   letter-spacing: 1px; }
 
 h2 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: .5px; }
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .4px; }
+  h2.bold {
+    font-weight: 700; }
 
 h3 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 12px;
   letter-spacing: .4px; }
   h3.bold {
     font-weight: 700; }
 
 h4 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 12px; }
+  font-weight: 400;
+  font-size: 10px; }
   h4.bold {
     font-weight: 700; }
 
 h5 {
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 11px; }
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 2px; }
   h5.italic {
     font-style: italic; }
 
@@ -107,14 +115,37 @@ h6 {
   font-weight: 400;
   font-size: 10px; }
 
+:is(h1,h2,h3,h4,h5,h6) p {
+  margin: 0;
+  padding: 0;
+}
+
+p p {
+  margin: 0;
+  padding: 0;
+}
+
+li:not(.block) p {
+  margin: 0;
+  padding: 0;
+}
+
+li.block p {
+  margin: 5px 0;
+  padding: 0;
+  /* margin-bottom: 10px; */
+}
+
 a {
   color: inherit;
-  text-decoration: inherit; }
+  text-decoration: underline; }
   a:hover {
     color: #2895F1; }
   a .fa-external-link {
     font-size: 10px;
     vertical-align: text-top; }
+  .about-container a {
+    text-decoration: inherit; } 
 
 p,
 li {
@@ -156,11 +187,11 @@ ul {
   size: A4; }
 
 .container {
-  padding-top: 20px; }
+  padding-top: 10px; }
 
 .keyline {
   width: 45px;
-  margin: 8px 0 10px;
+  margin: 4px 0 4px;
   border-top: 1px solid #0f53d1; } /* 3b47b3 */
 
 .pull-left {
@@ -193,7 +224,6 @@ ul {
   min-height: 792px;
   display: block;
   margin: 0 auto;
-  border-top: 10px solid #0f53d1;
   padding: 36px 22px 30px 34px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
   .page:after {
@@ -202,14 +232,29 @@ ul {
     clear: both; }
 
 .left-column {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
+  /* float: left; */
+  /* width: 160px; */
+  /* margin-right: 20px; */
   word-wrap: break-word; }
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2.5px solid #0f53d1;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  padding-top: 5px;
+}
+
+.about-container > .info-tag-container {
+  display: inline-block;
+  width: auto;
+}
 
 .right-column {
   width: auto;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .item {
   margin-bottom: 15px; }
@@ -218,18 +263,19 @@ ul {
 
 @media print {
   body {
-    margin: 0; }
+    margin: 0; 
+    background: white; }
   .page {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 36px 0 30px;
     box-shadow: none; }
     .page .resume-header,
     .page .resume-content {
-      padding: 0 22px 0 34px; }
-  .container {
-    page-break-inside: avoid; }
+      padding: 0 22px 0 22px; }
+  /* .container {
+    page-break-inside: avoid; } */
   .work-container .item {
     page-break-inside: avoid; }
   .fa-external-link {
@@ -260,7 +306,14 @@ ul {
     font-size: 9px;
     display: inline-block;
     vertical-align: middle;
-    width: 139px; }
+    /* width: 139px; */
+    width: auto;
+    /* padding-right: 50px; */
+  }
+  .info-tag-container i {
+    position:relative;
+    top: calc(50% - 10px);
+  }
 
 .references-container .fa {
   font-size: 14px; }

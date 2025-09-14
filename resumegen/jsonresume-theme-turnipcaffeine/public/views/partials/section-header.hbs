@@ -1,12 +1,18 @@
 <div class="section-header clearfix">
     {{#if name}}
-    <h3 class="bold pull-left">
+    <h3 class="pull-left">
+        {{#if prefix}}
+            {{prefix}} —
+        {{/if}}
         {{#if url}}
             <a href="{{url}}" target="_blank">
                 {{name}} <i class="fa fa-external-link" aria-hidden="true"></i>
             </a>
         {{else}}
             {{name}}
+        {{/if}}
+        {{#if postfix}}
+            — {{postfix}}
         {{/if}}
     </h3>
     {{/if}}

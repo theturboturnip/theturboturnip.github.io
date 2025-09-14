@@ -1,0 +1,26 @@
+[current]
+"education" = ["phd", "mphil_mlfocus", "beng_mlfocus"]
+"work" = ["arminternships", "gapyear"]
+# "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
+"projects" = ["yk_gmd_io"]
+
+[current_projectheavy]
+"education" = ["allcambs", "beng_minimal"]
+"work" = ["arminternships", "gapyear"]
+"projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
+
+[arm2021]
+"education" = ["mphil", "beng_minimal", "alevels"]
+"work" = ["arm2019", "gapyear"]
+"projects" = [
+    "warwick_typ",
+    "warwick_aca",
+    "warwick_dsd",
+    # "turnip_gba",
+    "turnip_dxd",
+    "yk_gmd_io",
+    # "toothwatch",
+    # "warwick_browser",
+    # "get_to_the_top",
+    # "overgrowth"
+]

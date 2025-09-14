@@ -4,20 +4,20 @@
 
     {{#each resume.work}}
         <section class="item">
-            {{> section-header name=this.company }}
+            {{> section-header name=this.company prefix=this.position }}
 
-            {{#if position}}
+            {{!-- {{#if position}}
             <h4>{{position}}</h4>
-            {{/if}}
+            {{/if}} --}}
 
             {{#if summary}}
-            <p class="summary">{{summary}}</p>
+            <p class="summary">{{{filter summary "markdown"}}}</p>
             {{/if}}
 
             {{#if highlights.length}}
             <ul>
                 {{#each highlights}}
-                <li>{{.}}</li>
+                <li>{{{filter . "markdown"}}}</li>
                 {{/each}}
             </ul>
             {{/if}}

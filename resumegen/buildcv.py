@@ -7,10 +7,11 @@ from dataclasses import dataclass
 from typing import Dict, Any, List, Optional
 import copy
 import os
+import tomllib
 
-def read_json(path: str) -> Dict[str, Any]:
-    with open(path, "r") as f:
-        return json.loads(f.read())
+def read_toml(path: str) -> Dict[str, Any]:
+    with open(path, "rb") as f:
+        return tomllib.load(f)
 
 def apply_config(src: Dict[str, Any], config: Dict[str, List[str]]):
     # Config = dict of key -> list of IDs
@@ -23,30 +24,29 @@ def apply_config(src: Dict[str, Any], config: Dict[str, List[str]]):
     # For each thing the config changes
     # Create a new list for it in the dst, which holds references to objects in the src
     for k, vs in config.items():
-        src_id_dict = {
-            x["id"]:x
-            for x in src[k]
-        }
+        src_id_dict = dict(src[k])
 
-        dst[k] = [
-            src_id_dict[i]
-            for i in vs
-            if i in src_id_dict
-        ]
-
+        try:
+            dst[k] = [
+                src_id_dict[i]
+                for i in vs
+            ]
+        except KeyError as ex:
+            ex.args = (f"no '{ex.args[0]}' in '{k}'",) + ex.args[1:]
+            raise
     return dst
 
 def main():
     parser = argparse.ArgumentParser("buildcv")
-    parser.add_argument("source_data", type=str, help="JSON file describing core resume content")
+    parser.add_argument("source_data", type=str, help="TOML file describing core resume content")
     parser.add_argument("configs", type=str, help="JSON file describing all resume configurations")
     parser.add_argument("--config", type=str, help="The single config to generate. Otherwise, all configs are generated")
     parser.add_argument("-o", type=str, default="./output/")
 
     args = parser.parse_args()
 
-    source_data = read_json(args.source_data)
-    configs = read_json(args.configs)
+    source_data = read_toml(args.source_data)
+    configs = read_toml(args.configs)
     requested_config: Optional[str] = args.config
 
     if requested_config is None:

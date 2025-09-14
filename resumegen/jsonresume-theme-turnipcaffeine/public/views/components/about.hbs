@@ -1,10 +1,18 @@
 {{#resume.basics}}
 <div class="container about-container">
-    {{> title value="About"}}
+    {{!-- {{> title value="About"}} --}}
+
+    {{#if nationality}}
+        {{> info-tag text=this.nationality icon="fa-font-awesome" url=null }}
+    {{/if}}
 
     {{#if location}}
         {{#location}}
-        {{> info-tag text=(formatAddress address city region postalCode countryCode) icon="fa-map-marker"}}
+        {{#if formatAddress}}
+            {{> info-tag text=this.formatAddress icon="fa-map-marker"}}
+        {{else}}
+            {{> info-tag text=(address city region postalCode countryCode) icon="fa-map-marker"}}
+        {{/if}}
         {{/location}}
     {{/if}}
 

@@ -7,15 +7,15 @@
             {{> section-header name=this.name }}
 
             {{#if summary}}
-            <p class="summary">{{summary}}</p>
+            <p class="summary">{{{filter summary "markdown"}}}</p>
             {{else if description}}
-            <p class="summary">{{description}}</p>
+            <p class="summary">{{{filter description "markdown"}}}</p>
             {{/if}}
 
             {{#if highlights.length}}
             <ul>
                 {{#each highlights}}
-                <li>{{.}}</li>
+                <li>{{{filter . "markdown"}}}</li>
                 {{/each}}
             </ul>
             {{/if}}

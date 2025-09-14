@@ -1,14 +1,15 @@
 {
     "basics": {
         "name": "Samuel W. Stark",
-        "label": "Programmer",
+        "label": "",
         "image": "",
         "email": "samuel.winslow.stark@gmail.com",
         "url": "https://theturboturnip.com",
         "location": {
             "city": "Cambridge",
             "countryCode": "GB",
-            "region": "England"
+            "region": "England",
+            "formatAddress": "Cambridge, England"
         },
         "profiles": [
             {
@@ -22,7 +23,7 @@
                 "username": "Samuel Stark"
             }
         ],
-        "summary": ""
+        "nationality": "UK/USA dual national"
     },
     "education": [
         {
@@ -44,6 +45,16 @@
             "score": "Distinction (83%)"
         },
         {
+            "id": "mphil_mlfocus",
+            "institution": "University of Cambridge",
+            "url": "https://cam.ac.uk",
+            "area": "Computer Architecture, Security",
+            "studyType": "M.Phil",
+            "startDate": "2021-10-01",
+            "endDate": "2022-06-06",
+            "score": "Distinction (83%)"
+        },
+        {
             "id": "allcambs",
             "institution": "University of Cambridge",
             "url": "https://cam.ac.uk",
@@ -52,7 +63,18 @@
             "score": "M.Phil, Distinction (83%); PhD ongoing"
         },
         {
-            "id": "beng",
+            "id": "beng_mlfocus",
+            "institution": "University of Warwick",
+            "url": "https://warwick.ac.uk",
+            "area": "Computer Systems Engineering",
+            "startDate": "2018-10-01",
+            "endDate": "2021-07-02",
+            "score": "B.Eng, First Class (85%) - Best Overall Graduating Student",
+            "highlights": ["SOMETHING"],
+            "courses": ["SOMETHING"]
+        },
+        {
+            "id": "beng_minimal",
             "institution": "University of Warwick",
             "url": "https://warwick.ac.uk",
             "area": "Computer Systems Engineering",
@@ -104,7 +126,7 @@
             "company": "Arm Ltd",
             "position": "Architecture Research Intern",
             "url": "https://arm.com",
-            "dateText": "Summers 2019, 2021",
+            "dateText": "Summers of 2019 & 2021",
             "summary": "Simulated impact of DVM operations and non-volatile memory in gem5 (C++, 'Ruby' DSL).",
             "highlights": [
                 "Added DVM operations to existing gem5 CHI protocol model",
@@ -182,6 +204,19 @@
             ],
             "startDate": "2021",
             "endDate": "2021"
+        },
+        {
+            "id": "warwick_aca",
+            "name": "Optimized Vectorized Fluid Simulation",
+            "description": "Optimized a provided fluid simulation in C using AVX and SSE vectorized x86 instructions.",
+            "highlights": [
+                "Implemented profiling to determine functions most in need of optimization",
+                "Parallelized viable loops with OpenMP",
+                "Vectorized the most expensive code with SSE/AVX intrinsics",
+                "Achieved greatest speedup in year group (64x) while keeping bit-for-bit accurate output"
+            ],
+            "startDate": "2020",
+            "endDate": "2020"
         },
         {
             "id": "cambs_mphil",

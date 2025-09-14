@@ -1,31 +1,47 @@
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
-python := if os_family() == "windows" { "py" } else { "python3" }
 output_resume_json := "./output"
 
-cv_pdf := "../files/cv/current.pdf"
-cv_html := "../files/cv/current.html"
-cv_md := "../_includes/cv/current.md"
+cv_pdf  := "../files/cv/CV_SamuelWinslowStark.pdf"
+cv_docx := "../files/cv/CV_SamuelWinslowStark.docx"
+cv_md   := "../_includes/cv/current.md"
+cv_html := "../files/cv/CV_SamuelWinslowStark.html"
 
 default:
     @just --list
 
 [windows]
-_setup:
+setup-js:
     nvm use 23.5.0
     npm install
-    New-Item -Path .\TestFolder -ItemType Directory -Force
+    New-Item -Path .\output -ItemType Directory -Force
 
 [unix]
-_setup:
+setup-js:
     npm install
     mkdir -p ./output/
 
-render: _setup
-    {{python}} ./buildcv.py -o {{output_resume_json}} resume.json configs.json
+render-js:
+    uv run python ./buildcv.py -o {{output_resume_json}} resume.toml configs.toml
 
     npx resume-cli export {{cv_pdf}} -r {{output_resume_json}}/resume.current.json -t ./jsonresume-theme-turnipcaffeine
     npx resume-cli export {{cv_html}} -r {{output_resume_json}}/resume.current.json -t ./jsonresume-theme-turnipcaffeine
 
-    {{python}} ./rendermarkdown.py {{output_resume_json}}/resume.current.json {{cv_md}}
+    uv run python ./rendermarkdown.py --include_basics {{output_resume_json}}/resume.current.json {{cv_md}} 
+
+# Render the main CV with turnip_text
+render-main:
+    uv run python ./buildcv.py -o {{output_resume_json}} resume.toml configs.toml
+
+    # Render the main CV into the static files
+    uv run -- python -m turnip_text.cli render --setup CvSetup cv.ttext -o {{output_resume_json}} --formats markdown latex docx --setup-args resumejson:{{output_resume_json}}/resume.current.json
+    uv run -- latexmk -cd -lualatex -cd ./{{output_resume_json}}/cv.tex -auxdir=build
+    cp {{output_resume_json}}/cv.md {{cv_md}}
+    cp {{output_resume_json}}/cv.pdf {{cv_pdf}}
+    cp {{output_resume_json}}/cv.docx {{cv_pdf}}
+
+render-other name:
+    uv run python ./buildcv.py -o {{output_resume_json}} resume.toml configs.toml --config {{name}}
+    uv run -- python -m turnip_text.cli render --setup CvSetup cv.ttext -o {{output_resume_json}}/{{name}} --formats latex docx --setup-args resumejson:{{output_resume_json}}/resume.{{name}}.json
+    uv run -- latexmk -cd -lualatex -cd ./{{output_resume_json}}/{{name}}/cv.tex -auxdir=build
 

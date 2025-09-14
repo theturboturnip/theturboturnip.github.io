@@ -6,9 +6,11 @@ const
     handlebarsWax = require('handlebars-wax'),
     addressFormat = require('address-format'),
     moment = require('moment'),
-    Swag = require('swag');
+    Swag = require('swag'),
+    Filter = require("handlebars.filter");
 
 Swag.registerHelpers(handlebars);
+Filter.registerHelper(handlebars);
 
 handlebars.registerHelper({
     removeProtocol: function (url) {
@@ -45,7 +47,7 @@ handlebars.registerHelper({
         if (date.match(/^[0-9]+$/)) {
             return moment(date).format('YYYY');
         } else {
-            return moment(date).format('MM/YYYY');
+            return moment(date).format('MMMM YYYY');
         }
     },
 
