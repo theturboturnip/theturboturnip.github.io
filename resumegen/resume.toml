@@ -20,6 +20,7 @@ studyType = "PhD"
 startDate = "2022-10-01"
 score = "Ongoing, planning to submit in March 2026"
 # summary = "My PhD focuses on memory security on the interconnect, "
+# TODO don't forget QEMU work!
 highlights = [
     """
 **Secure FPGA Design**
