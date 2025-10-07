@@ -1,22 +1,15 @@
-<table style="margin-bottom: 0;">
+<table>
   <tbody>
     <tr style="text-align: center;">
-      <td>
-        <a href="/cv_archive/{{page.cv_archive_code}}">Web version</a>
-      </td>
-      <td>
+      <td colspan="1">
         <a href="/files/cv/{{page.cv_archive_code}}/CV_SamuelWinslowStark.pdf">PDF version</a>
       </td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="js-only" style="margin-top: 0; border-top: none;">
-  <tbody>
-    <tr style="text-align: center;">
-      <td colspan="2" style="padding: 0;">
+      <td colspan="1">
+        <a href="/files/cv/{{page.cv_archive_code}}/CV_SamuelWinslowStark.html">HTML version</a>
+      </td>
+      <td colspan="1" style="padding: 0;">
         <!-- https://stackoverflow.com/a/12287729 -->
-        <select class="cv_archive_select" onChange="window.location.href=this.children[this.selectedIndex].attributes.href.value">
+        <select class="cv_archive_select js-only" onChange="window.location.href=this.children[this.selectedIndex].attributes.href.value">
           <option value="current" href="/cv/">Current</option>
           {% for archive_page in site.cv_archive %}
             {% if archive_page.cv_archive_code == page.cv_archive_code %}
@@ -26,20 +19,10 @@
             {% endif %}
           {% endfor %}
         </select>
+        <noscript>
+          <a href="/cv/archive/">Other archived CVs</a>
+        </noscript>
       </td>
     </tr>
   </tbody>
 </table>
-
-<noscript>
-  <table style="margin-top: 0; border-top: none;">
-    <tbody>
-      <tr style="text-align: center;">
-        <td colspan="2">
-          <a href="/cv_archive/">Other archived CVs</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</noscript>
-
