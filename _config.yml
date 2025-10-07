@@ -10,7 +10,7 @@ locale                   : "en-GB"
 title                    : "Samuel W. Stark"
 title_separator          : "-"
 name                     : &name "Samuel W. Stark"
-description              : &description "PhD @ Cambridge. Computer architecture, graphics, and GPUs"
+description              : &description "PhD Candidate @ University of Cambridge. Computer architecture, graphics, and GPUs"
 url                      : https://theturboturnip.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "theturboturnip/theturboturnip.github.io"
@@ -81,7 +81,7 @@ analytics:
 author:
   name             : "Samuel W. Stark"
   avatar           : "profile.jpg"
-  bio              : "PhD @ Cambridge Uni. I enjoy working with computer architecture, graphics, and GPUs."
+  bio              : "PhD Candidate @ University of Cambridge. I enjoy working with computer architecture, graphics, and GPUs."
   location         : "Cambridge"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

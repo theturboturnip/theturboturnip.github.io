@@ -6,13 +6,13 @@ main:
   # - title: "Teaching"
   #   url: /teaching/    
     
-  - title: "Academia"
+  - title: "Research"
     url: /academia/
 
   # - title: "Projects"
   #   url: /projects/
         
-  - title: "Blog Posts"
+  - title: "Blog"
     url: /year-archive/
     
   - title: "CV"

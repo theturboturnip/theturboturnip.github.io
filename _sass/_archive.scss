@@ -40,7 +40,6 @@
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
 
   a + a {
@@ -53,7 +52,9 @@
 
   .archive__item-title {
     margin-top: 1em;
+    margin-bottom: 0em;
     border-bottom: none;
+    padding-bottom: 0em;
   }
 }
 
@@ -103,7 +104,7 @@
   }
 
   .page__meta {
-    margin: 0 0 4px;
+    margin: 4px 0 4px;
   }
 }
 
