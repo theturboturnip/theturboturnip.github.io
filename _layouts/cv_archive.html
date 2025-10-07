@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 class="page__title">CV Archive</h1>
+    {% endunless %}
+
+    {% include cv/archive_header.html %}
+
+    <p>
+      This is an archived CV, which may be outdated.
+      <a href="/cv/">If you are looking for my up-to-date CV, click here!</a>
+    </p>
+
+    {{ content }}
+  </div>
+</div>

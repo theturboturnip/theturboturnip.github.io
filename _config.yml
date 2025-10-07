@@ -147,6 +147,7 @@ exclude:
   - vendor
   - Justfile
   - resumegen
+  - turnip_text
 keep_files:
   - .git
   - .svn
@@ -183,6 +184,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   projects:
+    output: true
+    permalink: /:collection/:path/
+  cv_archive:
     output: true
     permalink: /:collection/:path/
   # talks:

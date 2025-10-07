@@ -1,0 +1,568 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	<title>CV - Samuel W. Stark</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+		/* Utils */
+/*----- Colors -----*/
+/*----- Fonts -----*/
+/*----- Dimensions and sizes -----*/
+/* Base */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04zwV_pQ1T3xN3K1c3sB361us.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v9/C6HYlRF50SGJq1XyXj04z306qf9KHRHwsVx7iw5MXmY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v11/nj47mAZe0mYUIySgfn0wpQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/v0SdcGFAl2aezM9Vq_aFTQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/DvlFBScY1r-FMtZSYIYoYw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v11/2HG_tEPiQ4Z6795cGfdivKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/LqowQDslGv4DmUBAfWa2Vw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYEKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background: #f8f8f8;
+  margin: 50px 0 100px;
+  letter-spacing: .3px;
+  color: #39424B;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* text-transform: uppercase; */
+  margin: 0; }
+
+h1 {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px; }
+
+h2 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .4px; }
+  h2.bold {
+    font-weight: 700; }
+
+h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: .4px; }
+  h3.bold {
+    font-weight: 700; }
+
+h4 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px; }
+  h4.bold {
+    font-weight: 700; }
+
+h5 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 2px; }
+  h5.italic {
+    font-style: italic; }
+
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 10px; }
+
+:is(h1,h2,h3,h4,h5,h6) p {
+  margin: 0;
+  padding: 0;
+}
+
+p p {
+  margin: 0;
+  padding: 0;
+}
+
+li:not(.block) p {
+  margin: 0;
+  padding: 0;
+}
+
+li.block p {
+  margin: 5px 0;
+  padding: 0;
+  /* margin-bottom: 10px; */
+}
+
+a {
+  color: inherit;
+  text-decoration: underline; }
+  a:hover {
+    color: #2895F1; }
+  a .fa-external-link {
+    font-size: 10px;
+    vertical-align: text-top; }
+  .about-container a {
+    text-decoration: inherit; } 
+
+p,
+li {
+  font-size: 11px; }
+
+blockquote {
+  font-size: 11px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  margin: 10px 25px; }
+
+em {
+  color: #999; }
+
+ul {
+  margin: 5px 0 0;
+  padding-left: 20px;
+  -webkit-padding-start: 25px; }
+  ul li {
+    padding-left: 5px; }
+  ul.minimal {
+    list-style: none;
+    padding: 0; }
+    ul.minimal li {
+      margin-bottom: 3px;
+      padding-left: 0; }
+  ul.two-column {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 28px;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 28px;
+         column-gap: 28px; }
+    ul.two-column li {
+      padding-left: 0; }
+
+@page {
+  size: A4; }
+
+.container {
+  padding-top: 10px; }
+
+.keyline {
+  width: 45px;
+  margin: 4px 0 4px;
+  border-top: 1px solid #0f53d1; } /* 3b47b3 */
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.profile-pic {
+  margin-top: -5px;
+  margin-right: 18px; }
+  .profile-pic img {
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    border: 2px solid #0f53d1; }
+
+.summary {
+  margin: 5px 0 5px; }
+
+/* Layouts */
+.page {
+  background: white;
+  width: 612px;
+  min-height: 792px;
+  display: block;
+  margin: 0 auto;
+  padding: 36px 22px 30px 34px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+  .page:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.left-column {
+  /* float: left; */
+  /* width: 160px; */
+  /* margin-right: 20px; */
+  word-wrap: break-word; }
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2.5px solid #0f53d1;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  padding-top: 5px;
+}
+
+.about-container > .info-tag-container {
+  display: inline-block;
+  width: auto;
+}
+
+.right-column {
+  width: auto;
+  overflow: hidden;
+}
+
+.item {
+  margin-bottom: 15px; }
+  .item:last-child {
+    margin-bottom: 0; }
+
+@media print {
+  body {
+    margin: 0; 
+    background: white; }
+  .page {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 36px 0 30px;
+    box-shadow: none; }
+    .page .resume-header,
+    .page .resume-content {
+      padding: 0 22px 0 22px; }
+  /* .container {
+    page-break-inside: avoid; } */
+  .work-container .item {
+    page-break-inside: avoid; }
+  .fa-external-link {
+    display: none; } }
+
+/* Components */
+.info-tag-container {
+  margin-bottom: 5px; }
+  .info-tag-container .fa {
+    font-size: 14px;
+    width: 12px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle; }
+    .info-tag-container .fa.fa-map-marker {
+      font-size: 16px; }
+    .info-tag-container .fa.fa-mobile {
+      font-size: 18px; }
+    .info-tag-container .fa.fa-envelope-o {
+      font-size: 12px; }
+    .info-tag-container .fa.fa-desktop {
+      font-size: 11px; }
+    .info-tag-container .fa.fa-external-link {
+      width: auto;
+      font-size: inherit;
+      vertical-align: text-top; }
+  .info-tag-container .info-text {
+    font-size: 9px;
+    display: inline-block;
+    vertical-align: middle;
+    /* width: 139px; */
+    width: auto;
+    /* padding-right: 50px; */
+  }
+  .info-tag-container i {
+    position:relative;
+    top: calc(50% - 10px);
+  }
+
+.references-container .fa {
+  font-size: 14px; }
+
+	</style>
+	</head>
+	<body>
+		<main id="resume" class="page">
+			<header class="resume-header clearfix">
+			    <div class="profile-header pull-left">
+			        <h1>Samuel W. Stark</h1>
+			    </div>
+			</header>
+			<div class="resume-content">
+				<aside class="left-column">
+					<div class="container about-container">
+					
+					        <div class="info-tag-container">
+					            <i class="fa fa-font-awesome"></i>
+					        
+					                <h6 class="info-text">UK/USA dual national</h6>
+					        </div>
+					            <div class="info-tag-container">
+					                <i class="fa fa-map-marker"></i>
+					            
+					                    <h6 class="info-text">Cambridge, England</h6>
+					            </div>
+					        <div class="info-tag-container">
+					            <i class="fa fa-envelope-o"></i>
+					        
+					                <h6 class="info-text">
+					                    <a href="https://theturboturnip.com" target="_blank">
+					                        samuel.winslow.stark@gmail.com <i class="fa fa-external-link" aria-hidden="true"></i>
+					                    </a>
+					                </h6>
+					        </div>
+					
+					
+					                         <div class="info-tag-container">
+					                             <i class="fa fa-github"></i>
+					                         
+					                                 <h6 class="info-text">
+					                                     <a href="https://github.com/theturboturnip" target="_blank">
+					                                         theturboturnip <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                     </a>
+					                                 </h6>
+					                         </div>                        <div class="info-tag-container">
+					                            <i class="fa fa-linkedin-square"></i>
+					                        
+					                                <h6 class="info-text">
+					                                    <a href="https://linkedin.com/in/samuel-stark" target="_blank">
+					                                        in/Samuel Stark <i class="fa fa-external-link" aria-hidden="true"></i>
+					                                    </a>
+					                                </h6>
+					                        </div></section>
+				</aside>
+				<div class="right-column">
+					<div class="container education-container">
+					    <div class="title">
+					        <h2>Education</h2>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        PhD in Computer Science —
+					                        <a href="https://cam.ac.uk" target="_blank">
+					                            University of Cambridge <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">October 2022</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					
+					            <h5><p>Ongoing, planning to submit in March 2026</p></h5>
+					
+					
+					            <ul>
+					                <li class="block"><p><strong>Secure FPGA Design</strong></p>
+					
+					<p>Designed a high-throughput cryptography accelerator for checking memory accesses at the edges of the interconnect.
+					Verified the design using a custom C++ UVM testbench with Verilator.
+					Integrated with a pre-existing soft-CPU interconnect design on a Stratix-10 FPGA.
+					    </p></li>
+					                <li class="block"><p><strong>Low-Level Operating System Integration</strong></p>
+					
+					<p>Wrote drivers and other software for interacting with the cryptography accelerator in multiple operating systems, including FreeBSD, using C, C++, Rust, and Python.
+					    </p></li>
+					                <li class="block"><p><strong>Writing and Communication</strong></p>
+					
+					<p>Wrote an article for <a href="https://spawn-queue.acm.org/doi/abs/10.1145/3606014">ACM Queue</a> on high-performance memory safety in CXL, which was subsequently published in Communications of the ACM - the official magazine of the world&#39;s largest scientific computing society.
+					<a href="https://dl.acm.org/doi/10.1145/3617580">The article is available online.</a>
+					    </p></li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        M.Phil in Advanced Computer Science —
+					                        <a href="https://cam.ac.uk" target="_blank">
+					                            University of Cambridge <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">October 2021</span>
+					                            <span class="endDate"> - June 2022</span>
+					                </h5>
+					            </div>
+					
+					            <h5><p>Distinction - <a href="https://x.com/UK_RISE/status/1598685532434964480">Thesis won 1st place in the RISE 2022 Student Competition</a></p></h5>
+					
+					
+					            <ul>
+					                <li class="block"><p><strong>Large-Scale Data Processing and Systems Research</strong></p>
+					
+					<p>Evaluated and presented research papers on many areas in large-scale data processing and cloud computing, focusing on GPU-based data processing.
+					Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+					    </p></li>
+					                <li class="block"><p><strong>RISC-V Vector Emulation &amp; Security</strong></p>
+					
+					<p>Built a RISC-V CPU emulator with support for the &quot;V&quot; vector extension, the CHERI memory safety extension, and a combination of the two.
+					Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
+					<a href="https://theturboturnip.com/cheri-rvv">The project is available online.</a>
+					    </p></li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        B.Eng in Computer Systems Engineering —
+					                        <a href="https://warwick.ac.uk" target="_blank">
+					                            University of Warwick <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">October 2018</span>
+					                            <span class="endDate"> - July 2021</span>
+					                </h5>
+					            </div>
+					
+					            <h5><p>First Class - Best overall graduating student in subject</p></h5>
+					
+					
+					            <ul>
+					                <li class="block"><p><strong>High Performance CPU and GPU Programming</strong></p>
+					
+					<p>Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+					Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
+					<a href="https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz">The project is available online.</a>
+					    </p></li>
+					                <li class="block"><p><strong>High Performance FPGA Design</strong></p>
+					
+					<p>Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+					    </p></li>
+					                <li class="block"><p><strong>Machine Learning</strong></p>
+					
+					<p>Learned basics of classic machine learning and neural networks/deep learning.
+					    </p></li>
+					            </ul>
+					        </section>
+					</div>
+					<div class="container work-container">
+					    <div class="title">
+					        <h2>Experience</h2>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        Memory &amp; Systems Architecture Research Intern —
+					                        <a href="https://arm.com" target="_blank">
+					                            Arm Ltd <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        Summers of 2019 &amp; 2021
+					                        </h5>
+					            </div>
+					
+					            <p class="summary"><p>Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the &#39;Ruby&#39; DSL.</p></p>
+					
+					            <ul>
+					                <li><p>Added DVM operations to existing gem5 CHI protocol model</p></li>
+					                <li><p>Simulated impact of DVM on many-core systems</p></li>
+					                <li><p>Presented results to key stakeholders and senior design members, including a &#39;CHI protocol crash course&#39;</p></li>
+					                <li><p>Changes upstreamed to public open source gem5 repository <a href="https://gem5-review.googlesource.com/c/public/gem5/+/57298">(available online)</a></p></li>
+					            </ul>
+					        </section>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        Junior Programmer —
+					                        <a href="https://virtualarts.co.uk" target="_blank">
+					                            Virtual Arts Ltd <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">September 2017</span>
+					                            <span class="endDate"> - August 2018</span>
+					                </h5>
+					            </div>
+					
+					            <p class="summary"><p>Developed 3D game engine in C++/Vulkan/Metal with two senior engineers.</p></p>
+					
+					            <ul>
+					                <li><p>Implemented Physically Based Rendering with Image Based Lighting</p></li>
+					                <li><p>Ported Unity-based code and shaders to C++, GLSL and Metal</p></li>
+					                <li><p>Supported development of AR racing game (Lightstream Racer) in Unity/C#</p></li>
+					            </ul>
+					        </section>
+					</div>
+					<div class="container work-container">
+					    <div class="title">
+					        <h2>Projects</h2>
+					        <div class="keyline"></div>
+					    </div>
+					        <section class="item">
+					            <div class="section-header clearfix">
+					                <h3 class="pull-left">
+					                        <a href="https://github.com/theturboturnip/yk_gmd_io" target="_blank">
+					                            yk_gmd_io <i class="fa fa-external-link" aria-hidden="true"></i>
+					                        </a>
+					                </h3>
+					                <h5 class="italic pull-right">
+					                        <span class="startDate">2020</span>
+					                        <span class="endDate"> - Present</span>
+					                </h5>
+					            </div>
+					            <p class="summary"><p>Python addon for importing and exporting the proprietary GMD file format, used by the &#39;Yakuza&#39; game series, into Blender.</p></p>
+					            
+					            <ul>
+					                <li><p>Reverse-engineered parts of the file format with the community</p></li>
+					                <li><p>Designed algorithms to convert computer-friendly meshes to artist-friendly meshes</p></li>
+					                <li><p>Developed beginner-friendly user experience for new modders</p></li>
+					            </ul>
+					        </section>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

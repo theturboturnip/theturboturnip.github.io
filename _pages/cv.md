@@ -19,6 +19,11 @@ redirect_from:
         [PDF version](/files/cv/CV_SamuelWinslowStark.pdf)
       </td>
     </tr>
+    <tr style="text-align: center;">
+      <td colspan="2" markdown="span">
+        [Archived CVs](/cv_archive/)
+      </td>
+    </tr>
   </tbody>
 </table>
 
