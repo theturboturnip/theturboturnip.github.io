@@ -31,18 +31,19 @@
     .page__meta,
     .page__share {
       @include full();
+      float: unset; // IDK why something here sets float: left, but it makes it worse
     }
   }
 }
 
 .page__title {
   margin: unset;
-  margin: 1em 0 1em;
+  margin: 0.5em 0 1em;
   line-height: 1;
 
-  & + .page__meta {
-    margin-top: -0.5em;
-  }
+  // & + .page__meta {
+  //   margin-top: -0.5em;
+  // }
 }
 
 .page__lead {
