@@ -13,6 +13,7 @@ tags:
   - cheri
   - rvv
   - risc-v
+author_profile: true
 ---
 
 This is a condensed version of my master's thesis (from 15,000 to 5,000 words), which [won the RISE 2022 Student competition!](https://twitter.com/UK_RISE/status/1598685532434964480)

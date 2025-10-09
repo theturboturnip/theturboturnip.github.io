@@ -8,6 +8,7 @@ categories:
 tags:
   - cxl
   - capabilities
+author_profile: true
 ---
 
 My first article, "How Flexible is CXL's Memory Protection?", was just published in ACM Queue (it's even on the front cover!)
