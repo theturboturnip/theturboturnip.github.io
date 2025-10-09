@@ -3,6 +3,7 @@
    ========================================================================== */
 
 $(document).ready(function(){
+  /*
    // Sticky footer
   var bumpIt = function() {
       $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
@@ -49,6 +50,7 @@ $(document).ready(function(){
   $(window).resize(function(){
     stickySideBar();
   });
+  */
 
   // Follow menu drop down
 
