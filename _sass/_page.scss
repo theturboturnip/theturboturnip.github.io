@@ -41,9 +41,9 @@
   margin: 0.5em 0 1em;
   line-height: 1;
 
-  // & + .page__meta {
-  //   margin-top: -0.5em;
-  // }
+  & + .page__meta {
+    margin-top: -1em;
+  }
 }
 
 .page__lead {
@@ -228,8 +228,8 @@
    Page meta
    ========================================================================== */
 
-.page__meta {
-  margin-top: 2em;
+// Include the .page__content prefix so that we get higher specificity than (.page__content p).
+.page__meta, .page__content .page__meta {
   color: mix(#fff, $gray, 25%);
   font-family: $sans-serif;
   font-size: $type-size-6;

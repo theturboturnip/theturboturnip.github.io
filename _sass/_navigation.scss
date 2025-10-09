@@ -172,10 +172,36 @@
    Priority plus navigation
    ========================================================================== */
 
-.greedy-nav {
+nav {
   position: relative;
   min-width: 250px;
   background: $masthead-background-color;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+
+  ul:first-child {
+    @include breakpoint($large) {
+      @include span(2 of 12);
+      a {
+        margin-left: 0;
+      }
+    }
+    @include breakpoint($x-large) {
+      padding-right: 0;
+    }
+    a {
+      font-weight: bold;
+    }
+  }
+  ul:not(:first-child) {
+    @include breakpoint($large) {
+      @include span(10 of 12 last);
+      @include prefix(0.5 of 12);
+      @include suffix(2 of 12);
+    }
+  }
 
   a {
     display: block;
@@ -202,23 +228,13 @@
   }
 
   .visible-links {
-    display: table;
-
     li {
-      display: table-cell;
+      display: inline-block;
       vertical-align: middle;
 
       &:first-child {
-        font-weight: bold;
-
         a {
           margin-left: 0;
-        }
-      }
-
-      &:last-child {
-        a {
-          margin-right: 0;
         }
       }
     }
