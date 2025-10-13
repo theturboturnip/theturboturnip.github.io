@@ -109,8 +109,9 @@ institution = "University of Cambridge"
 url = "https://cam.ac.uk"
 area = "Computer Architecture/Security"
 startDate = "2021-10-01"
-score = "M.Phil, Distinction (83%); PhD ongoing"
 studyType = "Masters and PhD (ongoing)"
+# score = "M.Phil, Distinction (83%); PhD ongoing"
+score = "M.Phil with Distinction; PhD ongoing - planning to finish Summer 2026"
 
 [education.beng_mlfocus]
 institution = "University of Warwick"
