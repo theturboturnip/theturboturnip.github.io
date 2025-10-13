@@ -24,3 +24,59 @@
     # "get_to_the_top",
     # "overgrowth"
 ]
+
+# https://www.kojimaproductions.jp/en/3D-rendering-programmer-effects-programmer
+# https://web.archive.org/web/20251006224343/https://www.kojimaproductions.jp/en/3D-rendering-programmer-effects-programmer
+# REQUIREMENTS
+# - Experience with 1 or more successful game development
+# - Thorough knowledge of mathematics
+# - Capable of creating a system that can effectively use multi-core
+# - Have an interest in game engine design and creation for next generation hardware
+# *New graduates are not required to meet the above qualification(s)
+# *If you are new to the industry, you do not have to meet all of the qualification(s), but please show us other qualities and/or abilities you may have instead.
+# PREFERRED QUALIFICATIONS
+# - Experience creating a game engine
+# - Thorough knowledge of or experience using foreign game engines
+# - English proficiency (enough to read a thesis report written in English)
+# REQUIRED DOCUMENTS
+# - Japanese CV (Rirekisho with photo) ※if available
+#       # https://livinginjapan.net/2021/08/00631/
+# - CV with the following information:
+#   - Please specify all game titles you have been involved with in the past and the details of your duties while working on them. 
+#   - Please specify any program languages that you can use, the number of years you have used them, and the typical contents you have produced with them. 
+#   - Please specify software that you can use (Photoshop, Maya, Eclipse, etc.), the number of years you have used them, and the typical contents you have produced with them. 
+#   - Please list two recent technical presentations and related articles that you found to be wonderful from a technical and expressive standpoint, and briefly explain the reason why. 
+#   - Please name one game you recently played that you were interested in from a technical standpoint, and briefly explain the reason why.
+# Projects/Work Samples
+# New graduates and those who are new to the industry must turn in sample work. Anyone else who would like to share their work may also send in samples.
+#   - Please include the following:
+#   - An original programming work (will accept team projects). No restriction on type or number of work(s). Please send us anything that you feel would showcase your abilities
+#   - An execution file of the build
+#   - Video capture of the screen (because there is a chance the video won’t operate depending on the environment)
+#   - A “readme.txt” file with necessary instructions for the submitted works. Please also explain the following in the readme.txt file.
+#   - Execution method including the execution environment
+#   - What your biggest challenge was in creating the work
+#   - What area you especially put effort into and would like us to focus on
+#   - If there were any source files you used for reference, what areas did you pull for reference? Please note the file name(s) for those area(s).
+# Notes
+# - If you used a library, functions, etc. that were created by other people, please separate those parts into a different file and list those file names.
+# - This also applies to the following scenarios:
+#   - If you used a function created by someone else
+#   - If you referenced more than half of a source file
+#   - If you used a free library (please specify the library name)
+#   - If you used a library created by someone else (please specify the library name)
+# - Please exclude confidential sources and information before submitting.
+# - Since our system is unable to recognize an overseas post code, applicants from outside Japan do not have to enter a post code that matches their actual address. However, please ensure that all other address information are valid.
+[kojipro]
+"education" = ["allcambs", "beng_minimal"]
+work = ["arminternships"]
+projects = [
+    "yk_gmd_io_kojipro",
+    # "turnip_dxd", # ?
+    "warwick_typ_kojipro",
+    # "warwich_aca",
+    "virtualarts_univrs",
+    "virtualarts_lightstream",
+    "get_to_the_top",
+]
+special = "kojipro"

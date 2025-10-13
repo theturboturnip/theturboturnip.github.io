@@ -12,14 +12,17 @@
 	<body>
 		<main id="resume" class="page">
 			{{> resume-header}}
+			{{#if resume.special}}
+			{{> special }}
+			{{else}}
 			<div class="resume-content">
-				<aside class="left-column">
+				<aside class="about-header">
 					{{> about }}
 					{{> skills }}
 					{{> languages }}
 					{{> interests }}
 				</aside>
-				<div class="right-column">
+				<div class="resume-contents">
 					{{> summary}}
 					{{> education }}
 					{{> work }}
@@ -30,6 +33,7 @@
 					{{> references }}
 				</div>
 			</div>
+			{{/if}}
 		</main>
 	</body>
 </html>

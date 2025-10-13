@@ -231,7 +231,7 @@ ul {
     display: table;
     clear: both; }
 
-.left-column {
+.about-header {
   /* float: left; */
   /* width: 160px; */
   /* margin-right: 20px; */
@@ -251,7 +251,7 @@ ul {
   width: auto;
 }
 
-.right-column {
+.resume-contents {
   width: auto;
   overflow: hidden;
 }
@@ -317,3 +317,14 @@ ul {
 
 .references-container .fa {
   font-size: 14px; }
+
+.kojipro-urls {
+  font-size: 10px;
+  margin-top: 5px;
+}
+.kojipro-urls .spacer {
+  color: color-mix(in srgb, black 30%, white);
+}
+.kojipro-urls .spacer::after {
+  content: " • "
+}

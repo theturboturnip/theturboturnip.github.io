@@ -7,7 +7,8 @@ const
     addressFormat = require('address-format'),
     moment = require('moment'),
     Swag = require('swag'),
-    Filter = require("handlebars.filter");
+    Filter = require("handlebars.filter"),
+    resolve = require('path').resolve;
 
 Swag.registerHelpers(handlebars);
 Filter.registerHelper(handlebars);
@@ -66,6 +67,24 @@ function render(resume) {
 
     Handlebars.partials(dir + '/views/partials/**/*.{hbs,js}');
     Handlebars.partials(dir + '/views/components/**/*.{hbs,js}');
+
+    if (resume.special) {
+        handlebars.registerPartial("special", fs.readFileSync(dir + '/views/specials/' + resume.special + '.hbs', 'utf-8'));
+    }
+
+    handlebars.registerHelper("imagedata", (arg) => {
+        // let str = fs.readFileSync(__dirname + '/../assets/kiryu-yk-gmd-io-smaller.png').toString("base64");
+
+        // This embeds the image directly - need to make sure it's small, or puppeteer craps out.
+        // TODO how to get this to work differently with html?
+        let str = fs.readFileSync(__dirname + '/../assets/' + arg).toString("base64");        
+        str = "data:image/" + arg.split(".")[1] + ';base64,' + str;
+        return str;
+
+        // // Doesn't work with puppeteer
+        // // https://stackoverflow.com/q/66751136
+        // return 'file://' + resolve(__dirname + '/../assets/' + arg);
+    });
 
     return Handlebars.compile(resumeTemplate)({
         css: css,

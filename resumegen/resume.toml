@@ -18,7 +18,8 @@ url = "https://cam.ac.uk"
 area = "Computer Science"
 studyType = "PhD"
 startDate = "2022-10-01"
-score = "Ongoing, planning to submit in March 2026"
+score = "Ongoing, planning to complete Summer 2026"
+# score = "Ongoing, planning to submit in March 2026"
 # summary = "My PhD focuses on memory security on the interconnect, "
 # TODO don't forget QEMU work!
 highlights = [
@@ -109,6 +110,7 @@ url = "https://cam.ac.uk"
 area = "Computer Architecture/Security"
 startDate = "2021-10-01"
 score = "M.Phil, Distinction (83%); PhD ongoing"
+studyType = "Masters and PhD (ongoing)"
 
 [education.beng_mlfocus]
 institution = "University of Warwick"
@@ -167,7 +169,10 @@ url = "https://warwick.ac.uk"
 area = "Computer Systems Engineering"
 startDate = "2018-10-01"
 endDate = "2021-07-02"
-score = "B.Eng, First Class (85%) - Best Overall Graduating Student"
+studyType = "B.Eng"
+# score = "B.Eng, First Class (85%) - Best Overall Graduating Student"
+# score = "First Class (85%) - Best overall graduating student in subject"
+score = "First Class - Best overall graduating student in subject"
 
 [education.alevels]
 institution = "Cambridge Center for Sixth-Form Studies"
@@ -309,3 +314,112 @@ endDate = "2022"
 [projects.turnip_dxd]
 name = "DirectX Disassembler"
 url = "https://github.com/theturboturnip/dx-disassembler"
+
+[projects.get_to_the_top]
+name = "Get To The Top"
+urls = [
+    { name="Game Link", url="https://theturboturnip.itch.io/get-to-the-top" },
+    { name="Development Videos", url="https://www.youtube.com/playlist?list=PLpc_f2Kxcy9WSuI24NlJThl_-yWwbnh3b" },
+    { name="GitHub", url="https://www.youtube.com/playlist?list=PLpc_f2Kxcy9WSuI24NlJThl_-yWwbnh3b" },
+    #https://github.com/theturboturnip/gttt-server
+]
+# videos = [
+#     { "name"="Get to the Top Explained", url="https://youtu.be/PSTU7zVxW4w" },
+#     { "name"="Get to the Top Playthrough", url="https://youtu.be/tjQaXPY5tKM"},
+#     { "name"="Clouds in Get To The Top", url="https://youtu.be/0yhQPlpfwbg" },
+# ]
+description = "A personal project made in my spare time after school at 15. Contains parkour gameplay with a shotgun that can be used for propulsion. I was the sole programmer and designer. Built in the **Unity** game engine, using **C#** for gameplay and editor programming, **HLSL** shaders, **Blender** for 3D model creation, and free online assets for textures and audio. I also wrote a small web server in **Python** for alerting users to updates and storing high scores."
+# highlights = [
+#     "HLSL shaders for a cartoon art style, including cel shading for objects, muzzle flashes, and a custom cloud shader",
+#     "Custom particle system implementation for shotgun shells",
+#     "Procedural generation of large levels, including basic visibility culling for high frame rate",
+#     "Custom editor gizmos for creating levels and checkpoints",
+# ]
+startDate = "2016"
+endDate = "2018"
+image = "gttt_snap.jpg"
+image_css = "object-position: 50% 50%;"
+
+[projects.virtualarts_univrs]
+name = "\"Universe Engine\" and associated benchmark apps"
+# url = ""
+urls = [
+    { name="'Orbital Flight' benchmark video", url="https://youtu.be/W9jLnle6vhM" },
+    { name="iOS App Store Link", url="https://apps.apple.com/gb/app/orbital-flight-benchmark/id1438214649" }
+    # https://web.archive.org/web/20230723210112/https://apps.apple.com/gb/app/snow-forest-benchmark/id1439105046
+    # https://web.archive.org/web/20220625034607/https://apps.apple.com/gb/app/meteor-shower-benchmark/id1438967675
+    # https://web.archive.org/web/20230723210111/https://apps.apple.com/gb/app/orbital-flight-benchmark/id1438214649
+]
+description = "A custom game engine using **C++/Vulkan/GLSL/Metal** I helped develop at [Virtual Arts](https://virtualarts.co.uk), a mobile games startup, when I was 16-17. I built the engine alongside two senior programmers, and I led the implementation of Physically Based Rendering with Image Based Lighting. The engine ran on Android devices using a Vulkan/GLSL graphics backend, and on iOS using a Metal graphics backend. Alongside our artists, we created a set of benchmarks and demo scenes (some using AR) in **Unity/C#/HLSL** and ported them to our engine. In particular, I was responsible for porting the shaders for the 'Orbital Flight' benchmark."
+startDate = "2017"
+endDate = "2018"
+# summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers."
+# highlights = [
+#     "Implemented Physically Based Rendering with Image Based Lighting",
+#     "Ported Unity-based code and shaders to C++, GLSL and Metal",
+#     "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
+# ]
+image = "OrbitalFrame0007_crop.jpg"
+image_css = "object-position: 50% 50%;"
+
+
+[projects.virtualarts_lightstream]
+name = "Lightstream Racer"
+# url = ""
+urls = [
+    # https://web.archive.org/web/20230723210149/https://apps.apple.com/gb/app/lightstream-racer/id1369124554
+    { name="Trailer", url="https://youtu.be/ZJg54josZJI" },
+    { name="iOS App Store Link", url="https://apps.apple.com/gb/app/lightstream-racer/id1369124554" },
+]
+description = "An augmented reality racing game for iOS, built in **Unity/C#**. This was developed at Virtual Arts in parallel to the Universe Engine, and I was pulled in to assist with the UI code."
+startDate = "2018"
+endDate = "2018"
+# summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers."
+# highlights = [
+#     "Implemented Physically Based Rendering with Image Based Lighting",
+#     "Ported Unity-based code and shaders to C++, GLSL and Metal",
+#     "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
+# ]
+image = "LightstreamRacer0723_crop.jpg"
+image_css = "object-position: 50% 50%;"
+
+[projects.yk_gmd_io_kojipro]
+name = "yk_gmd_io"
+urls = [
+    {name="GitHub", url="https://github.com/theturboturnip/yk_gmd_io"},
+]
+description = "I developed a utility for **Blender** in **Python** to import and export the 3D model format used in the 'Ryu ga Gotoku/Like A Dragon' game series - most recently from games using their **Dragon Engine**. This required reverse-engineering the file format with the community, understanding the different means of encoding vertices/indices, and importing them correctly for artists to manipulate. As these meshes are optimized for GPUs to display (e.g. with duplicated vertices), I had to develop an algorithm that intelligently converts them to artist-friendly meshes. My utility has been used to port many different characters and models from various games to Like A Dragon with improved quality."
+# description = "Python addon for importing and exporting the proprietary GMD file format, used by the 'Yakuza' game series, into Blender."
+# highlights = [
+#     "Reverse-engineered parts of the file format with the community",
+#     "Designed algorithms to convert computer-friendly meshes to artist-friendly meshes",
+#     "Developed beginner-friendly user experience for new modders"
+# ]
+startDate = "2020"
+# roles = [
+#     "developer", "maintainer"
+# ]
+image = "kiryu-yk-gmd-io-smaller.png"
+image_css = "object-position: left 50%;"
+
+[projects.warwick_typ_kojipro]
+name = "GPU Fluid Simulation/Visualization"
+urls = [
+    { name="Demo Video", url="https://youtu.be/WKzMIq4EkSs" },
+    # { name="More Info", url="https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf" },
+    { name="Presentation", url="https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf" },
+    { name="GitHub", url="https://github.com/theturboturnip/warwick-typ" }
+]
+description = "For my undergraduate thesis, I built a fluid simulation program with complex real-time visualization. Both components ran on the GPU, using **CUDA** for the simulation and **Vulkan/GLSL** for the visualization. This required me to optimize GPU code in two languages and profile it using **NVIDIA Nsight** to remove pipeline bubbles. The visualization included advanced graphics techniques such as indirect rendering, instanced rendering, compute shaders, and parallel reduction. The engine was written from scratch in **C++**, and required synchronization between multiple CPU threads and multiple GPU processes."
+# description = "Created a real-time GPU fluid simulation (CUDA) and parallel visualization (C++/Vulkan)."
+# highlights = [
+#     "Ported a fluid simulation from C to CUDA",
+#     "Implemented a GPU visualization in Vulkan",
+#     "Implemented various synchronization between CPUs and GPU",
+#     "Used memory sharing between CUDA and Vulkan to reduce copying"
+# ]
+# url = "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz"
+startDate = "2020"
+endDate = "2021"
+image = "2021-05-fluid-dynamics-header.png"
+image_css = "object-position: left 50%;"

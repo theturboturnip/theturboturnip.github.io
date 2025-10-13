@@ -24,6 +24,10 @@ def apply_config(src: Dict[str, Any], config: Dict[str, List[str]]):
     # For each thing the config changes
     # Create a new list for it in the dst, which holds references to objects in the src
     for k, vs in config.items():
+        if not isinstance(vs, list):
+            print(f"Assuming '{k}' is intended to directly override a field - it isn't a list!")
+            dst[k] = vs
+            continue 
         src_id_dict = dict(src[k])
 
         try:
