@@ -4,7 +4,7 @@
 import argparse
 import json
 from dataclasses import dataclass
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any, List, Optional, Union
 import copy
 import os
 import tomllib
@@ -13,7 +13,7 @@ def read_toml(path: str) -> Dict[str, Any]:
     with open(path, "rb") as f:
         return tomllib.load(f)
 
-def apply_config(src: Dict[str, Any], config: Dict[str, List[str]]):
+def apply_config(src: Dict[str, Any], config: Dict[str, Union[Dict, List[str]]]):
     # Config = dict of key -> list of IDs
     # i.e. { "projects": ["warwick_typ"] }
 
@@ -24,20 +24,27 @@ def apply_config(src: Dict[str, Any], config: Dict[str, List[str]]):
     # For each thing the config changes
     # Create a new list for it in the dst, which holds references to objects in the src
     for k, vs in config.items():
-        if not isinstance(vs, list):
-            print(f"Assuming '{k}' is intended to directly override a field - it isn't a list!")
-            dst[k] = vs
-            continue 
-        src_id_dict = dict(src[k])
+        if isinstance(vs, dict):
+            if isinstance(dst[k], dict):
+                print(f"Updating fields of '{k}' - was already a dictionary")
+                dst[k].update(vs)
+            else:
+                print(f"Setting field '{k}' to a dictionary - was {dst.get(k)} before")
+                dst[k] = copy.copy(vs)
+        elif isinstance(vs, list):
+            src_id_dict = dict(src[k])
 
-        try:
-            dst[k] = [
-                src_id_dict[i]
-                for i in vs
-            ]
-        except KeyError as ex:
-            ex.args = (f"no '{ex.args[0]}' in '{k}'",) + ex.args[1:]
-            raise
+            try:
+                dst[k] = [
+                    src_id_dict[i]
+                    for i in vs
+                ]
+            except KeyError as ex:
+                ex.args = (f"no '{ex.args[0]}' in '{k}'",) + ex.args[1:]
+                raise
+        else:
+            print(f"Assuming '{k}' is intended to directly override a field - it isn't a list or a dict!")
+            dst[k] = vs
     return dst
 
 def main():

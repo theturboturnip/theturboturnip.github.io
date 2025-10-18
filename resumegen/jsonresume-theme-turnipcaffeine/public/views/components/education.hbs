@@ -4,12 +4,23 @@
 
     {{#each resume.education}}
         <section class="item">
+            {{#if area}}
             {{> section-header name=this.institution prefix=(concat this.studyType " in " this.area) }}
+            {{/if}}
+            {{#unless area}}
+            {{> section-header name=this.institution prefix=this.studyType }}
+            {{/unless}}
 
             {{!-- <h4>{{#if studyType}}{{studyType}} {{/if}}{{#if area}}{{area}}{{/if}}</h4> --}}
 
             {{#if score}}
             <h5>{{{filter score "markdown"}}}</h5>
+            {{/if}}
+
+            {{#if summary}}
+            <div class="summary">
+                {{{filter summary "markdown"}}}
+            </div>
             {{/if}}
 
             {{#if courses.length}}

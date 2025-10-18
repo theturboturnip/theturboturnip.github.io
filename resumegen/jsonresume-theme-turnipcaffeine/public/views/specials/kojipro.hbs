@@ -1,7 +1,52 @@
+<style>
+.startDate {
+    display: inline-block;
+    min-width: 7.2ch;
+    text-align: right;
+}
+.endDate {
+    display: inline-block;
+    min-width: 7.2ch;
+    text-align: left;
+}
+.game-container .startDate {
+    display: inline-block;
+    min-width: 4ch;
+    text-align: right;
+}
+.game-container .endDate {
+    display: inline-block;
+    min-width: 6ch;
+    text-align: left;
+}
+.about-key-value {
+    display: flex; flex-direction: row; flex-wrap: wrap;
+    justify-content: space-between;
+}
+.about-key-value > p {
+    margin-bottom: 0;
+    margin-top: 3px;
+}
+table.invisible-table {
+    table-layout: auto;
+    border-collapse: collapse;
+}
+table.invisible-table td {
+    padding: 0;
+}
+</style>
 <div class="resume-content">
     <aside class="about-header">
-        {{> about }}
+        <div class="about-key-value">
+            <p>Gender: Male</p>
+            <p>DOB: {{orIfNull resume.basics.dob "XXXX-XX-XX"}}</p>
+            <p>Email: <a href="mailto:{{resume.basics.email}}">{{resume.basics.email}}</a></p>
+            <p>Phone: {{orIfNull resume.basics.phonne "+44 XXXX XXXXXX"}}</p>
+            <p>Address: {{orIfNull resume.basics.location.formatAddress "REDACTED REDACTED REDACTED REDACTED REDACTED"}}</p>
+            <p>Submission Date: 2025-10-18</p>
+        </div>
 {{!-- 
+        {{> about }}
         {{> skills }}
         {{> languages }}
         {{> interests }} --}}
@@ -12,15 +57,15 @@
     <div class="resume-contents">
         {{> summary }}
         {{> education }}
-        {{!-- {{> work }} --}}
+        {{> work header="Work" }}
         {{!-- {{> volunteer }} --}}
 {{#if resume.projects.length}}
-<div class="container work-container">
+<div class="container game-container">
     {{> title value="Games & Projects"}}
 
     {{#each resume.projects}}
         <section class="item" style="margin-bottom: 0px;">
-            <table style="table-layout: auto; border-collapse:collapse;">
+            <table class="invisible-table">
                 <tr>
                     {{#if image}}
                     <td style="width: 100px; padding: 0; padding-right:15px; position: relative;">
@@ -64,39 +109,86 @@
         {{> references }} --}}
 
         {{!-- Skill Summary --}}
-        <div class="container">
+        <div class="skill-container">
             {{> title value="Skill Summary" }}
 
-            <table>
-                <tr>
-                    <td>
-                        
-                    </td>
-                    <td>
-                        
-                    </td>
-                    <td>
-                        
-                    </td>
-                </tr>
+            {{!-- <div class="skill-key-value">
+                <p>Gender: Male</p>
+                <p>DOB: {{orIfNull resume.basics.dob "XXXX-XX-XX"}}</p>
+                <p>Email: <a href="mailto:{{resume.basics.email}}">{{resume.basics.email}}</a></p>
+                <p>Phone: {{orIfNull resume.basics.phonne "+44 XXXX XXXXXX"}}</p>
+                <p>Address: {{orIfNull resume.basics.location.formatAddress "REDACTED REDACTED REDACTED REDACTED REDACTED"}}</p>
+                <p>Submission Date: 2025-10-18</p>
+            </div> --}}
+
+
+{{!-- #   - Please specify any program languages that you can use, the number of years you have used them, and the typical contents you have produced with them. 
+#   - Please specify software that you can use (Photoshop, Maya, Eclipse, etc.), the number of years you have used them, and the typical contents you have produced with them.  --}}
+            <table class="invisible-table">
+                <tbody>
+                    <tr>
+                        <td id="language-skills" style="vertical-align: top;">
+                            {{> kojipro-skill-header value="Programming Languages" }}
+
+                            {{> kojipro-skill skill="C, C++" year=2014 }}
+                            {{> kojipro-skill skill="Rust" year=2014 }}
+                            {{> kojipro-skill skill="C#" year=2014 }}
+                            {{> kojipro-skill skill="Java" year=2014 }}
+                            {{> kojipro-skill skill="Python" year=2014 }}
+                            {{> kojipro-skill skill="Assembly (x86, ARM, RISC-V, NVIDIA PTX, RDNA2)" year=2014 }}
+
+                            {{> kojipro-skill-header value="GPU/Graphics Languages" }}
+                            {{> kojipro-skill skill="GLSL" year=2014 }}
+                            {{> kojipro-skill skill="HLSL" year=2014 }}
+                            {{> kojipro-skill skill="Metal" year=2014 }}
+                            {{> kojipro-skill skill="CUDA" year=2014 }}
+
+                            {{!-- {{> kojipro-skill-header value="Assembly Languages" }}
+                            
+                            <p>x86 Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>ARMv7 Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>RISC-V Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>AMD RDNA2 GPU Assembly <span class="spacer"></span> XYZ years</p> --}}
+                        </td>
+                        <td id="software-skills" style="vertical-align: top;">
+                            {{> kojipro-skill-header value="3D Art/Game Software" }}
+                            
+                            {{> kojipro-skill skill="Unity" year=2014 }}
+                            {{> kojipro-skill skill="Blender" year=2014 }}
+                            {{> kojipro-skill skill="GIMP" year=2014 }}
+
+                            {{> kojipro-skill-header value="Development Software" }}
+
+                            {{> kojipro-skill skill="NVIDIA NSight" year=2014 }}
+                            {{> kojipro-skill skill="Visual Studio" year=2014 }}
+                            {{> kojipro-skill skill="Visual Studio Code" year=2014 }}
+                            {{> kojipro-skill skill="CLion (and other JetBrains IDEs)" year=2014 }}
+
+                        </td>
+                    </tr>
+                </tbody>
             </table>
+        </div>
+
+        <div class="container">
+            {{> title value="Articles" }}
         </div>
 
         {{!-- Fav technical presentations and fav game --}}
         <div class="container">
-            <table>
-                <tr>
-                    <td>
-                        {{> title value="Interesting Presentations" }}
-                        
-                    </td>
-                    <td>
-                        {{> title value="Interesting Game" }}
-                        
-                    </td>
-                </tr>
-            </table>
+            {{> title value="Interesting Presentations" }}
         </div>
 
+        <div class="container">
+            {{> title value="Interesting Game" }}
+        </div>
+
+
+        TODOS
+        - specify work created with skills
+        - decide if supplementary info useful for work/education
+        - article
+        - interesting presentations
+        - interesting game
     </div>
 </div>

@@ -43,17 +43,24 @@ handlebars.registerHelper({
         return addressList.join('<br/>');
     },
 
-    formatDate: function(date) {
-        // If only a year is specified, don't add a month
-        if (date.match(/^[0-9]+$/)) {
-            return moment(date).format('YYYY');
-        } else {
-            return moment(date).format('MMMM YYYY');
-        }
-    },
-
     ifEquals: function(arg1, arg2, options) {
         return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    },
+
+    orIfNull: function(arg1, arg2) {
+        if (arg1) {
+            return arg1;
+        }
+        return arg2;
+    },
+
+    yearsAgo: function(year) {
+        let years = new Date().getFullYear() - year;
+        if (years == 1) {
+            return "1 year";
+        } else {
+            return years + " years";
+        }
     }
 });
 
@@ -85,6 +92,30 @@ function render(resume) {
         // // https://stackoverflow.com/q/66751136
         // return 'file://' + resolve(__dirname + '/../assets/' + arg);
     });
+
+    if (resume.jp_date) {
+        handlebars.registerHelper({
+            formatDate: function(date) {
+                // If only a year is specified, don't add a month
+                if (date.match(/^[0-9]+$/)) {
+                    return moment(date).format('YYYY');
+                } else {
+                    return moment(date).format('YYYY-MM');
+                }
+            },
+        });
+    } else {
+        handlebars.registerHelper({
+            formatDate: function(date) {
+                // If only a year is specified, don't add a month
+                if (date.match(/^[0-9]+$/)) {
+                    return moment(date).format('YYYY');
+                } else {
+                    return moment(date).format('MMMM YYYY');
+                }
+            },
+        });
+    }
 
     return Handlebars.compile(resumeTemplate)({
         css: css,

@@ -11,6 +11,15 @@ profiles = [
 ]
 nationality = "UK/USA dual national"
 
+[education.phd_kojipro]
+institution = "University of Cambridge, UK"
+# url = "https://cam.ac.uk"
+# area = "Computer Architecture, Security, GPUs"
+area = "Computer Science"
+studyType = "PhD"
+startDate = "2022-10-01"
+score = "Ongoing, expecting to complete Summer 2026"
+
 [education.phd]
 institution = "University of Cambridge"
 url = "https://cam.ac.uk"
@@ -44,6 +53,15 @@ Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/360
 ]
 #Received internship offer from the CEO of a CXL-based startup after the article was published, which fell through due to pay concerns.
 
+
+[education.mphil_kojipro]
+institution = "University of Cambridge, UK"
+# url = "https://cam.ac.uk"
+area = "Computer Architecture, Security"
+studyType = "M.Phil"
+startDate = "2021-10-01"
+endDate = "2022-06-06"
+score = "Completed with Distinction"
 
 [education.mphil]
 institution = "University of Cambridge"
@@ -175,14 +193,39 @@ studyType = "B.Eng"
 # score = "First Class (85%) - Best overall graduating student in subject"
 score = "First Class - Best overall graduating student in subject"
 
+[education.beng_kojipro]
+institution = "University of Warwick, UK"
+# url = "https://warwick.ac.uk"
+area = "Computer Systems Engineering"
+startDate = "2018-10-01"
+endDate = "2021-07-02"
+studyType = "B.Eng"
+# score = "B.Eng, First Class (85%) - Best Overall Graduating Student"
+# score = "First Class (85%) - Best overall graduating student in subject"
+score = "Graduated First Class - Best overall student in subject"
+# summary = "Wow isn't this great"
+
 [education.alevels]
 institution = "Cambridge Center for Sixth-Form Studies"
 studyType = "A-Levels"
-score = "Further Maths A*, Maths A*, Physics A*, AS Chemistry A"
+startDate = "2014-09"
+endDate = "2017-06"
+score = "Further Maths A\\*, Maths A\\*, Physics A\\*, AS Chemistry A"
 highlights = [
     "Baroness Perry Award for outstanding achievement in year 13",
     "Paul Redhead Prize for outstanding achievement in year 12"
 ]
+
+[education.alevels_kojipro]
+institution = "Cambridge Center for Sixth-Form Studies, UK"
+studyType = "High School"
+startDate = "2014-09"
+endDate = "2017-06"
+score = "Graduated with Maths A\\*, Further Maths A\\*, Physics A\\*" # , AS Chemistry A
+# highlights = [
+#     "Baroness Perry Award for outstanding achievement in year 13",
+#     "Paul Redhead Prize for outstanding achievement in year 12"
+# ]
 
 
 [work.arm2021]
@@ -209,6 +252,22 @@ startDate = "2019-07"
 endDate = "2019-09"
 summary = "Simulated impact of using non-volatile memory for L3 cache in gem5 (C++)."
 
+[work.arminternships_kojipro]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Research Intern"
+url = "https://arm.com"
+dateText = "Summers of 2019 & 2021"
+# subtitle = "Summer internships during university"
+summary = "Summer internships during university. Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the 'Ruby' DSL. Work was upstreamed and [is available online.](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+# highlights = [
+#     "Added DVM operations to existing gem5 CHI protocol model",
+#     "Simulated impact of DVM on many-core systems",
+#     "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+#     "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+# ]
+
+
 [work.arminternships]
 name = "Arm Ltd"
 company = "Arm Ltd"
@@ -222,6 +281,21 @@ highlights = [
     "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
     "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
 ]
+
+[work.virtualarts_kojipro]
+name = "Virtual Arts Ltd"
+company = "Virtual Arts Ltd"
+position = "Junior Programmer"
+# subtitle = "Left to enter university"
+url = "https://virtualarts.co.uk"
+startDate = "2017-09"
+endDate = "2018-08"
+summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers, including physically based rendering with image based lighting, for mobile devices and PCs. Supported Unity/C# AR racing game. Left to enter university."
+# highlights = [
+#     "Implemented Physically Based Rendering with Image Based Lighting",
+#     "Ported Unity-based code and shaders to C++, GLSL and Metal",
+#     "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
+# ]
 
 [work.gapyear]
 name = "Virtual Arts Ltd"
@@ -321,7 +395,7 @@ name = "Get To The Top"
 urls = [
     { name="Game Link", url="https://theturboturnip.itch.io/get-to-the-top" },
     { name="Development Videos", url="https://www.youtube.com/playlist?list=PLpc_f2Kxcy9WSuI24NlJThl_-yWwbnh3b" },
-    { name="GitHub", url="https://www.youtube.com/playlist?list=PLpc_f2Kxcy9WSuI24NlJThl_-yWwbnh3b" },
+    { name="GitHub", url="https://github.com/theturboturnip/get-to-the-top" },
     #https://github.com/theturboturnip/gttt-server
 ]
 # videos = [
@@ -337,7 +411,7 @@ description = "A personal project made in my spare time after school at 15. Cont
 #     "Custom editor gizmos for creating levels and checkpoints",
 # ]
 startDate = "2016"
-endDate = "2018"
+endDate = "2017"
 image = "gttt_snap.jpg"
 image_css = "object-position: 50% 50%;"
 
@@ -382,7 +456,7 @@ endDate = "2018"
 #     "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
 # ]
 image = "LightstreamRacer0723_crop.jpg"
-image_css = "object-position: 50% 50%;"
+image_css = "object-position: 100% 50%;"
 
 [projects.yk_gmd_io_kojipro]
 name = "yk_gmd_io"

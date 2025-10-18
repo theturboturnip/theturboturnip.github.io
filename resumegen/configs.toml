@@ -41,6 +41,20 @@
 # REQUIRED DOCUMENTS
 # - Japanese CV (Rirekisho with photo) ※if available
 #       # https://livinginjapan.net/2021/08/00631/
+#   - Date
+#   - Full Name
+#   - DOB
+#   - Gender
+#   - Current address
+#   - Contact info
+#       - Cell phone number
+#       - Email
+#   - Academic + Work history https://livinginjapan.net/2021/08/00636/
+#       - Order by date ascending, include high school
+#       - work should include reason for leaving
+#       - use official names for company and schools
+#       - clearly mark internships
+#       - "In the case of graduation school, enter “修了 (Completed)” rather than “卒業 (Graduated)”."
 # - CV with the following information:
 #   - Please specify all game titles you have been involved with in the past and the details of your duties while working on them. 
 #   - Please specify any program languages that you can use, the number of years you have used them, and the typical contents you have produced with them. 
@@ -68,15 +82,28 @@
 # - Please exclude confidential sources and information before submitting.
 # - Since our system is unable to recognize an overseas post code, applicants from outside Japan do not have to enter a post code that matches their actual address. However, please ensure that all other address information are valid.
 [kojipro]
-"education" = ["allcambs", "beng_minimal"]
-work = ["arminternships"]
+"education" = [
+    "alevels_kojipro",
+    "beng_kojipro",
+    "mphil_kojipro",
+    "phd_kojipro",
+]
+work = [
+    "virtualarts_kojipro",
+    "arminternships_kojipro",
+]
 projects = [
-    "yk_gmd_io_kojipro",
-    # "turnip_dxd", # ?
-    "warwick_typ_kojipro",
-    # "warwich_aca",
+    "get_to_the_top",
     "virtualarts_univrs",
     "virtualarts_lightstream",
-    "get_to_the_top",
+    "warwick_typ_kojipro",
+    "yk_gmd_io_kojipro",
+    # "turnip_dxd", # ?
+    # "warwich_aca",
 ]
+# publications = [
+
+# ]
 special = "kojipro"
+jp_date = true
+basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }

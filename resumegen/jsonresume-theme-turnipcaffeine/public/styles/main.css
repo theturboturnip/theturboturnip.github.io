@@ -59,7 +59,20 @@ body {
   margin: 50px 0 100px;
   letter-spacing: .3px;
   color: #39424B;
+  text-wrap: balance;
 }
+
+/* @supports(text-wrap: pretty) {
+  body {
+    text-wrap: pretty;
+  }
+} */
+/* 
+@supports not (text-wrap: pretty) {
+  body {
+    text-wrap: balance;
+  }
+} */
 
 html, body {
   min-height: 100vh;
@@ -214,7 +227,13 @@ ul {
     border-radius: 50%;
     border: 2px solid #0f53d1; }
 
-.summary {
+div.summary {
+  margin: 0; }
+
+div.summary > p {
+  margin: 5px 0 5px; }
+
+p.summary {
   margin: 5px 0 5px; }
 
 /* Layouts */
@@ -323,8 +342,14 @@ ul {
   margin-top: 5px;
 }
 .kojipro-urls .spacer {
-  color: color-mix(in srgb, black 30%, white);
+  /* color: color-mix(in srgb, black 30%, white); */
 }
 .kojipro-urls .spacer::after {
-  content: " • "
+  /* content: " • " */
+  content: " ∙ "
+}
+
+.skill-container .spacer::after {
+  /* content: " • " */
+  content: " — "
 }
