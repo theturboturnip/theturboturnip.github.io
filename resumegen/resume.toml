@@ -471,6 +471,7 @@ description = "I developed a utility for **Blender** in **Python** to import and
 #     "Developed beginner-friendly user experience for new modders"
 # ]
 startDate = "2020"
+endDate = "2025"
 # roles = [
 #     "developer", "maintainer"
 # ]
