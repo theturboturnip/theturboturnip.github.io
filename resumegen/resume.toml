@@ -429,7 +429,7 @@ urls = [
     # https://web.archive.org/web/20220625034607/https://apps.apple.com/gb/app/meteor-shower-benchmark/id1438967675
     # https://web.archive.org/web/20230723210111/https://apps.apple.com/gb/app/orbital-flight-benchmark/id1438214649
 ]
-description = "A custom game engine using **C++/Vulkan/GLSL/Metal** I helped develop at [Virtual Arts](https://virtualarts.co.uk), a mobile games startup, when I was 16-17. I built the engine alongside two senior programmers, and I led the implementation of Physically Based Rendering with Image Based Lighting. The engine ran on Android devices using a Vulkan/GLSL graphics backend, and on iOS using a Metal graphics backend. Alongside our artists, we created a set of benchmarks and demo scenes (some using AR) in **Unity/C#/HLSL** and ported them to our engine. In particular, I was responsible for porting the shaders for the 'Orbital Flight' benchmark."
+description = "A custom game engine using **C++/Vulkan/GLSL/Metal** I helped develop at [Virtual Arts](https://virtualarts.co.uk), a mobile games startup, when I was 16-17. I built the engine alongside two senior programmers, and I led the implementation of Physically Based Rendering with Image Based Lighting. The engine ran on Android devices using a Vulkan/GLSL graphics backend, and on iOS using a Metal graphics backend. Alongside our artists, we created a set of benchmarks and demo scenes (some using AR) in **Unity/C#/HLSL** and ported them to our engine. In particular, I was responsible for porting the shaders for the 'Orbital Flight' benchmark. Used **Git** for code and **Perforce** for gameplay assets."
 startDate = "2017"
 endDate = "2018"
 # summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers."

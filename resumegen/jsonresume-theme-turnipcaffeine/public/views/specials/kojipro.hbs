@@ -66,27 +66,65 @@ table.invisible-table td {
 
         {{!-- Skill Summary --}}
         <div class="skill-container">
-            {{> title value="Skill Summary" }}
 {{!-- #   - Please specify any program languages that you can use, the number of years you have used them, and the typical contents you have produced with them. 
 #   - Please specify software that you can use (Photoshop, Maya, Eclipse, etc.), the number of years you have used them, and the typical contents you have produced with them.  --}}
             <table class="invisible-table">
                 <tbody>
                     <tr>
                         <td id="language-skills" style="vertical-align: top;">
-                            {{> kojipro-skill-header value="Programming Languages" }}
+                            {{!-- {{> kojipro-skill-header value="Programming Languages" }} --}}
+                            {{> title value="Programming Languages" }}
 
                             {{> kojipro-skill skill="C, C++" year=2014 }}
-                            {{> kojipro-skill skill="Rust" year=2014 }}
-                            {{> kojipro-skill skill="C#" year=2014 }}
-                            {{> kojipro-skill skill="Java" year=2014 }}
-                            {{> kojipro-skill skill="Python" year=2014 }}
-                            {{> kojipro-skill skill="Assembly (x86, ARM, RISC-V, NVIDIA PTX, RDNA2)" year=2014 }}
 
-                            {{> kojipro-skill-header value="GPU/Graphics Languages" }}
-                            {{> kojipro-skill skill="GLSL" year=2014 }}
-                            {{> kojipro-skill skill="HLSL" year=2014 }}
-                            {{> kojipro-skill skill="Metal" year=2014 }}
-                            {{> kojipro-skill skill="CUDA" year=2014 }}
+                            <p>
+                            Multithreaded engine development with Vulkan, CUDA, and Metal; OS driver development and custom hardware testing during my PhD.
+                            </p>
+
+                            {{> kojipro-skill skill="Rust" year=2022 }}
+
+                            <p>
+                            General systems programming and OS driver development during my PhD.
+                            </p>
+
+                            {{> kojipro-skill skill="C#" year=2014 }}
+                            
+                            <p>
+                            Gameplay and editor programming in Unity.
+                            </p>
+
+                            {{> kojipro-skill skill="Java" year=2014 }}
+
+                            <p>
+                            Basic software development and algorithms at University of Warwick.
+                            </p>
+                            
+                            {{> kojipro-skill skill="Python" year=2011 }}
+
+                            <p>
+                            Amateur game development as a child, and various utilities since then.
+                            </p>
+
+                            {{> kojipro-skill skill="Assembly (various)" year=2018 }}
+
+                            <p>
+                            Writing old console emulators (ARM), debugging programs for my M.Phil and PhD work (RISC-V), optimizing vectorized code for my undergrad (x86 AVX-128), disassembly of video games for personal interest (AMD RDNA2 GPU)
+                            </p>
+
+                            {{!-- {{> kojipro-skill-header value="GPU/Graphics Languages" }} --}}
+                            {{> kojipro-skill skill="GLSL/HLSL/Metal Shading Language" year=2014 }}
+
+                            <p>
+                            Graphics and compute shaders for personal and professional game development, including physically based rendering with image-based lighting, instanced and indirect rendering, and parallel reductions. 
+                            </p>
+
+                            {{!-- {{> kojipro-skill skill="HLSL" year=2014 }} --}}
+                            {{!-- {{> kojipro-skill skill="Metal" year=2014 }} --}}
+                            {{> kojipro-skill skill="CUDA" year=2020 }}
+
+                            <p>
+                            Highly parallel fluid simulations ported from C.
+                            </p>
 
                             {{!-- {{> kojipro-skill-header value="Assembly Languages" }}
                             
@@ -96,18 +134,21 @@ table.invisible-table td {
                             <p>AMD RDNA2 GPU Assembly <span class="spacer"></span> XYZ years</p> --}}
                         </td>
                         <td id="software-skills" style="vertical-align: top;">
-                            {{> kojipro-skill-header value="3D Art/Game Software" }}
+                            {{> title value="Software" }}
+                            {{!-- {{> kojipro-skill-header value="3D Art/Game Software" }} --}}
                             
                             {{> kojipro-skill skill="Unity" year=2014 }}
                             {{> kojipro-skill skill="Blender" year=2014 }}
                             {{> kojipro-skill skill="GIMP" year=2014 }}
 
-                            {{> kojipro-skill-header value="Development Software" }}
+                            {{!-- {{> kojipro-skill-header value="Development Software" }} --}}
 
                             {{> kojipro-skill skill="NVIDIA NSight" year=2014 }}
                             {{> kojipro-skill skill="Visual Studio" year=2014 }}
                             {{> kojipro-skill skill="Visual Studio Code" year=2014 }}
                             {{> kojipro-skill skill="CLion (and other JetBrains IDEs)" year=2014 }}
+                            {{> kojipro-skill skill="Git & Perforce Version Control" year=2014 }}
+
 
                         </td>
                     </tr>
