@@ -19,6 +19,8 @@ area = "Computer Science"
 studyType = "PhD"
 startDate = "2022-10-01"
 score = "Ongoing, expecting to complete Summer 2026"
+summary = "I am researching memory security in system design, particularly for peripherals such as the GPU. As part of my work I teach CPU and GPU architecture to undergraduates. I have published an article in Communications of the ACM - the official magazine of the world's largest scientific computing society."
+# summary = "teaching cpu and gpu asrchitecyurew, hardfaer design"
 
 [education.phd]
 institution = "University of Cambridge"
@@ -62,6 +64,7 @@ studyType = "M.Phil"
 startDate = "2021-10-01"
 endDate = "2022-06-06"
 score = "Completed with Distinction"
+summary = "Won the RISE 2022 Student Competition for my thesis - see below."
 
 [education.mphil]
 institution = "University of Cambridge"
@@ -203,7 +206,7 @@ studyType = "B.Eng"
 # score = "B.Eng, First Class (85%) - Best Overall Graduating Student"
 # score = "First Class (85%) - Best overall graduating student in subject"
 score = "Graduated First Class - Best overall student in subject"
-# summary = "Wow isn't this great"
+summary = "Hybrid course under the Departments of Computer Science and Engineering, teaching computer science and hardware design. I chose this course to better understand hardware, so I could write faster software."
 
 [education.alevels]
 institution = "Cambridge Center for Sixth-Form Studies"
@@ -222,6 +225,7 @@ studyType = "High School"
 startDate = "2014-09"
 endDate = "2017-06"
 score = "Graduated with Maths A\\*, Further Maths A\\*, Physics A\\*" # , AS Chemistry A
+summary = "Won Paul Redhead Prize and Baroness Perry Award for outstanding achievement in 2016 and 2017 respectively."
 # highlights = [
 #     "Baroness Perry Award for outstanding achievement in year 13",
 #     "Paul Redhead Prize for outstanding achievement in year 12"
@@ -499,3 +503,39 @@ startDate = "2020"
 endDate = "2021"
 image = "2021-05-fluid-dynamics-header.png"
 image_css = "object-position: left 50%;"
+
+[publications.cxl_article]
+# Wrote an article for [ACM Queue]() on high-performance memory safety in CXL, which was subsequently published in Communications of the ACM - the official magazine of the world's largest scientific computing society.
+# [The article is available online.](https://dl.acm.org/doi/10.1145/3617580)
+name = "How Flexible is CXL's Memory Protection? Replacing a sledgehammer with a scalpel"
+urls = [
+    { name="ACM Queue", url="https://spawn-queue.acm.org/doi/abs/10.1145/3606014" },
+    { name="Communications of the ACM", url="https://dl.acm.org/doi/10.1145/3617580" },
+]
+authors = [
+    "Samuel W. Stark",
+    "A. Theodore Markettos",
+    "Simon W. Moore"
+]
+description = "I wrote this article as part of my PhD in high-performance memory security, in this case concerning the new protocol CXL. It was published first in ACM Queue, then in Communications of the ACM - the official magazine of the world's largest scientific computing society."
+# description = "Created a real-time GPU fluid simulation (CUDA) and parallel visualization (C++/Vulkan)."
+# highlights = [
+#     "Ported a fluid simulation from C to CUDA",
+#     "Implemented a GPU visualization in Vulkan",
+#     "Implemented various synchronization between CPUs and GPU",
+#     "Used memory sharing between CUDA and Vulkan to reduce copying"
+# ]
+# url = "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz"
+releaseDate = "2023"
+
+[publications.mphil_thesis_rise]
+name = "CHERI-RVV: The quest for secure, vectorized memcpy"
+urls = [
+    { name="Blog version", url="https://theturboturnip.com/posts/2022/12/cheri-rvv-rise" },
+    { name="Presentation", url="https://www.youtube.com/watch?v=J82OFvF3yGY" },
+]
+authors = [
+    "Samuel W. Stark"
+]
+description = "My M.Phil thesis at Cambridge was on adding CHERI memory security to the high-performance RISC-V vector extension. It won 1st place in the [RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)."
+releaseDate = "2022"

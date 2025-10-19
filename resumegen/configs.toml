@@ -3,11 +3,13 @@
 "work" = ["arminternships", "gapyear"]
 # "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
 "projects" = ["yk_gmd_io"]
+publications = []
 
 [current_projectheavy]
 "education" = ["allcambs", "beng_minimal"]
 "work" = ["arminternships", "gapyear"]
 "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
+publications = []
 
 [arm2021]
 "education" = ["mphil", "beng_minimal", "alevels"]
@@ -24,6 +26,7 @@
     # "get_to_the_top",
     # "overgrowth"
 ]
+publications = []
 
 # https://www.kojimaproductions.jp/en/3D-rendering-programmer-effects-programmer
 # https://web.archive.org/web/20251006224343/https://www.kojimaproductions.jp/en/3D-rendering-programmer-effects-programmer
@@ -101,9 +104,11 @@ projects = [
     # "turnip_dxd", # ?
     # "warwich_aca",
 ]
-# publications = [
-
-# ]
+publications = [
+    "mphil_thesis_rise",
+    "cxl_article",
+]
 special = "kojipro"
 jp_date = true
 basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }
+# TODO in special article, mention culling via AC Unity is also something I did?

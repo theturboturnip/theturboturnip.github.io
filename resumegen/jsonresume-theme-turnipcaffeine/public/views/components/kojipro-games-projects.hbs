@@ -1,0 +1,46 @@
+
+{{#if resume.projects.length}}
+<div class="container game-container">
+    {{> title value="Games & Projects"}}
+
+    {{#each resume.projects}}
+        <section class="item" style="margin-bottom: 0px;">
+            <table class="invisible-table">
+                <tr>
+                    {{#if image}}
+                    <td style="width: 100px; padding: 0; padding-right:15px; position: relative;">
+                        <div style="height: 100%; display: flex; align-items: stretch; min-height: 0;">
+<img src="{{imagedata image}}" style="height: 100%; width: 100px; object-fit: cover; display: block; position: absolute; top: 0; left: 0; {{#if image_css}}{{image_css}}{{/if}}"/>
+                        </div>
+                    </td>
+                    {{/if}}
+                    <td>
+                        {{> section-header name=this.name }}
+
+                        <div class="kojipro-urls">
+                            {{#each this.urls}}
+                            <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
+                            {{/each}}
+                        </div>
+
+                        {{#if summary}}
+                        <p class="summary">{{{filter summary "markdown"}}}</p>
+                        {{else if description}}
+                        <p class="summary">{{{filter description "markdown"}}}</p>
+                        {{/if}}
+
+                        {{#if highlights.length}}
+                        <ul>
+                            {{#each highlights}}
+                            <li>{{{filter . "markdown"}}}</li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                    </td>
+
+                </tr>
+            </table>
+        </section>
+    {{/each}}
+</div>
+{{/if}}

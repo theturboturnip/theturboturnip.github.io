@@ -59,69 +59,14 @@ table.invisible-table td {
         {{> education }}
         {{> work header="Work" }}
         {{!-- {{> volunteer }} --}}
-{{#if resume.projects.length}}
-<div class="container game-container">
-    {{> title value="Games & Projects"}}
 
-    {{#each resume.projects}}
-        <section class="item" style="margin-bottom: 0px;">
-            <table class="invisible-table">
-                <tr>
-                    {{#if image}}
-                    <td style="width: 100px; padding: 0; padding-right:15px; position: relative;">
-                        <div style="height: 100%; display: flex; align-items: stretch; min-height: 0;">
-<img src="{{imagedata image}}" style="height: 100%; width: 100px; object-fit: cover; display: block; position: absolute; top: 0; left: 0; {{#if image_css}}{{image_css}}{{/if}}"/>
-                        </div>
-                    </td>
-                    {{/if}}
-                    <td>
-                        {{> section-header name=this.name }}
-
-                        <div class="kojipro-urls">
-                            {{#each this.urls}}
-                            <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
-                            {{/each}}
-                        </div>
-
-                        {{#if summary}}
-                        <p class="summary">{{{filter summary "markdown"}}}</p>
-                        {{else if description}}
-                        <p class="summary">{{{filter description "markdown"}}}</p>
-                        {{/if}}
-
-                        {{#if highlights.length}}
-                        <ul>
-                            {{#each highlights}}
-                            <li>{{{filter . "markdown"}}}</li>
-                            {{/each}}
-                        </ul>
-                        {{/if}}
-                    </td>
-
-                </tr>
-            </table>
-        </section>
-    {{/each}}
-</div>
-{{/if}}
-        {{!-- {{> awards }}
-        {{> publications }}
-        {{> references }} --}}
+        {{> awards }}
+        {{> publications header="Articles"}}
+        {{!-- {{> references }} --}}
 
         {{!-- Skill Summary --}}
         <div class="skill-container">
             {{> title value="Skill Summary" }}
-
-            {{!-- <div class="skill-key-value">
-                <p>Gender: Male</p>
-                <p>DOB: {{orIfNull resume.basics.dob "XXXX-XX-XX"}}</p>
-                <p>Email: <a href="mailto:{{resume.basics.email}}">{{resume.basics.email}}</a></p>
-                <p>Phone: {{orIfNull resume.basics.phonne "+44 XXXX XXXXXX"}}</p>
-                <p>Address: {{orIfNull resume.basics.location.formatAddress "REDACTED REDACTED REDACTED REDACTED REDACTED"}}</p>
-                <p>Submission Date: 2025-10-18</p>
-            </div> --}}
-
-
 {{!-- #   - Please specify any program languages that you can use, the number of years you have used them, and the typical contents you have produced with them. 
 #   - Please specify software that you can use (Photoshop, Maya, Eclipse, etc.), the number of years you have used them, and the typical contents you have produced with them.  --}}
             <table class="invisible-table">
@@ -170,9 +115,7 @@ table.invisible-table td {
             </table>
         </div>
 
-        <div class="container">
-            {{> title value="Articles" }}
-        </div>
+        {{> kojipro-games-projects }}
 
         {{!-- Fav technical presentations and fav game --}}
         <div class="container">

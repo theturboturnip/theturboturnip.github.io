@@ -1,6 +1,6 @@
 {{#if resume.publications.length}}
 <div class="container publications-container">
-    {{> title value="Publications"}}
+    {{> title value=(orIfNull header "Publications")}}
 
     {{#each resume.publications}}
     <section class="item">
@@ -10,8 +10,22 @@
         <h5 class="awarder">{{publisher}}</h5>
         {{/if}}
 
+        <div class="kojipro-urls">
+            {{#if this.authors}}
+            <span>{{authorString this.authors}}</span>
+            {{#if this.urls}}
+             <span class="spacer"></span> 
+            {{/if}}
+            {{/if}}
+            {{#each this.urls}}
+            <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
+            {{/each}}
+        </div>
+
         {{#if summary}}
         <p class="summary">{{{filter summary "markdown"}}}</p>
+        {{else if description}}
+        <p class="summary">{{{filter description "markdown"}}}</p>
         {{/if}}
 
     </section>

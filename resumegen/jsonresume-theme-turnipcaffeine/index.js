@@ -61,6 +61,27 @@ handlebars.registerHelper({
         } else {
             return years + " years";
         }
+    },
+
+    authorString: function(authors) {
+        if (authors) {
+            let authorStr = "First author: " + authors[0];
+            let otherAuthors = authors.slice(1);
+            if (otherAuthors.length > 0) {
+                authorStr += "; Co-authors: ";
+                let first = true;
+                otherAuthors.forEach((author) => {
+                    if (!first) {
+                        authorStr += ", ";
+                    }
+                    authorStr += author;
+                    first = false;
+                });
+            }
+            return authorStr;
+        } else {
+            return "";
+        }
     }
 });
 
