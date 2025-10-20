@@ -34,14 +34,28 @@ table.invisible-table {
 table.invisible-table td {
     padding: 0;
 }
+.skill-container h3 + p {
+    margin-top: 0;
+}
+
+table td.side-image {
+width: 100px; padding: 0; padding-right:15px; position: relative;
+}
+table td.side-image > div {
+height: 100%; display: flex; align-items: stretch; min-height: 0;
+}
+table td.side-image > div > img {
+height: 100%; width: 100px; object-fit: cover; display: block; position: absolute; top: 0; left: 0;
+}
 </style>
 <div class="resume-content">
     <aside class="about-header">
         <div class="about-key-value">
             <p>Gender: Male</p>
+            {{!-- <p>US & UK Citizen</p> --}}
             <p>DOB: {{orIfNull resume.basics.dob "XXXX-XX-XX"}}</p>
             <p>Email: <a href="mailto:{{resume.basics.email}}">{{resume.basics.email}}</a></p>
-            <p>Phone: {{orIfNull resume.basics.phonne "+44 XXXX XXXXXX"}}</p>
+            <p>Phone: {{orIfNull resume.basics.phone "+44 XXXX XXXXXX"}}</p>
             <p>Address: {{orIfNull resume.basics.location.formatAddress "REDACTED REDACTED REDACTED REDACTED REDACTED"}}</p>
             <p>Submission Date: 2025-10-18</p>
         </div>
@@ -51,9 +65,9 @@ table.invisible-table td {
         {{> languages }}
         {{> interests }} --}}
     </aside>
-    <p>
-        TODO intro here?
-    </p>
+    {{!-- <p>
+        I am a new graduate. I worked on games in an amateur and professional capacity before I started university, and once I complete my PhD in 2026 I'm hoping to get back into the industry.
+    </p> --}}
     <div class="resume-contents">
         {{> summary }}
         {{> education }}
@@ -65,13 +79,13 @@ table.invisible-table td {
         {{!-- {{> references }} --}}
 
         {{!-- Skill Summary --}}
-        <div class="skill-container">
+        <div class="container skill-container">
 {{!-- #   - Please specify any program languages that you can use, the number of years you have used them, and the typical contents you have produced with them. 
 #   - Please specify software that you can use (Photoshop, Maya, Eclipse, etc.), the number of years you have used them, and the typical contents you have produced with them.  --}}
             <table class="invisible-table">
                 <tbody>
                     <tr>
-                        <td id="language-skills" style="vertical-align: top;">
+                        <td id="language-skills" style="vertical-align: top; width: 50%;">
                             {{!-- {{> kojipro-skill-header value="Programming Languages" }} --}}
                             {{> title value="Programming Languages" }}
 
@@ -81,35 +95,101 @@ table.invisible-table td {
                             Multithreaded engine development with Vulkan, CUDA, and Metal; OS driver development and custom hardware testing during my PhD.
                             </p>
 
-                            {{> kojipro-skill skill="Rust" year=2022 }}
-
-                            <p>
-                            General systems programming and OS driver development during my PhD.
-                            </p>
-
                             {{> kojipro-skill skill="C#" year=2014 }}
                             
                             <p>
                             Gameplay and editor programming in Unity.
                             </p>
 
-                            {{> kojipro-skill skill="Java" year=2014 }}
+                            {{!--
+                            {{> kojipro-skill skill="Java" year=2018 }}
 
                             <p>
                             Basic software development and algorithms at University of Warwick.
                             </p>
+                            --}}
                             
                             {{> kojipro-skill skill="Python" year=2011 }}
 
                             <p>
-                            Amateur game development as a child, and various utilities since then.
+                            Amateur game development, side projects, and utilities for my PhD.
+                             {{!-- and various utilities since then. --}}
                             </p>
 
                             {{> kojipro-skill skill="Assembly (various)" year=2018 }}
 
                             <p>
-                            Writing old console emulators (ARM), debugging programs for my M.Phil and PhD work (RISC-V), optimizing vectorized code for my undergrad (x86 AVX-128), disassembly of video games for personal interest (AMD RDNA2 GPU)
+                            Writing old console emulators (ARM), debugging for my MPhil and PhD (RISC-V), optimizing vectorized code (x86 AVX-128), disassembling video games for personal interest (AMD RDNA2 GPU)
                             </p>
+
+                            {{> kojipro-skill skill="Rust" year=2022 }}
+
+                            <p>
+                            General systems programming and OS driver development during my PhD.
+                            </p>
+                            {{!-- {{> kojipro-skill-header value="Assembly Languages" }}
+                            
+                            <p>x86 Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>ARMv7 Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>RISC-V Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>AMD RDNA2 GPU Assembly <span class="spacer"></span> XYZ years</p> --}}
+                        </td>
+                        <td id="software-skills" style="vertical-align: top; width: 50%;">
+                            {{> title value="Software" }}
+                            {{!-- {{> kojipro-skill-header value="3D Art/Game Software" }} --}}
+                            
+                            {{!-- {{> kojipro-skill skill="Unity" year=2014 }} --}}
+                            {{> kojipro-skill skill="Blender" year=2014 }}
+
+                            <p>
+                                3D content creation in Cycles, the ray-traced renderer, and Eevee, the real-time renderer.
+                                More recently, tooling development for importing and exporting models from games in the Like A Dragon/Yakuza series.
+                            </p>
+
+                            {{!-- {{> kojipro-skill skill="GIMP" year=2014 }}
+
+                            <p>
+
+                            </p> --}}
+
+                            {{!-- {{> kojipro-skill-header value="Development Software" }} --}}
+
+                            {{> kojipro-skill skill="Renderdoc" year=2018 }}
+
+                            <p>
+                                Debugging graphics errors on Windows and Android devices, and exploring modern game engine rendering pipelines in a personal capacity.
+                            </p>
+
+                            {{!--
+                            {{> kojipro-skill skill="NVIDIA NSight" year=2020 }}
+
+                            <p>
+                                Profiling GPU programs and diagnosing pipeline bubbles.
+                            </p>
+                            --}}
+
+                            {{> kojipro-skill skill="Visual Studio" year=2017 }}
+                            {{!-- {{> kojipro-skill skill="XCode" years=1 }} --}}
+                            <p>
+                                I used Visual Studio when I was working at Virtual Arts on the Universe Engine, and have since used it on personal C++ and C# projects.
+                                {{!-- I used Visual Studio and XCode when I was working at Virtual Arts on the Universe Engine. I have since used Visual Studio on personal C++ and C# projects. --}}
+                            </p>
+
+                            {{> kojipro-skill skill="Visual Studio Code" year=2019 }}
+                            {{> kojipro-skill skill="CLion (and other JetBrains IDEs)" year=2020 }}
+                            {{!-- {{> kojipro-skill skill="Git & Perforce Version Control" year=2014 }} --}}
+
+                            <p>
+                                These are the go-to IDEs for my PhD and MPhil work.
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 100%; text-align: center; break-after: page;"><p>Skills continued on next page</p></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top; width: 50%;">
+                            {{> title value="GPU Programming Languages" }}
 
                             {{!-- {{> kojipro-skill-header value="GPU/Graphics Languages" }} --}}
                             {{> kojipro-skill skill="GLSL/HLSL/Metal Shading Language" year=2014 }}
@@ -125,31 +205,13 @@ table.invisible-table td {
                             <p>
                             Highly parallel fluid simulations ported from C.
                             </p>
-
-                            {{!-- {{> kojipro-skill-header value="Assembly Languages" }}
-                            
-                            <p>x86 Assembly <span class="spacer"></span> XYZ years</p>
-                            <p>ARMv7 Assembly <span class="spacer"></span> XYZ years</p>
-                            <p>RISC-V Assembly <span class="spacer"></span> XYZ years</p>
-                            <p>AMD RDNA2 GPU Assembly <span class="spacer"></span> XYZ years</p> --}}
                         </td>
-                        <td id="software-skills" style="vertical-align: top;">
-                            {{> title value="Software" }}
-                            {{!-- {{> kojipro-skill-header value="3D Art/Game Software" }} --}}
-                            
-                            {{> kojipro-skill skill="Unity" year=2014 }}
-                            {{> kojipro-skill skill="Blender" year=2014 }}
-                            {{> kojipro-skill skill="GIMP" year=2014 }}
+                        <td style="vertical-align: top; width: 50%;">
+                            {{> title value="Other" }}
 
-                            {{!-- {{> kojipro-skill-header value="Development Software" }} --}}
-
-                            {{> kojipro-skill skill="NVIDIA NSight" year=2014 }}
-                            {{> kojipro-skill skill="Visual Studio" year=2014 }}
-                            {{> kojipro-skill skill="Visual Studio Code" year=2014 }}
-                            {{> kojipro-skill skill="CLion (and other JetBrains IDEs)" year=2014 }}
-                            {{> kojipro-skill skill="Git & Perforce Version Control" year=2014 }}
-
-
+                            <p>
+                                I also have experience with Java, Kotlin, Flutter, Dart, and Lua; and hardware development langauges such as SystemVerilog and Bluespec.
+                            </p>
                         </td>
                     </tr>
                 </tbody>
@@ -161,6 +223,31 @@ table.invisible-table td {
         {{!-- Fav technical presentations and fav game --}}
         <div class="container">
             {{> title value="Interesting Presentations" }}
+            <table class="invisible-table">
+                <tbody>
+                    <tr>
+                        <td class="side-image">
+                            <div>
+                                <img src="" style=""/>
+                            </div>
+                        </td>
+                        <td>
+                            {{> section-header name=this.name }}
+
+                            <div class="kojipro-urls">
+                                {{!-- {{#each this.urls}}
+                                <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
+                                {{/each}} --}}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td ncols="2">
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <div class="container">
@@ -169,9 +256,6 @@ table.invisible-table td {
 
 
         TODOS
-        - specify work created with skills
-        - decide if supplementary info useful for work/education
-        - article
         - interesting presentations
         - interesting game
     </div>

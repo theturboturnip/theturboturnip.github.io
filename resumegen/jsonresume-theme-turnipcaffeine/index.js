@@ -63,6 +63,14 @@ handlebars.registerHelper({
         }
     },
 
+    nYears: function(years) {
+        if (years == 1) {
+            return "1 year";
+        } else {
+            return years + " years";
+        }
+    },
+
     authorString: function(authors) {
         if (authors) {
             let authorStr = "First author: " + authors[0];
