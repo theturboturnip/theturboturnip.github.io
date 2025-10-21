@@ -108,6 +108,13 @@ publications = [
     "mphil_thesis_rise",
     "cxl_article",
 ]
+kojipro_presentations = [
+    "nanite",
+    "hypehype",
+]
+kojipro_game = [
+    "alanwake2"
+]
 special = "kojipro"
 jp_date = true
 basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }

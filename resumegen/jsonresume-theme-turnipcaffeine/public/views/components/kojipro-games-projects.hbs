@@ -24,9 +24,9 @@
                         </div>
 
                         {{#if summary}}
-                        <p class="summary">{{{filter summary "markdown"}}}</p>
+                        <div class="summary">{{{filter summary "markdown"}}}</div>
                         {{else if description}}
-                        <p class="summary">{{{filter description "markdown"}}}</p>
+                        <div class="summary">{{{filter description "markdown"}}}</div>
                         {{/if}}
 
                         {{#if highlights.length}}

@@ -429,7 +429,8 @@ urls = [
     # https://web.archive.org/web/20220625034607/https://apps.apple.com/gb/app/meteor-shower-benchmark/id1438967675
     # https://web.archive.org/web/20230723210111/https://apps.apple.com/gb/app/orbital-flight-benchmark/id1438214649
 ]
-description = "A custom game engine using **C++/Vulkan/GLSL/Metal** I helped develop at [Virtual Arts](https://virtualarts.co.uk), a mobile games startup, when I was 16-17. I built the engine alongside two senior programmers, and I led the implementation of Physically Based Rendering with Image Based Lighting. The engine ran on Android devices using a Vulkan/GLSL graphics backend, and on iOS using a Metal graphics backend. Alongside our artists, we created a set of benchmarks and demo scenes (some using AR) in **Unity/C#/HLSL** and ported them to our engine. In particular, I was responsible for porting the shaders for the 'Orbital Flight' benchmark. Used **Git** for code and **Perforce** for gameplay assets."
+description = "A custom game engine using **C++/Vulkan/GLSL/Metal** I helped develop at [Virtual Arts](https://virtualarts.co.uk), a mobile games startup, when I was 16-17. I built the engine alongside two senior programmers, and I led the implementation of Physically Based Rendering with Image Based Lighting. The engine ran on Android devices using a Vulkan/GLSL graphics backend, and on iOS using a Metal graphics backend. Alongside our artists, we created a set of benchmarks and demo scenes (some using AR) in **Unity/C#/HLSL** and ported them to our engine. In particular, I was responsible for porting the shaders for the 'Orbital Flight' benchmark."
+#  Used **Git** for code and **Perforce** for gameplay assets.
 startDate = "2017"
 endDate = "2018"
 # summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers."
@@ -539,3 +540,45 @@ authors = [
 ]
 description = "My M.Phil thesis at Cambridge was on adding CHERI memory security to the high-performance RISC-V vector extension. It won 1st place in the [RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)."
 releaseDate = "2022"
+
+#   - Please list two recent technical presentations and related articles that you found to be wonderful from a technical and expressive standpoint, and briefly explain the reason why. 
+
+#   - Please name one game you recently played that you were interested in from a technical standpoint, and briefly explain the reason why.
+
+[kojipro_presentations.nanite]
+name = "A Deep Dive into Nanite Virtualized Geometry"
+urls = [
+    { name = "Video", url="https://www.youtube.com/watch?v=eviSykqSUUw" },
+    { name = "Slides", url="https://advances.realtimerendering.com/s2021/Karis_Nanite_SIGGRAPH_Advances_2021_final.pdf" },
+]
+description = """
+Nanite is part of Epic's push to separate scene complexity from render complexity in UE5, alongside [Lumen](https://www.advances.realtimerendering.com/s2022/SIGGRAPH2022-Advances-Lumen-Wright%20et%20al.pdf) and later [MegaLights](https://advances.realtimerendering.com/s2025/content/MegaLights_Stochastic_Direct_Lighting_2025.pdf). Coming up with both Nanite and Lumen required the authors to consider whether hardware features (rasterization, raytracing) were *actually* faster than software versions - and I think having that perspective and beating the hardware at its own game is wonderful! This presentation on Nanite, and [Capcom's 2025 presentation on their version,](https://www.youtube.com/watch?v=nWgPtCDXlPc) showed me how much the compute-focused GPU algorithms I learned during my master's degree also apply to graphics.
+"""
+releaseDate = "2021"
+# both require smart usage of hardware features, understanding where they're better *or worse* than software versions. I think having that perspective and not getting blinded by raw hardware performance is wonderful, and on top of that it represents a 
+#  Their efforts all involve some amount of 
+# TODO alternate implementtions are coming out, some including software renderers such as [Capcom's RE Engine](https://www.youtube.com/watch?v=nWgPtCDXlPc).
+
+[kojipro_presentations.hypehype] # ?
+name = "Modern Mobile Rendering @ HypeHype"
+urls = [
+    { name = "Video", url="https://www.youtube.com/watch?v=m3bW8d4Brec" },
+    { name = "Slides", url="https://enginearchitecture.realtimerendering.com/downloads/reac2023_modern_mobile_rendering_at_hypehype.pdf" },
+]
+description = """
+Sebastian Aaltonen, one of the [pioneers of modern GPU-driven rendering with Assassin's Creed Unity,](https://www.advances.realtimerendering.com/s2015/aaltonenhaar_siggraph2015_combined_final_footer_220dpi.pdf) now works at a mobile game company. Mobile rendering, particularly on outdated phones, is incredibly constrained - but this presentation shows how rethinking your engine architecture can squeeze out so much performance that you can start supporting modern rendering techniques such as [stochastic lighting (like MegaLights!)](https://advances.realtimerendering.com/s2025/content/s2025_stb_lighting_v1.1_notes.pdf) on decades-old devices.
+"""
+releaseDate = "2023"
+
+
+[kojipro_game.alanwake2]
+name = "Alan Wake 2"
+image = "aw2_2.jpg"
+# urls = [
+#     { name = "Modernizing geometry rendering in Alan Wake 2", url = "https://www.youtube.com/watch?v=l98JgYBQz68" }
+# ]
+description = """
+Alan Wake 2 stands out to me because it entirely relies on its advanced technical features, both the use of [mesh shaders in general](https://www.youtube.com/watch?v=EtX7WnFhxtQ) and [GPU vegetation skinning](https://gdcvault.com/play/1034310/Large-Scale-GPU-Based-Skinning) (up to [a million bones per frame](https://www.youtube.com/watch?v=l98JgYBQz68)), to convey emotion. Plenty of games use technology to look great, but here the horror just wouldn't work without that level of detail, without the dense foliage casting shadows and moving *just* outside your peripheral vision.
+"""
+# Alan Wake 2 stands out to me because it entirely relies on its advanced technical features, both the use of [mesh shaders in general](https://www.youtube.com/watch?v=EtX7WnFhxtQ) and [GPU vegetation skinning](https://gdcvault.com/play/1034310/Large-Scale-GPU-Based-Skinning) (up to [a million bones per frame](https://www.youtube.com/watch?v=l98JgYBQz68)), to convey the intended emotions and do justice to the Pacific Northwest setting. Plenty of amazing games use tech well, but Alan Wake's horror just doesn't work without the foliage constantly moving just out of sigh
+# the intended emotions and do justice to the Pacific Northwest setting. Plenty of amazing games use tech well, but Alan Wake's horror just doesn't work without the foliage constantly moving just out of sigh

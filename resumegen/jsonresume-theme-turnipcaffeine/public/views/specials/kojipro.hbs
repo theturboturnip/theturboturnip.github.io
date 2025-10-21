@@ -200,17 +200,17 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
 
                             {{!-- {{> kojipro-skill skill="HLSL" year=2014 }} --}}
                             {{!-- {{> kojipro-skill skill="Metal" year=2014 }} --}}
-                            {{> kojipro-skill skill="CUDA" year=2020 }}
+                            {{> kojipro-skill skill="CUDA" years=2 }}
 
                             <p>
-                            Highly parallel fluid simulations ported from C.
+                            Highly parallel fluid simulations ported from C, and other general-purpose GPU algorithms I learned about during my MPhil degree.
                             </p>
                         </td>
                         <td style="vertical-align: top; width: 50%;">
                             {{> title value="Other" }}
 
                             <p>
-                                I also have experience with Java, Kotlin, Flutter, Dart, JavaScript, and Lua; and hardware development langauges such as SystemVerilog and Bluespec.
+                                I also have experience with Java, Kotlin, Flutter, Dart, JavaScript, and Lua;the Git and Perforce version control systems; and hardware development langauges such as SystemVerilog and Bluespec.
                             </p>
                         </td>
                     </tr>
@@ -223,40 +223,72 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
         {{!-- Fav technical presentations and fav game --}}
         <div class="container">
             {{> title value="Interesting Presentations" }}
-            <table class="invisible-table">
-                <tbody>
-                    <tr>
-                        <td class="side-image">
-                            <div>
-                                <img src="" style=""/>
-                            </div>
-                        </td>
-                        <td>
-                            {{> section-header name=this.name }}
 
-                            <div class="kojipro-urls">
-                                {{!-- {{#each this.urls}}
-                                <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
-                                {{/each}} --}}
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td ncols="2">
+            {{#each resume.kojipro_presentations}}
+                <section class="item" style="margin-bottom: 0px;">
+                    <table class="invisible-table">
+                        <tr>
+                            {{#if image}}
+                            <td class="side-image">
+                                <div>
+                                    <img src="{{imagedata image}}" style="{{#if image_css}}{{image_css}}{{/if}}"/>
+                                </div>
+                            </td>
+                            {{/if}}
+                            <td>
+                                {{> section-header name=this.name }}
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                                <div class="kojipro-urls">
+                                    {{#each this.urls}}
+                                    <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
+                                    {{/each}}
+                                </div>
+
+                                {{#if summary}}
+                                <div class="summary">{{{filter summary "markdown"}}}</div>
+                                {{else if description}}
+                                <div class="summary">{{{filter description "markdown"}}}</div>
+                                {{/if}}
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            {{/each}}
         </div>
 
         <div class="container">
-            {{> title value="Interesting Game" }}
+
+            {{#each resume.kojipro_game}}
+
+                <section class="item" style="margin-bottom: 0px;">
+                    <table class="invisible-table">
+                        <tr>
+                            {{#if image}}
+                            <td class="side-image">
+                                <div>
+                                    <img src="{{imagedata image}}" style="{{#if image_css}}{{image_css}}{{/if}}"/>
+                                </div>
+                            </td>
+                            {{/if}}
+                            <td>
+                                {{> title value=(concat "Interesting Game: " this.name) }}
+
+                                <div class="kojipro-urls">
+                                    {{#each this.urls}}
+                                    <a href="{{this.url}}">{{this.name}}</a>{{#unless @last}} <span class="spacer"></span> {{/unless}}
+                                    {{/each}}
+                                </div>
+
+                                {{#if summary}}
+                                <div class="summary">{{{filter summary "markdown"}}}</div>
+                                {{else if description}}
+                                <div class="summary">{{{filter description "markdown"}}}</div>
+                                {{/if}}
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            {{/each}}
         </div>
-
-
-        TODOS
-        - interesting presentations
-        - interesting game
     </div>
 </div>
