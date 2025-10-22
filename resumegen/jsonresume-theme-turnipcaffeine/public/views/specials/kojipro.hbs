@@ -49,22 +49,44 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
 }
 </style>
 <div class="resume-content">
-    <aside class="about-header">
-        <div class="about-key-value">
-            <p>Gender: Male</p>
-            {{!-- <p>US & UK Citizen</p> --}}
-            <p>DOB: {{orIfNull resume.basics.dob "XXXX-XX-XX"}}</p>
-            <p>Email: <a href="mailto:{{resume.basics.email}}">{{resume.basics.email}}</a></p>
-            <p>Phone: {{orIfNull resume.basics.phone "+44 XXXX XXXXXX"}}</p>
-            <p>Address: {{orIfNull resume.basics.location.formatAddress "REDACTED REDACTED REDACTED REDACTED REDACTED"}}</p>
-            <p>Submission Date: 2025-10-18</p>
-        </div>
-{{!-- 
-        {{> about }}
-        {{> skills }}
-        {{> languages }}
-        {{> interests }} --}}
-    </aside>
+    <table class="invisible-table">
+        <tbody>
+            <tr>
+                {{#if resume.basics.picture}}
+                <td style="margin-right:10px;">
+                    {{!-- Exact Rirekisho specifiation --}}
+                    {{!-- <img style="width: 3cm; height: 4cm" src="{{imagedata resume.basics.picture}}"> --}}
+                    <img style="width: 1.5cm; height: 2cm" src="{{imagedata resume.basics.picture}}">
+                </td>
+                {{/if}}
+                <td>
+                    <header class="clearfix">
+                        <div class="profile-header pull-left">
+                            <h1>{{resume.basics.name}}</h1>
+                            {{!-- <h2>{{label}}</h2> --}}
+                        </div>
+                    </header>
+                    <aside class="about-header">
+                        <div class="about-key-value">
+                            <p>Gender: Male</p>
+                            <p>DOB: {{orIfNull resume.basics.dob "XXXX-XX-XX"}}</p>
+                            <p>Email: <a href="mailto:{{resume.basics.email}}">{{resume.basics.email}}</a></p>
+                            <p>Phone: {{orIfNull resume.basics.phone "+44 XXXX XXXXXX"}}</p>
+                            <p>US & UK Citizen</p>
+                            <p>Address: {{orIfNull resume.basics.location.formatAddress "REDACTED REDACTED REDACTED REDACTED REDACTED"}}</p>
+                            <p>Submission Date: 2025-10-18</p>
+                        </div>
+                {{!-- 
+                        {{> about }}
+                        {{> skills }}
+                        {{> languages }}
+                        {{> interests }} --}}
+                    </aside>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
     {{!-- <p>
         I am a new graduate. I worked on games in an amateur and professional capacity before I started university, and once I complete my PhD in 2026 I'm hoping to get back into the industry.
     </p> --}}
@@ -124,7 +146,7 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
 
                             {{> kojipro-skill skill="Rust" year=2022 }}
 
-                            <p>
+                            <p style="margin-bottom: 0;">
                             General systems programming and OS driver development during my PhD.
                             </p>
                             {{!-- {{> kojipro-skill-header value="Assembly Languages" }}
@@ -185,14 +207,15 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" style="width: 100%; text-align: center; break-after: page;"><p>Skills continued on next page</p></td>
+                        {{!-- break-after: page; --}}
+                        <td colspan="2" style="width: 100%; text-align: center;  margin-bottom: 0;"><p>Skills continued on next page</p></td>
                     </tr>
                 </tbody>
             </table>
             <table class="invisible-table" style="margin-top: 36px">
                 <tbody>
                     <tr>
-                        <td colspan="2" style="width: 100%; height: 20px"></td>
+                        <td colspan="2" style="width: 100%; height: 0"></td>
                     </tr>
                     <tr>
                         <td style="vertical-align: top; width: 50%;">
@@ -209,7 +232,7 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
                             {{!-- {{> kojipro-skill skill="Metal" year=2014 }} --}}
                             {{> kojipro-skill skill="CUDA" years=2 }}
 
-                            <p>
+                            <p style="margin-bottom: 0;">
                             Highly parallel fluid simulations ported from C, and other general-purpose GPU algorithms I learned about during my MPhil degree.
                             </p>
                         </td>
@@ -217,7 +240,7 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
                             {{> title value="Other" }}
 
                             <p>
-                                I also have experience with Java, Kotlin, Flutter, Dart, JavaScript, and Lua;the Git and Perforce version control systems; and hardware development langauges such as SystemVerilog and Bluespec.
+                                I also have experience with Java, Kotlin, Flutter, Dart, JavaScript, and Lua; the Git and Perforce version control systems; and hardware development languages such as SystemVerilog and Bluespec.
                             </p>
                         </td>
                     </tr>

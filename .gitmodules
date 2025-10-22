@@ -4,3 +4,6 @@
 [submodule "resumegen/resume-cli"]
 	path = resumegen/resume-cli
 	url = https://github.com/theturboturnip/resume-cli
+[submodule "resumegen/resumegen-private"]
+	path = resumegen/resumegen-private
+	url = https://github.com/theturboturnip/resumegen-private

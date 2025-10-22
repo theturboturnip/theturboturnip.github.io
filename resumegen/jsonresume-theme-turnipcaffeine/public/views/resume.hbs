@@ -11,10 +11,10 @@
 	</head>
 	<body>
 		<main id="resume" class="page">
-			{{> resume-header}}
 			{{#if resume.special}}
 			{{> special }}
 			{{else}}
+			{{> resume-header}}
 			<div class="resume-content">
 				<aside class="about-header">
 					{{> about }}

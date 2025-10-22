@@ -1,6 +1,7 @@
 set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 output_resume_json := "./output"
+output_resume_json_PRIVATE := "./output/PRIVATE"
 
 cv_pdf  := "../files/cv/CV_SamuelWinslowStark.pdf"
 # cv_docx := "../files/cv/CV_SamuelWinslowStark.docx"
@@ -15,11 +16,13 @@ setup-js:
     nvm use 23.5.0
     npm install
     New-Item -Path .\output -ItemType Directory -Force
+    New-Item -Path .\output\PRIVATE -ItemType Directory -Force
 
 [unix]
 setup-js:
     npm install
     mkdir -p ./output/
+    mkdir -p ./output/PRIVATE
 
 render-js-main name="current":
     uv run python ./buildcv.py -o {{output_resume_json}} resume.toml configs.toml
@@ -36,6 +39,12 @@ render-js name="current":
     npx resume-cli export {{output_resume_json}}/CV_SamuelWinslowStark_{{name}}.html -r {{output_resume_json}}/resume.{{name}}.json -t ./jsonresume-theme-turnipcaffeine
 
     uv run python ./rendermarkdown.py --include_basics {{output_resume_json}}/resume.{{name}}.json {{output_resume_json}}/CV_SamuelWinslowStark_{{name}}.md 
+
+render-js-PRIVATE name="current":
+    uv run python ./buildcv.py -o {{output_resume_json_PRIVATE}} resume.toml configs.toml ./resumegen-private/configs.toml
+
+    npx resume-cli export {{output_resume_json_PRIVATE}}/CV_SamuelWinslowStark_{{name}}_PRIVATE.pdf -r {{output_resume_json_PRIVATE}}/resume.{{name}}.json -t ./jsonresume-theme-turnipcaffeine
+    npx resume-cli export {{output_resume_json_PRIVATE}}/CV_SamuelWinslowStark_{{name}}_PRIVATE.html -r {{output_resume_json_PRIVATE}}/resume.{{name}}.json -t ./jsonresume-theme-turnipcaffeine
 
 # # Render the main CV with turnip_text
 # render-main:

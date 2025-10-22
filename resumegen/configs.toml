@@ -84,6 +84,11 @@ publications = []
 #   - If you used a library created by someone else (please specify the library name)
 # - Please exclude confidential sources and information before submitting.
 # - Since our system is unable to recognize an overseas post code, applicants from outside Japan do not have to enter a post code that matches their actual address. However, please ensure that all other address information are valid.
+#
+#
+# A4 size (this is a CV i.e. shokumu keirekisho)
+# https://livinginjapan.net/2021/08/00633/
+# photograph should be 3x4cm https://livinginjapan.net/2021/08/00635/
 [kojipro]
 "education" = [
     "alevels_kojipro",
@@ -118,4 +123,6 @@ kojipro_game = [
 special = "kojipro"
 jp_date = true
 basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }
+# , picture="profile_smol.jpg"
+# decided against profile pic because it's just too big.
 # TODO in special article, mention culling via AC Unity is also something I did?

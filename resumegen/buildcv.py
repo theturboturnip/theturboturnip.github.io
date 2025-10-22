@@ -4,7 +4,7 @@
 import argparse
 import json
 from dataclasses import dataclass
-from typing import Dict, Any, List, Optional, Union
+from typing import Dict, Any, Iterable, List, Optional, Union
 import copy
 import os
 import tomllib
@@ -12,6 +12,24 @@ import tomllib
 def read_toml(path: str) -> Dict[str, Any]:
     with open(path, "rb") as f:
         return tomllib.load(f)
+
+def read_tomls(paths: Iterable[str]) -> Dict[str, Any]:
+    config: Dict[str, Any] = {}
+    for p in paths:
+        extra_config = read_toml(p)
+        merge_dicts(extra_config, config)
+    if not config:
+        raise RuntimeError("No tomls provided to read_tomls")
+    return config
+
+def merge_dicts(src: Dict[str, Any], dst: Dict[str, Any]):
+    for k, v in src.items():
+        if isinstance(v, dict):
+            if k not in dst:
+                dst[k] = {}
+            merge_dicts(v, dst[k])
+        else:
+            dst[k] = v
 
 def apply_config(src: Dict[str, Any], config: Dict[str, Union[Dict, List[str]]]):
     # Config = dict of key -> list of IDs
@@ -47,17 +65,17 @@ def apply_config(src: Dict[str, Any], config: Dict[str, Union[Dict, List[str]]])
             dst[k] = vs
     return dst
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser("buildcv")
     parser.add_argument("source_data", type=str, help="TOML file describing core resume content")
-    parser.add_argument("configs", type=str, help="JSON file describing all resume configurations")
+    parser.add_argument("configs", nargs='+', type=str, help="JSON file describing all resume configurations")
     parser.add_argument("--config", type=str, help="The single config to generate. Otherwise, all configs are generated")
     parser.add_argument("-o", type=str, default="./output/")
 
     args = parser.parse_args()
 
     source_data = read_toml(args.source_data)
-    configs = read_toml(args.configs)
+    configs = read_tomls(args.configs)
     requested_config: Optional[str] = args.config
 
     if requested_config is None:
