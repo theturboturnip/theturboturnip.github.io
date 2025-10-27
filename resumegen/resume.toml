@@ -468,7 +468,8 @@ name = "yk_gmd_io"
 urls = [
     {name="GitHub", url="https://github.com/theturboturnip/yk_gmd_io"},
 ]
-description = "I developed a utility for **Blender** in **Python** to import and export the 3D model format used in the 'Ryu ga Gotoku/Like A Dragon' game series - most recently from games using their **Dragon Engine**. This required reverse-engineering the file format with the community, understanding the different means of encoding vertices/indices, and importing them correctly for artists to manipulate. As these meshes are optimized for GPUs to display (e.g. with duplicated vertices), I had to develop an algorithm that intelligently converts them to artist-friendly meshes. My utility has been used to port many different characters and models from various games to Like A Dragon with improved quality."
+description = "I developed a utility for **Blender** in **Python** to import and export the 3D model format used in the 'Ryu ga Gotoku/Like A Dragon' game series - most recently from games using their **Dragon Engine**. This required reverse-engineering the file format with the community, understanding the different means of encoding vertices/indices, and importing them correctly for artists to manipulate. As these meshes are optimized for GPUs to display (e.g. with duplicated vertices), I had to develop an algorithm that intelligently converts them to artist-friendly meshes."
+# My utility has been used to port many different characters and models from various games to Like A Dragon with improved quality.
 # description = "Python addon for importing and exporting the proprietary GMD file format, used by the 'Yakuza' game series, into Blender."
 # highlights = [
 #     "Reverse-engineered parts of the file format with the community",
