@@ -59,7 +59,7 @@ Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/360
 [education.mphil_kojipro]
 institution = "University of Cambridge, UK"
 # url = "https://cam.ac.uk"
-area = "Computer Architecture, Security"
+area = "Computer Science"
 studyType = "M.Phil"
 startDate = "2021-10-01"
 endDate = "2022-06-06"
@@ -487,7 +487,7 @@ image_css = "object-position: left 50%;"
 [projects.warwick_typ_kojipro]
 name = "GPU Fluid Simulation/Visualization"
 urls = [
-    { name="Demo Video", url="https://youtu.be/WKzMIq4EkSs" },
+    { name="Demo Video", url="https://youtu.be/-t9ePUkOQfM" },
     # { name="More Info", url="https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf" },
     { name="Presentation", url="https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf" },
     { name="GitHub", url="https://github.com/theturboturnip/warwick-typ" }
