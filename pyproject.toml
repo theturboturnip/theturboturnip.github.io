@@ -5,8 +5,8 @@ description = ""
 authors = [{ name = "Samuel Stark" }]
 requires-python = "~=3.11.0"
 dependencies = [
-    "pandas>=2.1.0,<3",
-    "turnip-text",
+    # "pandas>=2.1.0,<3",
+    # "turnip-text",
 ]
 
 [dependency-groups]
@@ -15,8 +15,8 @@ dev = ["mypy>=1.5.1,<2"]
 [tool.uv]
 package = false
 
-[tool.uv.sources]
-turnip-text = { path = "turnip_text", editable = true }
+# [tool.uv.sources]
+# turnip-text = { path = "turnip_text", editable = true }
 
 [build-system]
 requires = ["hatchling"]
