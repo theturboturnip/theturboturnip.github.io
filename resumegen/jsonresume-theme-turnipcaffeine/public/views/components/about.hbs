@@ -6,22 +6,22 @@
         {{> info-tag text=this.nationality icon="fa-font-awesome" url=null }}
     {{/if}}
 
-    {{#if location}}
-        {{#location}}
-        {{#if formatAddress}}
-            {{> info-tag text=this.formatAddress icon="fa-map-marker"}}
-        {{else}}
-            {{> info-tag text=(address city region postalCode countryCode) icon="fa-map-marker"}}
+    {{#if phone}}
+        {{> info-tag text=this.phone icon="fa-mobile" url=null }}
+    {{else}}
+        {{#if location}}
+            {{#location}}
+            {{#if formatAddress}}
+                {{> info-tag text=this.formatAddress icon="fa-map-marker"}}
+            {{else}}
+                {{> info-tag text=(address city region postalCode countryCode) icon="fa-map-marker"}}
+            {{/if}}
+            {{/location}}
         {{/if}}
-        {{/location}}
     {{/if}}
 
     {{#if email}}
         {{> info-tag text=this.email icon="fa-envelope-o"}}
-    {{/if}}
-
-    {{#if phone}}
-        {{> info-tag text=this.phone icon="fa-mobile"}}
     {{/if}}
 
     {{#if website}}

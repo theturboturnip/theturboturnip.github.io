@@ -126,3 +126,12 @@ basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED
 # , picture="profile_smol.jpg"
 # decided against profile pic because it's just too big.
 # TODO in special article, mention culling via AC Unity is also something I did?
+
+
+[jump]
+"education" = ["phd", "mphil_mlfocus", "beng_jump"]
+"work" = ["arminternships_jump", "gapyear"]
+# "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
+"projects" = ["warwick_typ_jump"]
+publications = []
+basics = { name = "Samuel W. Stark", location = { formatAddress = "REDACTED REDACTED" }, phone = "+XX XXXX XXXXXX" }

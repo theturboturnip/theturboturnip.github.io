@@ -243,7 +243,7 @@ p.summary {
   min-height: 792px;
   display: block;
   margin: 0 auto;
-  padding: 36px 22px 30px 34px;
+  padding: calc(36px + 0.2in) calc(22px + 0.4) 0.2in calc(34px + 0.4);
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
   .page:after {
     content: "";
@@ -353,3 +353,27 @@ p.summary {
   /* content: " • " */
   content: " — "
 }
+
+table.invisible-table {
+    table-layout: auto;
+    border-collapse: collapse;
+}
+table.invisible-table td {
+    padding: 0;
+}
+.skill-container h3 + p {
+    margin-top: 0;
+}
+
+table td.side-image {
+width: 100px; padding: 0; padding-right:15px; position: relative;
+}
+table td.side-image > div {
+height: 100%; display: flex; align-items: stretch; min-height: 0;
+}
+table td.side-image > div > img {
+height: 100%; width: 100px; object-fit: cover; display: block; position: absolute; top: 0; left: 0;
+}
+
+/* body:last-child { margin-bottom: -1px; overflow: hidden; }
+.page:last-of-type { margin-bottom: -1px; overflow: hidden; } */

@@ -37,8 +37,8 @@ highlights = [
     """
 **Secure FPGA Design**
 
-Designed a high-throughput cryptography accelerator for checking memory accesses at the edges of the interconnect.
-Verified the design using a custom C++ UVM testbench with Verilator.
+Designed a high-throughput cryptography accelerator using Bluespec SystemVerilog for checking memory accesses at the edges of the interconnect.
+Verified the design using a custom C++ UVM-style testbench with Verilator.
 Integrated with a pre-existing soft-CPU interconnect design on a Stratix-10 FPGA.
     """,
     """
@@ -112,7 +112,7 @@ Profiled and replicated results from an open-source CPU/GPU stream processing re
     """
 **RISC-V Vector Emulation & Security**
 
-Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two.
+Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two in Rust.
 Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
 [The project is available online.](https://theturboturnip.com/cheri-rvv)
     """,
@@ -172,6 +172,56 @@ highlights = [
 Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
 Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
 [The project is available online.](https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz)
+    """,
+    """
+**High Performance FPGA Design**
+
+Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+    """,
+    """
+**Machine Learning**
+
+Learned basics of classic machine learning and neural networks/deep learning.
+    """
+]
+
+[education.beng_jump]
+institution = "University of Warwick"
+url = "https://warwick.ac.uk"
+studyType = "B.Eng"
+area = "Computer Systems Engineering"
+startDate = "2018-09-01"
+endDate = "2021-07-02"
+# score = "First Class (85%) - Best overall graduating student in subject"
+score = "First Class - Best overall graduating student in subject"
+# courses = [
+#     """
+# #### High-speed CPU Programming in C
+#
+# Achieved best-in-class (64x) speedup on a fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+#     """,
+#     """
+# #### High-speed GPU Programming in CUDA
+#
+# Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
+#     """,
+#     """
+# #### High Performance Embedded Systems Design
+#
+# Built a high-speed video processing filter on an FPGA with various parameters controlled in real-time from the onboard hard Arm CPU.
+#     """,
+#     """
+# #### Machine Learning
+#
+# Learned basics of classic machine learning and neural networks/deep learning.
+#     """
+# ]
+highlights = [
+    """
+**High Performance CPU and GPU Programming**
+
+Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+Moved the fluid simulation to the GPU using C++/CUDA, with Vulkan graphics for real-time visualization, for my final-year project - see below.
     """,
     """
 **High Performance FPGA Design**
@@ -283,6 +333,21 @@ highlights = [
     "Added DVM operations to existing gem5 CHI protocol model",
     "Simulated impact of DVM on many-core systems",
     "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+    "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+]
+
+
+[work.arminternships_jump]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Memory & Systems Architecture Research Intern"
+url = "https://arm.com"
+dateText = "Summers of 2019 & 2021"
+summary = "Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the 'Ruby' DSL."
+highlights = [
+    "Added DVM operations to existing gem5 CHI protocol model",
+    "Simulated impact of DVM on many-core systems",
+    # "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
     "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
 ]
 
@@ -500,6 +565,31 @@ description = "For my undergraduate thesis I built a fluid simulation program wi
 #     "Implemented various synchronization between CPUs and GPU",
 #     "Used memory sharing between CUDA and Vulkan to reduce copying"
 # ]
+# url = "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz"
+startDate = "2020"
+endDate = "2021"
+image = "2021-05-fluid-dynamics-header.png"
+image_css = "object-position: left 50%;"
+
+
+[projects.warwick_typ_jump]
+name = "GPU Fluid Simulation/Visualization"
+urls = [
+    { name="Demo Video", url="https://youtu.be/-t9ePUkOQfM" },
+    # { name="More Info", url="https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf" },
+    { name="Presentation", url="https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz-presentation.pdf" },
+    { name="Website", url = "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz" },
+    { name="GitHub", url="https://github.com/theturboturnip/warwick-typ" }
+]
+# description = "For my undergraduate thesis I built a fluid simulation program with real-time visualization. Both components ran on the GPU, using **CUDA** for the simulation and **Vulkan/GLSL** for the visualization. This required me to optimize GPU code in two languages and profile it using **NVIDIA Nsight** to remove pipeline bubbles. The visualization included advanced graphics techniques such as indirect rendering, instanced rendering, compute shaders, and parallel reduction. The engine was written from scratch in **C++**, and required synchronization between multiple CPU threads and multiple GPU processes."
+summary = "Undergraduate third-year project, written in C++/CUDA/Vulkan/GLSL"
+highlights = [
+    "Ported an optimized x86 AVX fluid simulation from C to CUDA",
+    "Implemented real-time GPU visualization in Vulkan/GLSL, using advanced rendering techniques like indirect instanced rendering and compute shaders",
+    "Used memory sharing between CUDA and Vulkan to eliminate redundant copying",
+    "Implemented multithreading and synchronization in C++ between CPUs and GPU",
+    # "Implemented multithreading and synchronization in C++ between CPUs and GPU",
+]
 # url = "https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz"
 startDate = "2020"
 endDate = "2021"
