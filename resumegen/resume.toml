@@ -125,6 +125,59 @@ Added support for combined instructions to Clang/LLVM, tested using C++ inline a
 #     "Developed CHERI-RVV emulator in Rust"
 # ]
 
+[education.mphil_gfx]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+area = "Advanced Computer Science"
+studyType = "M.Phil"
+startDate = "2021-10-01"
+endDate = "2022-06-06"
+# score = "Distinction (83%) - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
+score = "Distinction - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
+highlights = [
+    """
+**Large-Scale Data Processing and Systems Research**
+
+Evaluated and presented research papers on many areas in large-scale data processing and cloud computing, focusing on GPU-based data processing.
+Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+    """,
+    """
+**RISC-V Vector Emulation & Security**
+
+Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two in Rust.
+Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
+[The project is available online.](https://theturboturnip.com/cheri-rvv)
+    """
+]
+
+[education.mphil_hw]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+area = "Advanced Computer Science"
+studyType = "M.Phil"
+startDate = "2021-10-01"
+endDate = "2022-06-06"
+# score = "Distinction (83%) - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
+score = "Distinction - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
+highlights = [
+#     """
+# **Large-Scale Data Processing and Systems Research**
+
+# Evaluated and presented research papers on many areas in large-scale data processing and cloud computing, focusing on GPU-based data processing.
+# Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+#     """,
+    """
+**RISC-V Vector Emulation & Security**
+
+Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two in Rust.
+Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
+[The project is available online.](https://theturboturnip.com/cheri-rvv)
+    """,
+    """
+    **TODO something about architecture focus**
+    """
+]
+
 [education.allcambs]
 institution = "University of Cambridge"
 url = "https://cam.ac.uk"
@@ -233,6 +286,57 @@ Built a high-speed video processing filter on an FPGA using SystemVerilog with v
 
 Learned basics of classic machine learning and neural networks/deep learning.
     """
+]
+
+
+[education.beng_hw]
+institution = "University of Warwick"
+url = "https://warwick.ac.uk"
+studyType = "B.Eng"
+area = "Computer Systems Engineering"
+startDate = "2018-09-01"
+endDate = "2021-07-02"
+score = "First Class - Best overall graduating student in subject"
+highlights = [
+    """
+**High Performance CPU and GPU Programming**
+
+Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+Moved the fluid simulation to the GPU using C++/CUDA, with Vulkan graphics for real-time visualization, for my final-year project - see below.
+    """,
+    """
+**High Performance FPGA Design**
+
+Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+    """,
+    """
+**TODO split out FPGA design**
+    """
+]
+
+[education.beng_gfx]
+institution = "University of Warwick"
+url = "https://warwick.ac.uk"
+studyType = "B.Eng"
+area = "Computer Systems Engineering"
+startDate = "2018-09-01"
+endDate = "2021-07-02"
+score = "First Class - Best overall graduating student in subject"
+highlights = [
+    """
+**High Performance CPU and GPU Programming**
+
+Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
+Moved the fluid simulation to the GPU using C++/CUDA, with Vulkan graphics for real-time visualization, for my final-year project - see below.
+    """,
+    """
+**High Performance FPGA Design**
+
+Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+    """,
+#     """
+# **TODO split out FPGA design**
+#     """
 ]
 
 [education.beng_minimal]
@@ -345,6 +449,21 @@ url = "https://arm.com"
 dateText = "Summers of 2019 & 2021"
 summary = "Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the 'Ruby' DSL."
 highlights = [
+    "Added DVM operations to existing gem5 CHI protocol model",
+    "Simulated impact of DVM on many-core systems",
+    # "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+    "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+]
+
+[work.arminternships_hw]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Memory & Systems Architecture Research Intern"
+url = "https://arm.com"
+dateText = "Summers of 2019 & 2021"
+summary = "Simulated impact of non-volatile memory and DVM operations in gem5 using C++ and the 'Ruby' DSL."
+highlights = [
+    "Simulated impact of NVM last level cache on performance, and determined NVM lifetime requirements, using gem5",
     "Added DVM operations to existing gem5 CHI protocol model",
     "Simulated impact of DVM on many-core systems",
     # "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",

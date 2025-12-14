@@ -135,3 +135,63 @@ basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED
 "projects" = ["warwick_typ_jump"]
 publications = []
 basics = { name = "Samuel W. Stark", location = { formatAddress = "REDACTED REDACTED" }, phone = "+XX XXXX XXXXXX" }
+
+[hw]
+"education" = ["phd", "mphil_hw", "beng_hw"]
+"work" = ["arminternships_hw", "gapyear"]
+# "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
+"projects" = ["warwick_typ_jump"]
+publications = []
+basics = { name = "Samuel W. Stark", location = { formatAddress = "REDACTED REDACTED" }, phone = "+XX XXXX XXXXXX" }
+
+[gfx]
+# "education" = [
+#     "phd_kojipro",
+#     "mphil_kojipro",
+#     "beng_kojipro",
+#     # "alevels_kojipro",
+# ]
+# work = [
+#     "arminternships_kojipro",
+#     "virtualarts_kojipro",
+# ]
+# projects = [
+#     # "get_to_the_top",
+#     "virtualarts_univrs",
+#     "virtualarts_lightstream",
+#     "warwick_typ_kojipro",
+#     # "yk_gmd_io_kojipro",
+#     # "turnip_dxd", # ?
+#     # "warwich_aca",
+# ]
+publications = [
+    "cxl_article",
+    "mphil_thesis_rise",
+]
+
+
+basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }
+# , picture="profile_smol.jpg"
+# decided against profile pic because it's just too big.
+# TODO in special article, mention culling via AC Unity is also something I did?
+
+
+"education" = ["phd", "mphil_gfx", "beng_gfx"]
+"work" = ["arminternships_hw", "gapyear"]
+projects = [
+    "get_to_the_top",
+    "virtualarts_univrs",
+    "virtualarts_lightstream",
+    "warwick_typ_kojipro",
+    "yk_gmd_io_kojipro",
+    # "turnip_dxd", # ?
+    # "warwich_aca",
+]
+special = "gfx"
+# kojipro_presentations = [
+#     "nanite",
+#     "hypehype",
+# ]
+# kojipro_game = [
+#     "alanwake2"
+# ]

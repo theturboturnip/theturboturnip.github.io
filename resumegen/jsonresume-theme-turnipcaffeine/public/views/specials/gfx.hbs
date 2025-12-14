@@ -1,0 +1,151 @@
+<style>
+.startDate {
+    display: inline-block;
+    min-width: 7.2ch;
+    text-align: right;
+}
+.endDate {
+    display: inline-block;
+    min-width: 7.2ch;
+    text-align: left;
+}
+.game-container .startDate {
+    display: inline-block;
+    min-width: 4ch;
+    text-align: right;
+}
+.game-container .endDate {
+    display: inline-block;
+    min-width: 4ch;
+    text-align: left;
+}
+table.invisible-table {
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+table td.side-image {
+width: 100px; padding: 0; padding-right:15px; position: relative;
+}
+table td.side-image > div {
+height: 100%; display: flex; align-items: stretch; min-height: 0;
+}
+table td.side-image > div > img {
+height: 100%; width: 100px; object-fit: cover; display: block; position: absolute; top: 0; left: 0;
+}
+
+.game-container table td.game-content {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+</style>
+{{> resume-header}}
+<div class="resume-content">
+    {{!-- <p>
+        I am a new graduate. I worked on games in an amateur and professional capacity before I started university, and once I complete my PhD in 2026 I'm hoping to get back into the industry.
+    </p> --}}
+    <div class="resume-contents">
+        <aside class="about-header">
+            {{> about }}
+            {{> skills }}
+            {{> languages }}
+            {{> interests }}
+        </aside>
+        {{> summary }}
+        {{> education }}
+        {{> work header="Work" }}
+        {{!-- {{> volunteer }} --}}
+
+        {{> awards }}
+        {{> publications header="Articles" }}
+        {{!-- {{> references }} --}}
+
+        <div style="break-before: page; margin-top: 34px;"></div>
+
+        {{> kojipro-games-projects }}
+
+        {{!-- Skill Summary --}}
+        <div class="container skill-container">
+            <table class="invisible-table">
+                <tbody>
+                    <tr>
+                        <td id="language-skills" style="vertical-align: top; width: 50%;">
+                            {{!-- {{> kojipro-skill-header value="Programming Languages" }} --}}
+                            {{> title value="Programming Languages" }}
+
+                            {{> kojipro-skill skill="C, C++" year=2014 }}
+
+                            <p>
+                            Multithreaded engine development with Vulkan, CUDA, and Metal; OS driver development and custom hardware testing during my PhD.
+                            </p>
+
+                            {{> kojipro-skill skill="C#" year=2014 }}
+                            
+                            <p>
+                            Gameplay and editor programming in Unity.
+                            </p>
+
+                            {{!--
+                            {{> kojipro-skill skill="Java" year=2018 }}
+
+                            <p>
+                            Basic software development and algorithms at University of Warwick.
+                            </p>
+                            --}}
+                            
+                            {{> kojipro-skill skill="Python" year=2011 }}
+
+                            <p>
+                            Amateur game development, side projects, and utilities for my PhD.
+                             {{!-- and various utilities since then. --}}
+                            </p>
+
+                            {{> kojipro-skill skill="Assembly (various)" year=2018 }}
+
+                            <p>
+                            Writing old console emulators (ARM), debugging for my MPhil and PhD (RISC-V), optimizing vectorized code (x86 AVX-128), disassembling video games for personal interest (AMD RDNA2 GPU)
+                            </p>
+
+                            {{> kojipro-skill skill="Rust" year=2022 }}
+
+                            <p style="margin-bottom: 0;">
+                            General systems programming and OS driver development during my PhD.
+                            </p>
+                            {{!-- {{> kojipro-skill-header value="Assembly Languages" }}
+                            
+                            <p>x86 Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>ARMv7 Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>RISC-V Assembly <span class="spacer"></span> XYZ years</p>
+                            <p>AMD RDNA2 GPU Assembly <span class="spacer"></span> XYZ years</p> --}}
+                        </td>
+                        <td style="vertical-align: top; width: 50%;">
+                            {{> title value="GPU Programming Languages" }}
+
+                            {{!-- {{> kojipro-skill-header value="GPU/Graphics Languages" }} --}}
+                            {{> kojipro-skill skill="GLSL/HLSL/Metal Shading Language" year=2014 }}
+
+                            <p>
+                            Graphics and compute shaders for personal and professional game development, including physically based rendering with image-based lighting, instanced and indirect rendering, and parallel reductions. 
+                            </p>
+
+                            {{!-- {{> kojipro-skill skill="HLSL" year=2014 }} --}}
+                            {{!-- {{> kojipro-skill skill="Metal" year=2014 }} --}}
+                            {{> kojipro-skill skill="CUDA" years=2 }}
+
+                            <p>
+                            Highly parallel fluid simulations ported from C, and other general-purpose GPU algorithms I learned about during my MPhil degree.
+                            </p>
+                        {{!-- </td>
+                        <td style="vertical-align: top; width: 50%;"> --}}
+                            {{> title value="Other" }}
+
+                            <p>
+                                I also have experience with Java, Kotlin, Flutter, Dart, JavaScript, and Lua; the Git and Perforce version control systems; and hardware development languages such as SystemVerilog and Bluespec.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
