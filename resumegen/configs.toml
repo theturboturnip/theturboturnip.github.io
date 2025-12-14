@@ -131,15 +131,34 @@ basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED
 [jump]
 "education" = ["phd", "mphil_mlfocus", "beng_jump"]
 "work" = ["arminternships_jump", "gapyear"]
-# "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
 "projects" = ["warwick_typ_jump"]
 publications = []
 basics = { name = "Samuel W. Stark", location = { formatAddress = "REDACTED REDACTED" }, phone = "+XX XXXX XXXXXX" }
 
 [hw]
-"education" = ["phd", "mphil_hw", "beng_hw"]
+# ## NVIDIA 
+# What we need to see:
+#     Completing a Master's degree (or equivalent experience) in Electrical or Computer Engineering, or a Bachelor's degree with 6+ months of relevant experience.
+#     Strong academic background in digital design and computer architecture.
+#     Programming experience in Python or other scripting languages.
+#     Knowledge of RTL design (Verilog) and digital design concepts.
+#     Understanding of basic SOC architecture concepts.
+#     Excellent problem-solving and analytical skills.
+#     Proven teamwork and communication across multiple teams.
+
+# ## APPLE
+# Minimum Qualifications
+#     Previous complex IP design experience required..
+#     Understanding of implementing modern design techniques.
+#     Hands on experience with energy-efficient and low-power logic design.
+#     Strong background in computer architecture including one or more of: high-speed CMOS processor and controller blocks, cache controllers, bus-interface subsystems, integer and floating-point numeric units, digital filters, graphics processors, crossbar fabrics and other high-speed data-path control units.
+#     Well-versed in logic optimisation, synthesis, timing analysis.
+#     Fluency with RTL Verilog/VHDL syntax & hardware modelling.
+#     Familiarity with logic simulation and debug environments as well as formal verification.
+#     Ability to work well in a team and be productive under tight schedules.
+#     Excellent communications skills, self-motivated and well-organised
+"education" = ["phd_hw", "mphil_hw", "beng_hw"]
 "work" = ["arminternships_hw", "gapyear"]
-# "projects" = ["cambs_mphil", "warwick_typ", "warwick_hpes", "yk_gmd_io"]
 "projects" = ["warwick_typ_jump"]
 publications = []
 basics = { name = "Samuel W. Stark", location = { formatAddress = "REDACTED REDACTED" }, phone = "+XX XXXX XXXXXX" }
@@ -168,14 +187,7 @@ publications = [
     "cxl_article",
     "mphil_thesis_rise",
 ]
-
-
 basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }
-# , picture="profile_smol.jpg"
-# decided against profile pic because it's just too big.
-# TODO in special article, mention culling via AC Unity is also something I did?
-
-
 "education" = ["phd", "mphil_gfx", "beng_gfx"]
 "work" = ["arminternships_hw", "gapyear"]
 projects = [
@@ -184,14 +196,5 @@ projects = [
     "virtualarts_lightstream",
     "warwick_typ_kojipro",
     "yk_gmd_io_kojipro",
-    # "turnip_dxd", # ?
-    # "warwich_aca",
 ]
 special = "gfx"
-# kojipro_presentations = [
-#     "nanite",
-#     "hypehype",
-# ]
-# kojipro_game = [
-#     "alanwake2"
-# ]

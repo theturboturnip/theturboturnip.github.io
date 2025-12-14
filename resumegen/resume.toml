@@ -56,6 +56,39 @@ Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/360
 #Received internship offer from the CEO of a CXL-based startup after the article was published, which fell through due to pay concerns.
 
 
+[education.phd_hw]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+# area = "Computer Architecture, Security, GPUs"
+area = "Computer Science"
+studyType = "PhD"
+startDate = "2022-10-01"
+score = "Ongoing, planning to complete Summer 2026"
+# score = "Ongoing, planning to submit in March 2026"
+# summary = "My PhD focuses on memory security on the interconnect, "
+# TODO don't forget QEMU work!
+highlights = [
+    """
+**Secure FPGA Design**
+
+Designed a high-throughput cryptography accelerator using Bluespec SystemVerilog for checking memory accesses at the edges of the interconnect.
+Verified the design using a custom C++ UVM-style testbench with Verilator.
+Integrated with a pre-existing soft-CPU interconnect design on a Stratix-10 FPGA.
+Optimized for frequency to reach 190MHz.
+    """,
+    """
+**Low-Level Operating System Integration**
+
+Wrote drivers and other software for interacting with the cryptography accelerator in multiple operating systems, including FreeBSD, using C, C++, Rust, and Python.
+    """,
+    """
+**Writing and Communication**
+
+Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/3606014) on high-performance memory safety in CXL, which was subsequently published in Communications of the ACM - the official magazine of the world's largest scientific computing society.
+[The article is available online.](https://dl.acm.org/doi/10.1145/3617580)
+    """,
+]
+
 [education.mphil_kojipro]
 institution = "University of Cambridge, UK"
 # url = "https://cam.ac.uk"
@@ -167,15 +200,20 @@ highlights = [
 # Profiled and replicated results from an open-source CPU/GPU stream processing research project.
 #     """,
     """
-**RISC-V Vector Emulation & Security**
+**RISC-V Vector Emulation and Security Research**
 
 Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two in Rust.
 Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
 [The project is available online.](https://theturboturnip.com/cheri-rvv)
     """,
     """
-    **TODO something about architecture focus**
+**Systems and Architecture Research**
+
+Evaluated and presented research papers on computer architecture, large-scale data processing, and cloud computing; focusing on GPU-based data processing.
+Profiled and replicated results from an open-source CPU/GPU stream processing research project.
     """
+# Studied modules on computer architecture, multicore processing and memory models, and large scale data processing.
+#     """
 ]
 
 [education.allcambs]
@@ -305,13 +343,16 @@ Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit ac
 Moved the fluid simulation to the GPU using C++/CUDA, with Vulkan graphics for real-time visualization, for my final-year project - see below.
     """,
     """
-**High Performance FPGA Design**
+**High Performance FPGA Design in (System)Verilog**
 
-Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+Created a FPGA rhythm game, with video and audio output, in Verilog for a second-year project. 
+Built a high-speed FPGA video processing filter, with real-time parameter control from the onboard hard Arm CPU, using SystemVerilog for a final-year project.
     """,
-    """
-**TODO split out FPGA design**
-    """
+#     """
+# **TODO split out FPGA design**
+#     """
+# # Created multiple FPGA designs for second and third-year coursework, including a rhythm game
+
 ]
 
 [education.beng_gfx]
