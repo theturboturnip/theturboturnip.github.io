@@ -101,7 +101,7 @@ work = [
     "arminternships_kojipro",
 ]
 projects = [
-    "get_to_the_top",
+    "get_to_the_top_age",
     "virtualarts_univrs",
     "virtualarts_lightstream",
     "warwick_typ_kojipro",
