@@ -38,14 +38,6 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-/* @media print {
-    @page::bottom-center {  
-        content: "Page Footer";
-        font-size: 10pt;
-        color: #333;
-    }
-} */
 </style>
 {{> resume-header}}
 <div class="resume-content">
@@ -60,25 +52,22 @@ height: 100%; width: 100px; object-fit: cover; display: block; position: absolut
             {{> interests }}
         </aside>
         {{> summary }}
+
+        {{> kojipro-games-projects header="Portfolio" }}
+
         {{> education }}
-        {{> work header="Work" }}
-        {{!-- {{> volunteer }} --}}
-
-        {{> awards }}
-        {{!-- {{> references }} --}}
-
-        {{!-- <div style="break-before: page; margin-top: 34px;"></div> --}}
-        
-
-        {{> kojipro-games-projects header="Portfolio" start=0 end=2 }}
 
         <p style="break-after: page; margin-top: 34px; margin-bottom: 34px; text-align:center;">
-            Continued overleaf
+            Work Experience and Skills on next page
         </p>
 
-        {{> kojipro-games-projects header="Portfolio (Continued)" start=2 }}
 
+        {{!-- {{> volunteer }} --}}
+        {{> work header="Work" }}
+
+        {{> awards }}
         {{> publications header="Articles" }}
+        {{!-- {{> references }} --}}
 
         {{!-- Skill Summary --}}
         <div class="container skill-container">

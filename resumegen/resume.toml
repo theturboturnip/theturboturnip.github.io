@@ -55,6 +55,38 @@ Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/360
 ]
 #Received internship offer from the CEO of a CXL-based startup after the article was published, which fell through due to pay concerns.
 
+[education.phd_gfx]
+institution = "University of Cambridge"
+url = "https://cam.ac.uk"
+# area = "Computer Architecture, Security, GPUs"
+area = "Computer Science"
+studyType = "PhD"
+startDate = "2022-10-01"
+score = "Ongoing, planning to complete Summer 2026"
+# score = "Ongoing, planning to submit in March 2026"
+# summary = "My PhD focuses on memory security on the interconnect, "
+# TODO don't forget QEMU work!
+highlights = [
+    """
+**High-Performance Hardware Design**
+
+Designed a high-throughput hardware cryptography accelerator for enforcing memory safety at the edges of the interconnect.
+Verified the design using a custom C++ testbench.
+Integrated with pre-existing CPU and system infrastructure on an FPGA.
+    """,
+    """
+**Low-Level OS Design and Memory Management**
+
+Wrote drivers and other software for managing exposed memory using the accelerator in multiple operating systems, including FreeBSD, using C, C++, Rust, and Python.
+    """,
+    """
+**Writing and Communication**
+
+Wrote an article for [ACM Queue](https://spawn-queue.acm.org/doi/abs/10.1145/3606014) on high-performance memory safety, which was subsequently published in Communications of the ACM - the official magazine of the world's largest scientific computing society.
+[The article is available online.](https://dl.acm.org/doi/10.1145/3617580)
+    """,
+]
+#Received internship offer from the CEO of a CXL-based startup after the article was published, which fell through due to pay concerns.
 
 [education.phd_hw]
 institution = "University of Cambridge"
@@ -168,19 +200,26 @@ endDate = "2022-06-06"
 # score = "Distinction (83%) - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
 score = "Distinction - [Thesis won 1st place in the RISE 2022 Student Competition](https://x.com/UK_RISE/status/1598685532434964480)"
 highlights = [
-    """
-**Large-Scale Data Processing and Systems Research**
+"""
+**Multi-Core Programming and CPU Architecture**
 
-Evaluated and presented research papers on many areas in large-scale data processing and cloud computing, focusing on GPU-based data processing.
-Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+Took courses on both topics and developed a RISC-V CPU emulator, with support for vector instructions, for my thesis project.
+[The project is available online.](https://theturboturnip.com/cheri-rvv)
     """,
     """
-**RISC-V Vector Emulation & Security**
+**GPU Large-Scale Data Processing and Systems Research**
 
-Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two in Rust.
-Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
-[The project is available online.](https://theturboturnip.com/cheri-rvv)
-    """
+Evaluated and presented research papers on computer architecture, large-scale data processing, and cloud computing; focusing on GPU-based data processing.
+Profiled and replicated results from an open-source CPU/GPU stream processing research project.
+    """,
+
+#     """
+# **RISC-V Vector Emulation & Security**
+
+# Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two in Rust.
+# Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
+# [The project is available online.](https://theturboturnip.com/cheri-rvv)
+#     """
 ]
 
 [education.mphil_hw]
@@ -370,11 +409,11 @@ highlights = [
 Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
 Moved the fluid simulation to the GPU using C++/CUDA, with Vulkan graphics for real-time visualization, for my final-year project - see below.
     """,
-    """
-**High Performance FPGA Design**
+#     """
+# **High Performance FPGA Design**
 
-Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
-    """,
+# Built a high-speed video processing filter on an FPGA using SystemVerilog with various parameters controlled in real-time from the onboard hard Arm CPU.
+#     """,
 #     """
 # **TODO split out FPGA design**
 #     """
@@ -466,6 +505,22 @@ summary = "Summer internships during university. Simulated impact of non-volatil
 #     "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
 # ]
 
+[work.arminternships_gfx]
+name = "Arm Ltd"
+company = "Arm Ltd"
+position = "Memory & Systems Architecture Research Intern"
+url = "https://arm.com"
+dateText = "Summers of 2019 & 2021"
+# subtitle = "Summer internships during university"
+summary = "Simulated impact of non-volatile cache memory and distributed virtual memory (DVM) operations in gem5 using C++."
+#  and the 'Ruby' DSL."
+highlights = [
+    "Simulated impact of NVM last level cache on performance, and determined NVM lifetime requirements, using gem5",
+    "Added DVM operations to existing cache coherency protocol model",
+    "Simulated impact of DVM on many-core systems",
+    # "Presented results to key stakeholders and senior design members, including a 'CHI protocol crash course'",
+    "Changes upstreamed to public open source gem5 repository [(available online)](https://gem5-review.googlesource.com/c/public/gem5/+/57298)"
+]
 
 [work.arminternships]
 name = "Arm Ltd"
@@ -525,6 +580,20 @@ summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineer
 #     "Ported Unity-based code and shaders to C++, GLSL and Metal",
 #     "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
 # ]
+
+[work.virtualarts_gfx]
+name = "Virtual Arts Ltd"
+company = "Virtual Arts Ltd"
+position = "Junior Programmer"
+url = "https://virtualarts.co.uk"
+startDate = "2017-09"
+endDate = "2018-08"
+summary = "Developed 3D game engine in C++/Vulkan/Metal with two senior engineers."
+highlights = [
+    "Implemented Physically Based Rendering with Image Based Lighting",
+    "Ported Unity-based code and shaders to C++, GLSL and Metal",
+    "Supported development of AR racing game (Lightstream Racer) in Unity/C#"
+]
 
 [work.gapyear]
 name = "Virtual Arts Ltd"

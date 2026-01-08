@@ -283,6 +283,10 @@ p.summary {
     margin-bottom: 0; }
 
 @media print {
+  @page {
+    margin-top: 34px;
+    margin-bottom: 20px;
+  }
   body {
     margin: 0; 
     background: white; }
@@ -290,7 +294,8 @@ p.summary {
     width: 100%;
     /* height: 100vh; */
     margin: 0;
-    padding: 36px 0 30px;
+    padding: 0;
+    /* padding: 36px 0 30px; */
     /* padding: 36px 0 0; */
     box-shadow: none; }
     .page .resume-header,

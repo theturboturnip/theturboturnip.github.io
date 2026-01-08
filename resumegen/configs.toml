@@ -188,8 +188,11 @@ publications = [
     "mphil_thesis_rise",
 ]
 basics = { name = "Samuel Winslow Stark", location = { formatAddress = "REDACTED REDACTED REDACTED REDACTED REDACTED" } }
-"education" = ["phd", "mphil_gfx", "beng_gfx"]
-"work" = ["arminternships_hw", "gapyear"]
+"education" = ["phd_gfx", "mphil_gfx", "beng_gfx"]
+"work" = [
+    "arminternships_gfx",
+    "virtualarts_gfx",
+]
 projects = [
     "get_to_the_top",
     "virtualarts_univrs",

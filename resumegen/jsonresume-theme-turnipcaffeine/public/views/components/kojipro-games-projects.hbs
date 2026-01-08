@@ -1,10 +1,10 @@
 
 {{#if resume.projects.length}}
 <div class="container game-container">
-    {{> title value="Games & Projects"}}
+    {{> title value=(orIfNull header "Games & Projects")}}
 
-    {{#each resume.projects}}
-        <section class="item" style="margin-bottom: 0px;">
+    {{#each (subset resume.projects start end)}}
+        <section class="item" style="margin-bottom: 0px; page-break-inside: avoid;">
             <table class="invisible-table">
                 <tr>
                     {{#if image}}

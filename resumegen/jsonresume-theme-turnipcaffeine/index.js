@@ -90,6 +90,16 @@ handlebars.registerHelper({
         } else {
             return "";
         }
+    },
+
+    subset: function(array, start, end) {
+        if (start == null) {
+            return array;
+        }
+        if (end == null) {
+            return array.slice(start);
+        }
+        return array.slice(start, end);
     }
 });
 
