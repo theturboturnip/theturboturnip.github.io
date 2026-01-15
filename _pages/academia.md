@@ -6,6 +6,7 @@ redirect_from:
   - /publications/
   - /publications.html
 author_profile: true
+description: "Samuel W. Stark's academic projects & publications."
 ---
 
 {% if author.googlescholar %}
