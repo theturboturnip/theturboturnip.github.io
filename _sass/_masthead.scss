@@ -43,20 +43,24 @@
   }
 }
 
+.masthead__menu-title {
+  display: block;
+  list-style-type: none;
+  white-space: nowrap;
+  font-weight: 700;
+  margin: 0 2rem 0 0;
+  @include breakpoint($x-large) {
+    margin: 0 1rem;
+  }
+}
+
 .masthead__menu-item {
   display: block;
   list-style-type: none;
   white-space: nowrap;
   margin: 0 1rem;
-
-  &--lg {
-    display: block;
-    list-style-type: none;
-    white-space: nowrap;
-    font-weight: 700;
-    margin: 0 1rem;
-  }
 }
+
 .masthead__menu-item:nth-child(1){
   margin: 0 1rem 0 0;
 }
