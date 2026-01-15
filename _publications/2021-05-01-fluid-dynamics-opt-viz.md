@@ -11,7 +11,7 @@ header:
 excerpt: "On creating a real-time GPU fluid simulation (CUDA) and visualization (Vulkan)."
 date: 2021-05-01
 paperurl: 'https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz.pdf'
-citation: 'Stark, S. (2021). Performance Optimization and Visualization for a Fluid Dynamics Simulation. [Third-year project]. University of Warwick.'
+citation: 'Stark, Samuel W. (2021). Performance Optimization and Visualization for a Fluid Dynamics Simulation. [Third-year project]. University of Warwick.'
 course: 'Computer Systems Engineering @ University of Warwick'
 ---
 
@@ -29,11 +29,11 @@ For my third-year project at University of Warwick, I created a real-time GPU fl
 
 ## Recommended citation
 
-*Stark, S. (2021). Performance Optimization and Visualization for a Fluid Dynamics Simulation. [Third-year project]. University of Warwick. URL: <https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz.pdf>*
+*Stark, Samuel W. (2021). Performance Optimization and Visualization for a Fluid Dynamics Simulation. [Third-year project]. University of Warwick. URL: <https://theturboturnip.com/files/2021-05-fluid-dynamics-opt-viz.pdf>*
 
 ```
 @unpublished{starkRealTimeFluidSim2021,
-    author = "Stark, Samuel",
+    author = "Stark, Samuel W.",
     title = "Performance Optimization and Visualization for a Fluid Dynamics Simulation",
     school = "University of Warwick",
     year = "2021",
