@@ -24,13 +24,13 @@ My inspiration was video games, and I've worked on a few, but now I'm leaning mo
 <div>
 {% for post in site.publications reversed %}
 <p>
-    <img src=
+    <!-- <img src=
       {% if post.header.teaser contains "://" %}
         "{{ post.header.teaser }}"
       {% else %}
         "{{ post.header.teaser | prepend: "/images/" | prepend: base_path }}"
       {% endif %}
-      alt="">
+      alt=""> -->
     <i>{{ post.citation }}</i><br/>
     {{ post.excerpt }}
     <a href="{{ post.url }}">Project details</a><br/>
