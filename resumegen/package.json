@@ -1,8 +1,0 @@
-{
-    "name": "theturboturnip-resume",
-    "version": "0.0.1",
-    "dependencies": {
-        "jsonresume-theme-turnipcaffeine": "file:jsonresume-theme-turnipcaffeine",
-        "resume-cli": "file:resume-cli"
-    }
-}
