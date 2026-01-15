@@ -47,10 +47,16 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  margin: 0 1rem;
 
   &--lg {
-    padding-right: 2em;
+    display: block;
+    list-style-type: none;
+    white-space: nowrap;
     font-weight: 700;
-    margin-right: auto;
+    margin: 0 1rem;
   }
+}
+.masthead__menu-item:nth-child(1){
+  margin: 0 1rem 0 0;
 }
