@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /cv/archive/
 
-Sitemap: https://theturboturnip.com/sitemap.xml
+Sitemap: https://samuelwstark.com/sitemap.xml

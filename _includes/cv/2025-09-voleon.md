@@ -9,7 +9,7 @@ Cambridge, England
 
 Email: [samuel.winslow.stark@gmail.com](mailto:samuel.winslow.stark@gmail.com)
 
-Website: <https://theturboturnip.com>
+Website: <https://samuelwstark.com>
 
 ## Education
 ### PhD in Computer Science - [University of Cambridge](https://cam.ac.uk)
@@ -53,7 +53,7 @@ Distinction - [Thesis won 1st place in the RISE 2022 Student Competition](https:
   
   Built a RISC-V CPU emulator with support for the "V" vector extension, the CHERI memory safety extension, and a combination of the two.
   Added support for combined instructions to Clang/LLVM, tested using C++ inline assembly.
-  [The project is available online.](https://theturboturnip.com/cheri-rvv)
+  [The project is available online.](https://samuelwstark.com/cheri-rvv)
       
 
 
@@ -67,7 +67,7 @@ First Class - Best overall graduating student in subject
   
   Achieved best-in-class (64x) speedup on a C fluid simulation with bit-for-bit accuracy using multithreading and vectorized assembly code.
   Moved the fluid simulation to the GPU using CUDA, with Vulkan graphics for real-time visualization, for my final-year project.
-  [The project is available online.](https://theturboturnip.com/academia/2021-05-01-fluid-dynamics-opt-viz)
+  [The project is available online.](https://samuelwstark.com/academia/2021-05-01-fluid-dynamics-opt-viz)
       
 
 * **High Performance FPGA Design**
