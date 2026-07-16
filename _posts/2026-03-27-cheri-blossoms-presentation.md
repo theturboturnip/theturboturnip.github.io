@@ -14,7 +14,7 @@ author_profile: true
 I was super excited to gave this talk on my PhD work to close out the CHERI Blossoms conference on 27th March 2026!
 Many thanks to my supervisor Simon W. Moore and collaborator Theo Markettos.
 
-<iframe src="https://www.youtube-nocookie.com/embed/qV_4stih5tc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/qV_4stih5tc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 CHERI's capability system has shown to be secure and incredibly flexible. It can layer on top of virtual memory, or operate in single-address-space systems (e.g. CHERIoT and CheriOS). It can be used in the kernel as well as userspace (e.g. CheriBSD, Paul Metzger's work on deprivileged GPU drivers, and CHERI CAPIO), providing both with fine-grained spatial memory safety. It can even extend beyond the CPU to trusted hardware peripherals (e.g. CHERI-SIMT) — but not all peripherals can be trusted. Untrusted hardware, well, can't be trusted to store CHERI capabilities or manipulate them correctly. What other kinds of capability are there, and how can they fill the gaps to provide full system protection, unified with CHERI?
 

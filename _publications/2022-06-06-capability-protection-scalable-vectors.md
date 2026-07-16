@@ -22,7 +22,7 @@ course: 'Advanced Computer Science MPhil @ University of Cambridge'
 
 My master's project examines the impact of combining [CHERI](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/)'s hardware memory protection with vector processing, particularly vectorized loads and stores, by designing a potential specification for "CHERI-RVV" - a CHERI version of [the RISC-V "V" scalable vector extension](https://github.com/riscv/riscv-v-spec).
 
-<iframe src="https://www.youtube-nocookie.com/embed/J82OFvF3yGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-wrapper"><iframe src="https://www.youtube-nocookie.com/embed/J82OFvF3yGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Artefacts
 - Dissertation [(pdf)](/files/2022-06-06-capability-protection-scalable-vectors.pdf)
