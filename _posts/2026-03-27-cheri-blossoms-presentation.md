@@ -13,7 +13,7 @@ author_profile: true
 read_time_minutes: 20
 ---
 
-I was invited to give a short talk on my PhD work to close out the [CHERI Blossoms 2026 conference](https://cheri-alliance.org/events/cheri-blossoms-conference-2026)!
+I got to give a short talk on my PhD work to close out the [CHERI Blossoms 2026 conference](https://cheri-alliance.org/events/cheri-blossoms-conference-2026)!
 I was super excited to have the opportunity to present, and I think it went very well.
 This post serves as an archive of the video recording and the slide deck.
 Many thanks to my supervisor Simon W. Moore and collaborator Theo Markettos.
