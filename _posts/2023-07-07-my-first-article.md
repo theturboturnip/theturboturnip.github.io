@@ -8,6 +8,7 @@ categories:
 tags:
   - cxl
   - capabilities
+  - publications
 author_profile: true
 ---
 
