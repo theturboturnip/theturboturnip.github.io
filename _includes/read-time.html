@@ -1,14 +1,16 @@
 <!--<i class="fa fa-clock-o" aria-hidden="true"></i> -->
 
-{% if page.read_time_minutes %}
-  {{ page.read_time_minutes }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
-{% elsif post.read_time_minutes %}
-  {{ post.read_time_minutes }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
+{% if post %}
+    {% assign relevant = post %}
+{% elsif page %}
+    {% assign relevant = page %}
+{% endif %}
+
+{% if relevant.read_time_minutes %}
+  {{ relevant.read_time_minutes }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}
 {% elsif site.words_per_minute %}
-    {% if post.read_time %}
-        {% assign words = post.content | strip_html | number_of_words %}
-    {% elsif page.read_time %}
-        {% assign words = page.content | strip_html | number_of_words %}
+    {% if relevant.read_time %}
+        {% assign words = relevant.content | strip_html | number_of_words %}
     {% endif %}
 
     {% if words < 180 %}
