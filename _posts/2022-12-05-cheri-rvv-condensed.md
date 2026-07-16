@@ -6,10 +6,9 @@ header:
 date: 2022-12-08
 permalink: /posts/2022/12/cheri-rvv-rise
 categories: 
-  - CHERI
-  - RISC-V
-  - RISC-V V
+  - Research
 tags:
+  - mphil
   - cheri
   - rvv
   - risc-v

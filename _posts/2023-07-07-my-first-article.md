@@ -4,8 +4,9 @@ title:  "My first article!"
 date: 2023-07-07
 permalink: /posts/2023/07/my-first-article
 categories: 
-  - PhD
+  - Research
 tags:
+  - phd
   - cxl
   - capabilities
   - publications
