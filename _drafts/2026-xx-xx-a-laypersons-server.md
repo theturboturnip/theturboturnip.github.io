@@ -12,35 +12,37 @@ tags:
 author_profile: true
 ---
 
-{{content}}
-
-So, it's finally over! You've submitted your PhD thesis **[Blogpost Pending]**, found a job **[Blogpost Pending]**, and you have one last summer of independence before entering the perpetual grind.
-There's only one thing for it: build some random personal projects, buy some domains, and host them on a server!
+So, it's finally over! You've submitted your PhD thesis, found a job, and you have one last summer of independence before entering the perpetual grind.
+There's only one thing for it: build some random personal projects, buy some domains, and waste a bunch of time hosting them on a server!
 I went on this little odyssey over the last few months and learned a lot about how servers are managed in the cloud, and thought it would be nice to post about how I managed to figure it all out.
-The proof is in the pudding: said server now hosts <https://theturboturnip.com>, which can be used to access this blog e.g. <https://theturboturnip.com{{ page.permalink }}>, and my Turnip-Search service with useful autocomplete **[Blogpost Pending]** along with my other web APIs <https://github.com/theturboturnip/turnip_api>.
+My server now hosts <https://theturboturnip.com>, which can be used to access this blog e.g. <https://theturboturnip.com{{ page.permalink }}>, and my custom web APIs <https://github.com/theturboturnip/turnip_api>.
+
+<!--my Turnip-Search service with useful autocomplete **[Blogpost Pending]** along with my other web APIs .-->
 
 
 <!--Aside from [watching movies](https://letterboxd.com/theturboturnip/), there is only one thing to do: screw around with personal projects and do very little of use!-->
 
 
-To preface, I'm sure my setup is not how professional devops work, but it *is* reliable, debuggable, and works in a way that I can understand as a non-devops-y, hardware-y, OS-y person.
-The goal of this post is to explain briefly how some of these tools work from my perspective, and maybe even show you some new ways to approach or think about them.
+I'm sure my setup is jankier than a professional devops work, but it *is* reliable, debuggable, and works in a way that I can understand as a non-devops-y, hardware-y, OS-y person.
+The goal of this post is to explain briefly how some of these tools work from my perspective, and maybe even show you some new ways to think about them.
 
 # Domains & DNS
 
-A year or so ago I bought the domain <https://theturboturnip.com> , having accepted that this username will forever be attached to my real identity.
-That matched my GitHub username and for a while I used it to host this website.
-However, this website also includes my CV, and I felt that the domain didn't really match the level of professionalism I'd want to show potential employers.
-I also wanted to start using the domain for email, but that would have the same problem.
+A year or so ago I bought the domain <https://theturboturnip.com>, having accepted that this username will forever be attached to my real identity.
+For a while this website was hosted there, but once I started hosting my CV here I felt that the domain wasn't quite professional enough.
+<!--A more professional -->
+<!--That matched my GitHub username and for a while I used it to host this website.-->
+<!--However, this website also includes my CV, and I felt that the domain didn't really match the level of professionalism I'd want to show potential employers.-->
+I also wanted to start using the domain for email, which would have the same problem.
 I ended up buying <https://samuelwstark.com>, where this website is now hosted, and keeping both domains active.
-<https://theturboturnip.com>  now redirects all HTTP requests to <https://samuelwstark.com> to ensure my permalinks stick around.
+<https://theturboturnip.com> now redirects to <https://samuelwstark.com> to ensure old links stick around.
 
 (moved from godaddy to porkbun. porkbun has nicer DNS modification, and was also cheaper for my case)
 GoDaddy £45/3 years (they don't include tax in their stated prices!!!!)
 
 # Email
 
-A crucial principle I used for this journey was "I don't want to rely on my server".
+One of my guiding principles was "I don't want to rely on my server".
 Servers are fickle things, they can go down, they can be attacked, they can lose data.
 I am not a devops professional and I am not always going to be around to manage my server --- if anything happens, I need it to be recoverable.
 Thus, anything truly important should be deferred to other services, even if it uses my domains.
