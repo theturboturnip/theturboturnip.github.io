@@ -76,13 +76,13 @@ Anyway, I already had eggs in their baskets, so I looked further afield.
 [iCloud+](https://www.icloud.com/en-gb/icloudplus) allows custom email domains, and does cover more of the office suite, but it's all centered on the Apple ecosystem.
 <!-- https://support.apple.com/en-gb/102540 -->
 I ended up choosing [Proton](https://proton.me/) with the Unlimited plan (approximately £100/yr) to host email for both of my domains.
-Their office suite is not quite as powerful, but it gets the job done, and I feel more comfortable holding sensitive files (e.g. work contracts, payslips, personal info) where they won't be scanned for AI and are less likely to arbitrarily disappear.
+Their office suite is not quite as powerful, but it gets the job done, and I feel more comfortable holding sensitive files (e.g. work contracts, payslips, personal info) where they won't be used for AI training and are less likely to arbitrarily disappear.
 I've seen quite a few horror stories of Google capriciously deleting accounts, with no reversal process, due to vague "terms of service violations".
 
 Setting up Proton Mail required some screwing around with DNS records, but the Proton website had [step-by-step instructions](https://proton.me/support/custom-domain), and Porkbun has a good interface for changing records.
 It went off without a hitch.
 Because of Proton's focus on encryption, the whole office suite including email and calendar requires you to use their apps specifically.
-You can set up email forwarding and calendar sharing to avoid this, but it's less secure, and the apps are good so I haven't seen reason to.
+You can set up [an email bridge](https://proton.me/mail/bridge) and [calendar sharing](https://proton.me/support/share-calendar-via-link) to avoid this, but it can be less secure, and the apps are good so I haven't seen reason to.
 <!--I can now send and receive email from both domains on my phone with Proton's app suite, and  -->
 
 ## Hosting a Blog
@@ -128,11 +128,30 @@ I also don't really want to use Amazon any more than I need to, considering thei
 ## Setting up the Server
 
 My Hetzner VPS is a virtual machine running on Hetzner-owned hardware.
+When you create a new Hetzner VM with the web interface, you have the option to select a base image (the initial operating system, I stick with Debian personally) and to provide a [cloud-init](https://docs.cloud-init.io/en/latest/explanation/introduction.html) script.
+I find it important to use cloud-init to make sure crucial hardening steps are performed ASAP.
+Once a server is exposed to the public internet, it will be attacked by malicious actors immediately and constantly, so it is important to:
 
+- Upgrade all packages, to keep security patches up to date
+- Configure `ufw` to block attackers from connecting to arbitrary ports
+  - Most of your machine's ports do not need to be open, and should be closed.
+- Configure `fail2ban` to blocking attackers who fail login attempts
+  - Attackers will try to login using common username/password combinations, fail2ban blocks them if they fail
+  - There are [arguments against fail2ban](https://j3s.sh/thought/fail2ban-sux.html), which I haven't looked at thoroughly, so I may revert this at some point.
+- Configure SSH to only allow login with a known keypair, and disable username/password authentication.
 
-(initially I provisioned it with a basic cloud-init script and poked at it manually - i got things wrong. Not so wrong as to be attacked, but still wrong. I would recommend reading through other people's scripts and setups and starting from there, they will likely have thought of things you didn't.)
+Password logins are guessable by attackers, you have to enter them manually which is error-prone, and they're just better off avoided.
+Hetzner generates a random root account password each time you re-create the VM, and if you wanted to use password login you'd need to remember a new password each time, which makes it harder to interact with the server automatically. 
+Instead, I generated a single [SSH key pair](https://wiki.archlinux.org/title/SSH_keys), and my cloud-init script sets up a user with that pair's *public key*, which means I (as the only person who knows the *private key*) can always log in.
+It's more secure and easier than a password.
 
-## Caddy for web serving
+I initially based my cloud-init script off of [this tutorial](https://community.hetzner.com/tutorials/basic-cloud-config), and then I also found a [cloud-init generator](https://deployn.de/en/hetzner-cloud-init/) with a few more features.
+You should definitely use a generator or template initially, as it will include things you haven't thought of that could be useful, but you should also take the time to understand what it's doing.
+This script is the first line of defence for your server, and if there's anything fishy you should figure out why it's there.
+
+<!--(initially I provisioned it with a basic cloud-init script and poked at it manually - i got things wrong. Not so wrong as to be attacked, but still wrong. I would recommend reading through other people's scripts and setups and starting from there, they will likely have thought of things you didn't.)-->
+
+## HTTPS with Caddy
 
 (nginx requires a bunch of extra certbot things for HTTPS - don't worry! use caddy!)
 
