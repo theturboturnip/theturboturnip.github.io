@@ -125,7 +125,7 @@ I also don't really want to use Amazon any more than I need to, considering thei
 <!--(hetzner, also considered netcup but I had an issue with a voucher not working and got a better vibe for hetzner)-->
 <!--(I use hetzner for a public IPV4, IPV6, and the cheapest server money can buy)-->
 
-## Setting up the Server
+## Cloud-init for basic setup
 
 My Hetzner VPS is a virtual machine running on Hetzner-owned hardware.
 When you create a new Hetzner VM with the web interface, you have the option to select a base image (the initial operating system, I stick with Debian personally) and to provide a [cloud-init](https://docs.cloud-init.io/en/latest/explanation/introduction.html) script.
@@ -147,29 +147,17 @@ It's more secure and easier than a password.
 
 I initially based my cloud-init script off of [this tutorial](https://community.hetzner.com/tutorials/basic-cloud-config), and then I also found a [cloud-init generator](https://deployn.de/en/hetzner-cloud-init/) with a few more features.
 You should definitely use a generator or template initially, as it will include things you haven't thought of that could be useful, but you should also take the time to understand what it's doing.
+cloud-init is little more than a set of shell commands to run - it should be self explanatory.
 This script is the first line of defence for your server, and if there's anything fishy you should figure out why it's there.
 
 <!--(initially I provisioned it with a basic cloud-init script and poked at it manually - i got things wrong. Not so wrong as to be attacked, but still wrong. I would recommend reading through other people's scripts and setups and starting from there, they will likely have thought of things you didn't.)-->
 
-## HTTPS with Caddy
 
-(nginx requires a bunch of extra certbot things for HTTPS - don't worry! use caddy!)
+<!--(nicer than an init script)-->
 
-(that said, caddy does require the 'data directory' to be kept consistent. I have a workflow to copy it off the server and then copy it back after reimaging so it can persist.)
+<!--(necessary to set up firewalls and ssh keys as early as possible - the public internet is a hostile environment)-->
 
-## Docker for custom services
-
-(Dockerfiles are easier than you think (sort of) (follow the tutorial))
-
-## Cloud-init for initial setup
-
-(nicer than an init script)
-
-(necessary to set up firewalls and ssh keys as early as possible - the public internet is a hostile environment)
-
-(hetzner has an API endpoint for reimaging servers with new cloud-init, which i relied on to make sure I kept my cheap server)
-
-(try and find the two places I generated my script from)
+<!--(try and find the two places I generated my script from)-->
 
 ## Ansible for complex setup
 
@@ -181,9 +169,24 @@ This script is the first line of defence for your server, and if there's anythin
 
 (decided against nixos and immuatability to allow e.g. security patches through unattended-upgrades, timezone file updates)
 
+
+### Re-imaging complex setups
+
+(hetzner has an API endpoint for reimaging servers with new cloud-init, which i relied on to make sure I kept my cheap server)
+
+## Caddy for HTTP(S)
+
+(nginx requires a bunch of extra certbot things for HTTPS - don't worry! use caddy!)
+
+(that said, caddy does require the 'data directory' to be kept consistent. I have a workflow to copy it off the server and then copy it back after reimaging so it can persist.)
+
+## Docker for APIs
+
+(Dockerfiles are easier than you think (sort of) (follow the tutorial))
+
 ## QEMU for testing
 
-(grab a cloud-init image and set it up correctly, keep the same cloud-init script (it is important to test!))
+(grab a cloud-init debian image and set it up correctly, keep the same cloud-init script (it is important to test!))
 
 (QEMU user-mode networking (i.e. the easy networking) does weird DNS things - I upload a setup script that updates to the correct DNS )
 
@@ -192,3 +195,7 @@ This script is the first line of defence for your server, and if there's anythin
 (ansible localhost weirdness)
 
 (90% of the bugs I encountered over the course of this process were shell scripts doing something slightly different to what I want. This makes the interation time on those bugs a lot nicer and avoids server downtime.)
+
+## The overall flow
+
+# Conclusion
