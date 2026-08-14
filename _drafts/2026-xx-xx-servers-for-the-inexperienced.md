@@ -1,7 +1,7 @@
 ---
 layout: single
-title:  "A layperson's server"
-permalink: /posts/2026/07/a-laypersons-server
+title:  "Servers, for the inexperienced"
+permalink: /posts/2026/08/servers-for-the-inexperienced
 categories: 
   - Side Projects
 tags:
@@ -14,16 +14,13 @@ author_profile: true
 
 {% include toc %}
 
-So, it's finally over! You've submitted your PhD thesis, found a job, and you have one last summer of independence before entering the perpetual grind.
+It was finally over! I submitted my PhD thesis, found a job, and I had one last summer of independence before entering the perpetual grind.
 There's only one thing for it: build some random personal projects, buy some domains, and waste a bunch of time hosting them on a server!
 I went on this little odyssey over the last few months and learned a lot about how servers are managed in the cloud, and thought it would be nice to post about how I managed to figure it all out.
-My server now hosts <https://theturboturnip.com>, which can be used to access this blog e.g. <https://theturboturnip.com{{ page.permalink }}>, and my custom web APIs <https://github.com/theturboturnip/turnip_api>.
+I now have two domains: <https://samuelwstark.com>, which hosts this blog with GitHub Pages, and <https://theturboturnip.com>, a server which redirects to this blog e.g. <https://theturboturnip.com{{ page.permalink }}> and hosts my custom web APIs <https://github.com/theturboturnip/turnip_api>.
 
 <!--my Turnip-Search service with useful autocomplete **[Blogpost Pending]** along with my other web APIs .-->
-
-
 <!--Aside from [watching movies](https://letterboxd.com/theturboturnip/), there is only one thing to do: screw around with personal projects and do very little of use!-->
-
 
 I'm sure my setup is jankier than a professional devops work, but it *is* reliable, debuggable, and works in a way that I can understand as a non-devops-y, hardware-y, OS-y person.
 The goal of this post is to explain briefly how some of these tools work from my perspective, and maybe even show you some new ways to think about them.
