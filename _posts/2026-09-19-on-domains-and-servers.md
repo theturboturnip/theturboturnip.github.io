@@ -13,6 +13,8 @@ tags:
   - ssh
   - networking
 author_profile: true
+excerpt: After submitting my PhD thesis, one of my side projects over my final(?) unemployed summer has been setting up a couple of domains and a server. You remember those things, servers? Those things we all used before lambdas, workers, microservices, etc.? Well, I found one in the wild, and I wrangled it just right, and now I'm here to talk about it.
+
 ---
 
 {% include toc %}
