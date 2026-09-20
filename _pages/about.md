@@ -8,9 +8,9 @@ redirect_from:
 
 Hi, I'm Samuel!
 
-I'm doing a PhD at University of Cambridge in Computer Science.
+I'm a hardware engineer at Headlands Technologies, putting nose to grindstone after finishing my PhD in computer architecture and security at the University of Cambridge.
 I enjoy working with computer architecture, computer graphics, and GPUs.
-My inspiration was video games, and I've worked on a few, but now I'm leaning more towards hardware and architecture.
+My first inspiration was video games, and I've worked on a few, but now I'm leaning more towards hardware and architecture.
 
 ## Recent Posts
 <div>

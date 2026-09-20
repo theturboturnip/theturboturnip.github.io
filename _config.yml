@@ -10,7 +10,8 @@ locale                   : "en-GB"
 title                    : "Samuel W. Stark"
 title_separator          : "-"
 name                     : &name "Samuel W. Stark"
-description              : &description "Samuel W. Stark is a PhD Candidate at the University of Cambridge, studying computer science with interests in computer hardware, security, graphics, and GPUs."
+description              : &description "I'm a hardware engineer at Headlands Technologies and a PhD candidate at the University of Cambridge."
+# , studying computer science with interests in computer hardware, security, graphics, and GPUs.
 url                      : https://samuelwstark.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "theturboturnip/theturboturnip.github.io"
@@ -81,8 +82,8 @@ analytics:
 author:
   name             : "Samuel W. Stark"
   avatar           : "profile.jpg"
-  bio              : "PhD Candidate @ University of Cambridge. I enjoy working with computer architecture, graphics, and GPUs."
-  location         : "Cambridge"
+  bio              : "Hardware Engineer @ Headlands Technologies, PhD @ University of Cambridge. I enjoy working with FPGAs, graphics, and GPUs. Opinions are my own."
+  location         : "Around, generally"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=X9-fswkAAAAJ"
