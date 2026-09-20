@@ -5,6 +5,13 @@
   <Description>Search engine with in-suggestion unit conversions and Wikipedia/TMDB direct searches. Redirects normal searches to DuckDuckGo (AI enabled).</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <!-- <Image width="16" height="16" type="image/x-icon">[https://example.com/favicon.ico]</Image> -->
-  <Url type="text/html" template="https://api.theturboturnip.com/search?backend=ddg-ai&q={searchTerms}"/>
-  <Url type="application/x-suggestions+json" template="https://api.theturboturnip.com/search/suggest?backend=ddg-ai&n={count}&q={searchTerms}"/>
+  <Url type="text/html" template="https://api.theturboturnip.com/search">
+    <Param name="backend" value="ddg-ai"/>
+    <Param name="q" value="{searchTerms}"/>
+  </Url>
+  <Url type="application/x-suggestions+json" template="https://api.theturboturnip.com/search/suggest">
+    <Param name="backend" value="ddg-ai"/>
+    <Param name="n" value="{count}"/>
+    <Param name="q" value="{searchTerms}"/>
+  </Url>
 </OpenSearchDescription>
