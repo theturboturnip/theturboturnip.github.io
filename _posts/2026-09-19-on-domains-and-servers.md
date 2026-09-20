@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "On Domains and Servers"
-permalink: /posts/2026/08/on-domains-and-servers
+permalink: /posts/2026/09/on-domains-and-servers
 categories: 
   - Side Projects
 tags:
