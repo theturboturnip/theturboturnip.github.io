@@ -9,7 +9,7 @@ prepare:
 [macos]
 prepare:
     asdf exec bundle install
-[unix]
+[linux]
 prepare:
     rbenv install -s
     bundle install
@@ -20,7 +20,7 @@ debug_serve:
 [macos]
 debug_serve:
     asdf exec bundle exec jekyll serve --drafts
-[unix]
+[linux]
 debug_serve:
     rbenv local
     bundle exec jekyll serve --drafts
