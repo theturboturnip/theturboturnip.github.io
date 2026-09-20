@@ -170,9 +170,12 @@
 
 /*
    Priority plus navigation
-   ========================================================================== */
+   ==========================================================================
 
-nav {
+   Masthead nav
+   */
+
+nav#site-nav {
   position: relative;
   min-width: 250px;
   background: $masthead-background-color;
@@ -388,16 +391,17 @@ nav {
 .toc {
   font-family: $sans-serif-narrow;
   color: $gray;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  // text-transform: uppercase;
+  // letter-spacing: 1px;
   background-color: #fff;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
+  min-width: 250px;
 
   .nav__title {
     color: #fff;
-    font-size: $type-size-6;
+    font-size: $type-size-5;
     background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -415,10 +419,10 @@ nav {
     display: block;
     padding: 0.5rem 1rem;
     color: $gray;
-    font-size: $type-size-7;
+    font-size: $type-size-5;
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
+    // border-bottom: 1px solid $border-color;
 
     &:hover {
       color: #000;
@@ -432,8 +436,13 @@ nav {
     }
   }
 
-  li ul > li a {
+  > li > ul > li > a {
     padding-left: 2rem;
+    font-weight: normal;
+  }
+
+  > li > ul > li > ul > li > a {
+    padding-left: 4rem;
     font-weight: normal;
   }
 
