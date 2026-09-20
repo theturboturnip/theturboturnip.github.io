@@ -425,6 +425,6 @@ Wasn't that a thrilling ride?
 Kept you on the edge of your seat?
 I bet it was.
 It even works!
-Right now there's not much to show for it beyond the Turnip Search API, but that really does work --- if I've set this up right, they should show up as search engine suggestions in your address bar right now.
+Right now there's not much to show for it beyond the Turnip Search API, but that really does work --- you should be able to right click the URL bar and select "Add Search Engine" (Firefox) or right click the URL bar and select "Manage Search Engines" (Chrome/derivatives) or stare pensively into the middle distance, wondering what could have been (Safari) to install/use it.
 I won't be able to do nearly as much with this stuff now that I have a Real Actual Job, but hopefully I'll still be able to pick at it here and there.
 Until next time!
